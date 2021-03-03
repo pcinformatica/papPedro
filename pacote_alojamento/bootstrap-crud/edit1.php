@@ -1,23 +1,6 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>CRUD com Bootstrap 3</title>
-
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-</head>
-<body>
-
-
-
-<div id="main" class="container-fluid">
-
-    <h3 class="page-header">Adicionar Publicação</h3>
-
-    <!DOCTYPE html>
+<?php
+function edit(){
+    ?>
     <html lang="pt-br">
     <head>
         <meta charset="utf-8">
@@ -90,21 +73,26 @@
                 <option value="-1">Escolha a categoria..</option>
                 <?php
 
-    $result=mysqli_query($con,$sql);
-    while ($dados=mysqli_fetch_array($result)){
-        ?>
+                $result=mysqli_query($con,$sql);
+                while ($dados=mysqli_fetch_array($result)){
+                    ?>
 
-                <?php
-    }
+                    <?php
+                }
 
 
-    ?>
+                ?>
             </select>
 
 
             <hr />
 
-
+            <div class="row">
+                <div class="col-md-12">
+                    <button type="submit" class="btn btn-primary">Atualizar</button>
+                    <a href="testerest.php" class="btn btn-default">Cancelar</a>
+                </div>
+            </div>
 
         </form>
     </div>
@@ -114,21 +102,6 @@
     <script src="js/bootstrap.min.js"></script>
     </body>
     </html>
-
-        <hr />
-
-        <div class="row">
-            <div class="col-md-12">
-                <button type="submit" class="btn btn-primary">Salvar</button>
-                <a href="template.html" class="btn btn-default">Cancelar</a>
-            </div>
-        </div>
-
-    </form>
-</div>
-
-
-<script src="js/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-</body>
-</html>
+<?php
+}
+?>

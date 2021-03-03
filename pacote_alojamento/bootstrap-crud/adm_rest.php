@@ -63,7 +63,7 @@ function top(){
         <!-- Main -->
         <div id="main">
             <div class="inner">
-                <h1>Página de Restauração - Administração</h1>
+                <h1>Página de Alojamento - Administração</h1>
 
 
 
