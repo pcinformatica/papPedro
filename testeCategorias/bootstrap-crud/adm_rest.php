@@ -63,7 +63,7 @@ function top(){
         <!-- Main -->
         <div id="main">
             <div class="inner">
-                <h1>Página de Restauração - Administração</h1>
+                <h1>Página de Categorias - Administração</h1>
 
 
 
@@ -88,20 +88,15 @@ function top(){
 <?php
 
 function table(){
-    ?>
-    <!DOCTYPE html>
-    <html lang="pt-br">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>CRUD com Bootstrap 3</title>
+?>
+<?php
+$con=mysqli_connect("localhost","root","","pap2021saopedro");
+$sql="select * from categorias";
+$result=mysqli_query($con,$sql);
 
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-        <link href="css/style.css" rel="stylesheet">
-    </head>
-    <body>
 
+
+?>
 
 
     <div id="main" class="container-fluid" style="margin-top: 50px">
@@ -113,7 +108,7 @@ function table(){
             <div class="col-sm-6">
 
                 <div class="input-group h2">
-                    <input name="data[search]" class="form-control" id="search" type="text" placeholder="Pesquisar Itens">
+                    <input name="data[search]" class="form-control" id="search" type="text" placeholder="Pesquisar Categorias">
                     <span class="input-group-btn">
 					<button class="btn btn-primary" type="submit">
 						<span class="glyphicon glyphicon-search"></span>
@@ -123,35 +118,39 @@ function table(){
 
             </div>
             <div class="col-sm-3">
-                <a href="add.php" class="btn btn-primary pull-right h2">Nova Publicação</a>
+                <a href="add.php" class="btn btn-primary pull-right h2">Nova Categoria</a>
             </div>
         </div> <!-- /#top -->
 
 
-        <hr />
-        <div id="list" class="row">
+
+         <div id="list" class="row">
 
             <div class="table-responsive col-md-12">
-                <table class="table table-striped" cellspacing="0" cellpadding="0">
+             echo"<table class="table table-striped" cellspacing="0" cellpadding="0">";
                     <thead>
                     <tr>
                         <th>ID</th>
-                        <th>Nome da publicação</th>
+                        <th>Nome da categoria</th>
                         <th>Estado</th>
                         <th>Data</th>
                         <th class="actions">Ações</th>
                     </tr>
                     </thead>
                     <tbody>
+
+                    while ($dados=mysqli_fetch_array($result)){
+
+                    }
                     <tr>
                         <td>1001</td>
-                        <td>HOMEMOEL</td>
+                        <td></td>
                         <td>Ativo</td>
                         <td>01/01/2015</td>
                         <td class="actions">
-                            <a class="btn btn-success btn-xs" href="view.php"><i class="fa fa-eye"></i> Visualizar</a>
-                            <a class="btn btn-warning btn-xs" href="edit.php"><i class="fa fa-pencil"></i> Editar</a>
-                            <a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#delete-modal"><i class="fa fa-trash"></i> Excluir</a>
+                            <a class="btn btn-success btn-xs" href="view.php">Visualizar</a>
+                            <a class="btn btn-warning btn-xs" href="edit.php">Editar</a>
+                            <a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#delete-modal">Excluir</a>
                         </td>
                     </tr>
                     <tr>
@@ -165,95 +164,7 @@ function table(){
                             <a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#delete-modal">Excluir</a>
                         </td>
                     </tr>
-                    <tr>
-                        <td>1003</td>
-                        <td>HOMEMOEL</td>
-                        <td>Desativado</td>
-                        <td>01/01/2015</td>
-                        <td class="actions">
-                            <a class="btn btn-success btn-xs" href="view.php">Visualizar</a>
-                            <a class="btn btn-warning btn-xs" href="edit.php">Editar</a>
-                            <a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#delete-modal">Excluir</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>1004</td>
-                        <td>HOMEMOEL</td>
-                        <td>Ativo</td>
-                        <td>01/01/2015</td>
-                        <td class="actions">
-                            <a class="btn btn-success btn-xs" href="view.php">Visualizar</a>
-                            <a class="btn btn-warning btn-xs" href="edit.php">Editar</a>
-                            <a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#delete-modal">Excluir</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>1005</td>
-                        <td>HOMEMOEL</td>
-                        <td>Ativo</td>
-                        <td>01/01/2015</td>
-                        <td class="actions">
-                            <a class="btn btn-success btn-xs" href="view.php">Visualizar</a>
-                            <a class="btn btn-warning btn-xs" href="edit.php">Editar</a>
-                            <a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#delete-modal">Excluir</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>1006</td>
-                        <td>HOMEMOEL</td>
-                        <td>Desativado</td>
-                        <td>01/01/2015</td>
-                        <td class="actions">
-                            <a class="btn btn-success btn-xs" href="view.php">Visualizar</a>
-                            <a class="btn btn-warning btn-xs" href="edit.php">Editar</a>
-                            <a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#delete-modal">Excluir</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>1007</td>
-                        <td>HOMEMOEL</td>
-                        <td>Desativado</td>
-                        <td>01/01/2015</td>
-                        <td class="actions">
-                            <a class="btn btn-success btn-xs" href="view..php">Visualizar</a>
-                            <a class="btn btn-warning btn-xs" href="edit.php">Editar</a>
-                            <a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#delete-modal">Excluir</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>1008</td>
-                        <td>HOMEMOEL</td>
-                        <td>Ativo</td>
-                        <td>01/01/2015</td>
-                        <td class="actions">
-                            <a class="btn btn-success btn-xs" href="view.php">Visualizar</a>
-                            <a class="btn btn-warning btn-xs" href="edit.php">Editar</a>
-                            <a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#delete-modal">Excluir</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>1009</td>
-                        <td>HOMEMOEL</td>
-                        <td>Ativo</td>
-                        <td>01/01/2015</td>
-                        <td class="actions">
-                            <a class="btn btn-success btn-xs" href="view.php">Visualizar</a>
-                            <a class="btn btn-warning btn-xs" href="edit.php">Editar</a>
-                            <a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#delete-modal">Excluir</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>1010</td>
-                        <td>HOMEMOEL</td>
-                        <td>Desativado</td>
-                        <td>01/01/2015</td>
-                        <td class="actions">
-                            <a class="btn btn-success btn-xs" href="view.php">Visualizar</a>
-                            <a class="btn btn-warning btn-xs" href="edit.php">Editar</a>
-                            <a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#delete-modal">Excluir</a>
 
-                        </td>
-                    </tr>
                     </tbody>
                 </table>
             </div>
@@ -296,7 +207,7 @@ function table(){
     <script src="js/bootstrap.min.js"></script>
     </body>
     </html>
-    <?php
+<?php
 }
 ?>
         <?php

@@ -1,7 +1,7 @@
 <?php
 
 function top(){
-?>
+    ?>
     <html>
     <head>
         <title>PHPJabbers.com | Free Travel Website Template</title>
@@ -15,80 +15,83 @@ function top(){
     <!-- Wrapper -->
     <div id="wrapper">
 
-        <!-- Header -->
-        <header id="header">
-            <div class="inner">
+    <!-- Header -->
+    <header id="header">
+        <div class="inner">
 
-                <!-- Logo -->
-                <a href="../../index.html" class="logo">
-                    <span class="fa fa-anchor"></span> <span class="title">São Pedro de Moel </span>
-                </a>
+            <!-- Logo -->
+            <a href="../../index.html" class="logo">
+                <span class="fa fa-anchor"></span> <span class="title">São Pedro de Moel </span>
+            </a>
 
-                <!-- Nav -->
-                <nav>
-                    <ul>
-                        <li><a href="#menu">Menu</a></li>
-                    </ul>
-                </nav>
+            <!-- Nav -->
+            <nav>
+                <ul>
+                    <li><a href="#menu">Menu</a></li>
+                </ul>
+            </nav>
 
-            </div>
-        </header>
+        </div>
+    </header>
 
-        <!-- Menu -->
-        <nav id="menu">
-            <h2>Menu</h2>
+    <!-- Menu -->
+    <nav id="menu">
+        <h2>Menu</h2>
 
-            <ul>
-                <li><a href="../../index.html" >Home</a></li>
+        <ul>
+            <li><a href="../../index.html" >Home</a></li>
 
-                <li><a href="../../packages.html">Alojamento</a></li>
+            <li><a href="../../packages.html">Alojamento</a></li>
 
-                <li><a href="../../blog.html">Blog</a></li>
+            <li><a href="../../blog.html">Blog</a></li>
 
-                <li><a href="menu/yamifood/pontosdecomida.html">Restauração</a></li>
+            <li><a href="menu/yamifood/pontosdecomida.html">Restauração</a></li>
 
-                <li>
-                    <a href="#" class="dropdown-toggle">Descobrir</a>
+            <li>
+                <a href="#" class="dropdown-toggle">Descobrir</a>
 
-                    <ul>
-                        <li><a href="../../about.html">Sobre S. Pedro</a></li>
-                        <li><a href="../../testimonials.html" class="active">Avaliações</a></li>
-                        <li><a href="../../terms.html">Termos</a></li>
-                    </ul>
-                </li>
-                <li><a href="../../contact.html">Contatos</a></li>
-            </ul>
-        </nav>
+                <ul>
+                    <li><a href="../../about.html">Sobre S. Pedro</a></li>
+                    <li><a href="../../testimonials.html" class="active">Avaliações</a></li>
+                    <li><a href="../../terms.html">Termos</a></li>
+                </ul>
+            </li>
+            <li><a href="../../contact.html">Contatos</a></li>
+        </ul>
+    </nav>
 
-        <!-- Main -->
-        <div id="main">
-            <div class="inner">
-                <h1>Página de Restauração - Administração</h1>
-
-
+    <!-- Main -->
+    <div id="main">
+        <div class="inner">
+            <h1>Página de Categorias - Administração</h1>
 
 
 
 
 
 
-                <br>
 
 
+            <br>
 
-            </div>
+
 
         </div>
 
+    </div>
 
-<?php
+
+    <?php
 }
 ?>
 
 <?php
 
 function table(){
+
+
     ?>
+
     <!DOCTYPE html>
     <html lang="pt-br">
     <head>
@@ -113,7 +116,7 @@ function table(){
             <div class="col-sm-6">
 
                 <div class="input-group h2">
-                    <input name="data[search]" class="form-control" id="search" type="text" placeholder="Pesquisar Itens">
+                    <input name="data[search]" class="form-control" id="search" type="text" placeholder="Pesquisar Categorias">
                     <span class="input-group-btn">
 					<button class="btn btn-primary" type="submit">
 						<span class="glyphicon glyphicon-search"></span>
@@ -123,7 +126,7 @@ function table(){
 
             </div>
             <div class="col-sm-3">
-                <a href="add.php" class="btn btn-primary pull-right h2">Nova Publicação</a>
+                <a href="add.php" class="btn btn-primary pull-right h2">Nova Categoria</a>
             </div>
         </div> <!-- /#top -->
 
@@ -136,7 +139,7 @@ function table(){
                     <thead>
                     <tr>
                         <th>ID</th>
-                        <th>Nome da publicação</th>
+                        <th>Nome da categoria</th>
                         <th>Estado</th>
                         <th>Data</th>
                         <th class="actions">Ações</th>
@@ -145,13 +148,13 @@ function table(){
                     <tbody>
                     <tr>
                         <td>1001</td>
-                        <td>HOMEMOEL</td>
+                        <td></td>
                         <td>Ativo</td>
                         <td>01/01/2015</td>
                         <td class="actions">
-                            <a class="btn btn-success btn-xs" href="view.php"><i class="fa fa-eye"></i> Visualizar</a>
-                            <a class="btn btn-warning btn-xs" href="edit.php"><i class="fa fa-pencil"></i> Editar</a>
-                            <a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#delete-modal"><i class="fa fa-trash"></i> Excluir</a>
+                            <a class="btn btn-success btn-xs" href="view.php">Visualizar</a>
+                            <a class="btn btn-warning btn-xs" href="edit.php">Editar</a>
+                            <a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#delete-modal">Excluir</a>
                         </td>
                     </tr>
                     <tr>
@@ -299,29 +302,29 @@ function table(){
     <?php
 }
 ?>
-        <?php
+<?php
 function footer(){
     ?>
-        <!-- Footer -->
-        <footer id="footer">
-            <div class="inner">
-                <section>
-                    <ul class="icons">
-                        <li><a href="#" class="icon style2 fa-twitter"><span class="label">Twitter</span></a></li>
-                        <li><a href="#" class="icon style2 fa-facebook"><span class="label">Facebook</span></a></li>
-                        <li><a href="#" class="icon style2 fa-instagram"><span class="label">Instagram</span></a></li>
-                        <li><a href="#" class="icon style2 fa-linkedin"><span class="label">LinkedIn</span></a></li>
-                    </ul>
-
-                    &nbsp;
-                </section>
-
-                <ul class="copyright">
-                    <li>Copyright © 2020 Company Name </li>
-                    <li>Template by: <a href="https://www.phpjabbers.com/">PHPJabbers.com</a></li>
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="inner">
+            <section>
+                <ul class="icons">
+                    <li><a href="#" class="icon style2 fa-twitter"><span class="label">Twitter</span></a></li>
+                    <li><a href="#" class="icon style2 fa-facebook"><span class="label">Facebook</span></a></li>
+                    <li><a href="#" class="icon style2 fa-instagram"><span class="label">Instagram</span></a></li>
+                    <li><a href="#" class="icon style2 fa-linkedin"><span class="label">LinkedIn</span></a></li>
                 </ul>
-            </div>
-        </footer>
+
+                &nbsp;
+            </section>
+
+            <ul class="copyright">
+                <li>Copyright © 2020 Company Name </li>
+                <li>Template by: <a href="https://www.phpjabbers.com/">PHPJabbers.com</a></li>
+            </ul>
+        </div>
+    </footer>
 
     </div>
 
@@ -333,6 +336,6 @@ function footer(){
     <script src="../../assets/js/main.js"></script>
     </body>
     </html>
-<?php
+    <?php
 }
-        ?>
+?>
