@@ -81,7 +81,7 @@ function footer(){
                     </div>
 
                     <div class="col-md-3">
-                        <a href="add.html" class="btn btn-primary pull-right h2">Novo publicacção</a>
+                        <a href="add.html" class="btn btn-primary pull-right h2">Novo publicação</a>
                     </div>
                 </div> <!-- /#top -->
 
