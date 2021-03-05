@@ -97,7 +97,7 @@ function view(){
         <div id="actions" class="row">
             <div class="col-md-12">
                 <a href="../testerest1.php" class="btn btn-primary">Fechar</a>
-                <a href="../edit.php" class="btn btn-default">Editar</a>
+                <a href="edit.php" class="btn btn-default">Editar</a>
                 <a href="#" class="btn btn-default" data-toggle="modal" data-target="#delete-modal">Excluir</a>
             </div>
         </div>

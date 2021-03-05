@@ -62,7 +62,7 @@ function table(){
                         <td>01/01/2015</td>
                         <td class="actions">
                             <a class="btn btn-success btn-xs" href="antigo/view.php">Visualizar</a>
-                            <a class="btn btn-warning btn-xs" href="edit.php">Editar</a>
+                            <a class="btn btn-warning btn-xs" href="antigo/edit.php">Editar</a>
                             <a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#delete-modal">Excluir</a>
                         </td>
                     </tr>
@@ -73,7 +73,7 @@ function table(){
                         <td>01/01/2015</td>
                         <td class="actions">
                             <a class="btn btn-success btn-xs" href="antigo/view.php">Visualizar</a>
-                            <a class="btn btn-warning btn-xs" href="edit.php">Editar</a>
+                            <a class="btn btn-warning btn-xs" href="antigo/edit.php">Editar</a>
                             <a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#delete-modal">Excluir</a>
                         </td>
                     </tr>
