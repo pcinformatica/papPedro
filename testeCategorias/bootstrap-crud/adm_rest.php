@@ -147,7 +147,7 @@ $result=mysqli_query($con,$sql);
                         <td></td>
                         <td>Ativo</td>
                         <td>01/01/2015</td>
-                        <td class="actions">
+                          <td class="actions">
                             <a class="btn btn-success btn-xs" href="view.php">Visualizar</a>
                             <a class="btn btn-warning btn-xs" href="edit.php">Editar</a>
                             <a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#delete-modal">Excluir</a>
