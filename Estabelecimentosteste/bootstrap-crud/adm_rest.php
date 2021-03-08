@@ -91,14 +91,14 @@ function table(){
 ?>
 <?php
 $con=mysqli_connect("localhost","root","","pap2021saopedro");
-$sql="select * from categorias";
+$sql="select * from estabelecimentos";
 $result=mysqli_query($con,$sql);
 
 ?>
 
 
    <div class="d-grid gap-2 d-md-flex justify-content-md-end" data-toggle="modal" data-target="#exampleModal">
-    <a href="#" class="btn btn-primary pull-right h2">Nova Categoria</a>
+    <a href="#" class="btn btn-primary pull-right h2">Novo estabelecimento</a>
     </div>
 
 
@@ -110,7 +110,11 @@ $result=mysqli_query($con,$sql);
         <tr>
             <th scope="col"></th>
           <th scope="col">ID</th>
-          <th scope="col">Nome da Categoria</th>
+          <th scope="col">Nome da Estabelecimento</th>
+          <th scope="col">Morada</th>
+          <th scope="col">Telefone</th>
+          <th scope="col">Email</th>
+
 
           <th scope="col" class="actions">Ações</th>
         </tr>
@@ -129,6 +133,11 @@ $result=mysqli_query($con,$sql);
             echo " <td></td>";
             echo "<td>".$dados['categoriaId']."</td>";
             echo "<td>".$dados['categoriaNome']."</td>";
+            echo "<td>".$dados['categoriaNome']."</td>";
+            echo "<td>".$dados['categoriaNome']."</td>";
+            echo "<td>".$dados['categoriaNome']."</td>";
+
+
 
 
 
@@ -171,6 +180,7 @@ $result=mysqli_query($con,$sql);
                          ?>
                 </div>
                 <div class="modal-footer">
+
                     <?php
                      echo "<button type='button' class='btn btn-secondary' data-dismiss='modal'>Close</button>";
                   echo" <button type=\"Submit\" class='btn btn-primary'>Save changes</button> ";

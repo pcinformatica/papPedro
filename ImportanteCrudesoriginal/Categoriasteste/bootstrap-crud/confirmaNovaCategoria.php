@@ -1,7 +1,7 @@
 <?php
 $con=mysqli_connect("localhost","root","","pap2021saopedro");
 
-$nome=$_POST['nomeCategoria1'];
+$nome=$_POST['nomeCategoria'];
 
 
 copy($_FILES['tmp_name']);

@@ -134,9 +134,9 @@ $result=mysqli_query($con,$sql);
 
            echo "<td class= 'actions' >";
 
+                  echo  "<a class='btn btn-success btn-xs' href=\"edita2.php?id=".$dados["categoriaId"]."\"><i class='fa fa-eye'></i> Visualizar</a>";
 
-
-                  echo  " <a class='btn btn-warning btn-xs  justify-content-md-end'href=\"edita2.php?id=".$dados["categoriaId"]."\"><i class='fa fa-pencil'></i>Editar</a>";
+                  echo  " <a class='btn btn-warning btn-xs  justify-content-md-end' data-toggle='modal' data-target='#exampleModal2' ><i class='fa fa-pencil'></i>Editar</a>";
 
                   echo  "  <a class='btn btn-danger btn-xs'  onclick=\"confirmaElimina(".$dados['categoriaId'].");\"><i class='fa fa-trash'></i>Excluir</a>";
             echo "   </td>";
@@ -167,7 +167,7 @@ $result=mysqli_query($con,$sql);
 
 
                        echo" <label>Nome: </label>";
-                      echo"  <input type=\"text\" name=\"nomeCategoria1\"><br>";
+                      echo"  <input type=\"text\" name=\"nomeCategoria\"><br>";
                          ?>
                 </div>
                 <div class="modal-footer">
