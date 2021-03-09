@@ -163,7 +163,7 @@ $result=mysqli_query($con,$sql);
                 </div>
                 <div class="modal-body">
                     <?php
-                    echo "<form action=\"confirmaNovaCategoria.php\" method=\"post\" enctype='multipart/form-data'>";
+                    echo "<form action=\"confirmaNovoEstabelecimento.php\" method=\"post\" enctype='multipart/form-data'>";
 
 
                        echo" <label>Nome: </label>";

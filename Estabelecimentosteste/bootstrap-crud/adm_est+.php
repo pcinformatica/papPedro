@@ -63,7 +63,7 @@ function top(){
         <!-- Main -->
         <div id="main">
             <div class="inner">
-                <h1>Página de Categorias - Administração</h1>
+                <h1>Página de Estabelecimento 2 - Administração</h1>
 
 
 
@@ -91,15 +91,12 @@ function table(){
 ?>
 <?php
 $con=mysqli_connect("localhost","root","","pap2021saopedro");
-$sql="select * from categorias";
+$sql="select * from estabelecimentos";
 $result=mysqli_query($con,$sql);
 
 ?>
 
 
-   <div class="d-grid gap-2 d-md-flex justify-content-md-end" data-toggle="modal" data-target="#exampleModal">
-    <a href="#" class="btn btn-primary pull-right h2">Nova Categoria</a>
-    </div>
 
 
 
@@ -110,7 +107,11 @@ $result=mysqli_query($con,$sql);
         <tr>
             <th scope="col"></th>
           <th scope="col">ID</th>
-          <th scope="col">Nome da Categoria</th>
+          <th scope="col">Nome da Estabelecimento</th>
+          <th scope="col">Descrição</th>
+          <th scope="col">Latitude</th>
+          <th scope="col">Longitude</th>
+
 
           <th scope="col" class="actions">Ações</th>
         </tr>
@@ -121,24 +122,29 @@ $result=mysqli_query($con,$sql);
         <?php
 
         //dados na base de dados
-        $sql="select * from categorias";
+        $sql="select * from estabelecimentos";
         $result=mysqli_query($con,$sql);
 
         while ($dados=mysqli_fetch_array($result)) {
             echo "<tr>";
             echo " <td></td>";
-            echo "<td>".$dados['categoriaId']."</td>";
-            echo "<td>".$dados['categoriaNome']."</td>";
+            echo "<td>".$dados['estabelecimentoId']."</td>";
+            echo "<td>".$dados['estabelecimentoNome']."</td>";
+            echo "<td>".$dados['estabelecimentoDescricao']."</td>";
+            echo "<td>".$dados['estabelecimentoLatitude']."</td>";
+            echo "<td>".$dados['estabelecimentoLongitude']."</td>";
+
+
 
 
 
            echo "<td class= 'actions' >";
 
-                  echo  "<a class='btn btn-success btn-xs' href=\"edita2.php?id=".$dados["categoriaId"]."\"><i class='fa fa-eye'></i> Visualizar</a>";
+            echo  "<a class='btn btn-success btn-xs' href='testerest.php'><i class='fa fa-eye'></i> Voltar </a>";
 
-                  echo  " <a class='btn btn-warning btn-xs  justify-content-md-end' data-toggle='modal' data-target='#exampleModal2' ><i class='fa fa-pencil'></i>Editar</a>";
+                  echo  " <a class='btn btn-warning btn-xs  justify-content-md-end'href=\"edita3.php?id=".$dados["estabelecimentoId"]."\"><i class='fa fa-pencil'></i>Editar</a>";
 
-                  echo  "  <a class='btn btn-danger btn-xs'  onclick=\"confirmaElimina(".$dados['categoriaId'].");\"><i class='fa fa-trash'></i>Excluir</a>";
+                  echo  "  <a class='btn btn-danger btn-xs'  onclick=\"confirmaElimina(".$dados['estabelecimentoId'].");\"><i class='fa fa-trash'></i>Excluir</a>";
             echo "   </td>";
            echo "</tr>";
         }
@@ -148,38 +154,11 @@ $result=mysqli_query($con,$sql);
     <script>
         function confirmaElimina(id) {
             if(confirm('Confirma que deseja eliminar o registo?'))
-                window.location="../bootstrap-crud/eliminaCategoria.php?id=" + id;
+                window.location="../bootstrap-crud/eliminaEstabelecimento2.php?id=" + id;
         }
 
     </script>
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Nova Categoria</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <?php
-                    echo "<form action=\"confirmaNovoEstabelecimento.php\" method=\"post\" enctype='multipart/form-data'>";
 
-
-                       echo" <label>Nome: </label>";
-                      echo"  <input type=\"text\" name=\"nomeCategoria\"><br>";
-                         ?>
-                </div>
-                <div class="modal-footer">
-                    <?php
-                     echo "<button type='button' class='btn btn-secondary' data-dismiss='modal'>Close</button>";
-                  echo" <button type=\"Submit\" class='btn btn-primary'>Save changes</button> ";
-                    ?>
-
-                </div>
-            </div>
-        </div>
-    </div>
     <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel2" aria-hidden="true">
         <?php
         $id=intval($_GET['id']);
@@ -204,7 +183,7 @@ $result=mysqli_query($con,$sql);
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form action="confirmaEditaCategoria.php" method="post" enctype="multipart/form-data">
+                    <form action="confirmaEditaEstabelecimento.php" method="post" enctype="multipart/form-data">
 
                         <input type="hidden" name="id" value="<?php echo $id?>">
 
