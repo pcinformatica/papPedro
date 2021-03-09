@@ -91,14 +91,14 @@ function table(){
 ?>
 <?php
 $con=mysqli_connect("localhost","root","","pap2021saopedro");
-$sql="select * from estabelecimentos";
+$sql="select * from imagens inner join estabelecimentos on imagemEstabelecimentoId";
 $result=mysqli_query($con,$sql);
 
 ?>
 
 
    <div class="d-grid gap-2 d-md-flex justify-content-md-end" data-toggle="modal" data-target="#exampleModal">
-    <a href="#" class="btn btn-primary pull-right h2">Novo estabelecimento</a>
+    <a href="#" class="btn btn-primary pull-right h2">Nova imagem</a>
     </div>
 
 
@@ -110,10 +110,10 @@ $result=mysqli_query($con,$sql);
         <tr>
             <th scope="col"></th>
           <th scope="col">ID</th>
-          <th scope="col">Nome da Estabelecimento</th>
-          <th scope="col">Morada</th>
-          <th scope="col">Telefone</th>
-          <th scope="col">Email</th>
+          <th scope="col">Nome da Imagem</th>
+          <th scope="col">ID Estabelecimento</th>
+          <th scope="col">Ordem</th>
+
 
 
           <th scope="col" class="actions">Ações</th>
@@ -125,17 +125,15 @@ $result=mysqli_query($con,$sql);
         <?php
 
         //dados na base de dados
-        $sql="select * from estabelecimentos";
-        $result=mysqli_query($con,$sql);
+
 
         while ($dados=mysqli_fetch_array($result)) {
             echo "<tr>";
             echo " <td></td>";
-            echo "<td>".$dados['estabelecimentoId']."</td>";
-            echo "<td>".$dados['estabelecimentoNome']."</td>";
-            echo "<td>".$dados['estabelecimentoMorada']."</td>";
-            echo "<td>".$dados['estabelecimentoTelefone']."</td>";
-            echo "<td>".$dados['estabelecimentoEmail']."</td>";
+            echo "<td>".$dados['imagemId']."</td>";
+            echo "<td><img src=\"../".$dados['imagemNome']."\"></td>";
+            echo "<td>".$dados['imagemEstabelecimentoId']."</td>";
+            echo "<td>".$dados['imagemOrdem']."</td>";
 
 
 
@@ -143,7 +141,6 @@ $result=mysqli_query($con,$sql);
 
            echo "<td class= 'actions' >";
 
-            echo  "<a class='btn btn-success btn-xs' href='testealog+.php'><i class='fa fa-eye'></i> Visualizar + </a>";
 
                   echo  " <a class='btn btn-warning btn-xs  justify-content-md-end'href=\"edita2.php?id=".$dados["estabelecimentoId"]."\"><i class='fa fa-pencil'></i>Editar</a>";
 
@@ -175,17 +172,33 @@ $result=mysqli_query($con,$sql);
                     echo "<form action=\"confirmaNovoEstabelecimento.php\" method=\"post\" enctype='multipart/form-data'>";
 
 
-                       echo" <label>Nome: </label>";
-                      echo"  <input type=\"text\" name=\"nomeCategoria1\"><br>";
-                    echo" <label>Morada: </label>";
-                    echo"  <input type=\"text\" name=\"moradaEstabelecimento1\"><br>";
-                    echo" <label>Telefone: </label>";
-                    echo"  <input type=\"text\" name=\"telefoneEstabelecimento1\"><br>";
-                    echo" <label>Email: </label>";
-                    echo"  <input type=\"text\" name=\"emailEstabelecimento1\"><br>";
+
+                    echo" <label>Ordem: </label>";
+                    echo"  <input type=\"text\" name=\"ordemImagem\"><br>";
 
 
                          ?>
+                    <label>Imagem:</label>
+                    <input type="file" name="nomeImagem"><br>
+                    <select name="imagemEstabelecimento">
+                        <option value="-1">Escolha o estabelecimento...</option>
+                        <?php
+                        $sql="select * from estabelecimentos order by estabelecimentoNome";
+                        $result=mysqli_query($con,$sql);
+                        while ($dados=mysqli_fetch_array($result)){
+                            ?>
+                            <option value="<?php echo $dados['estabelecimentoId']?>"><?php echo $dados['estabelecimentoNome']?></option>
+                            <?php
+                        }
+
+
+                        ?>
+                    </select>
+
+
+
+
+
                 </div>
                 <div class="modal-footer">
 

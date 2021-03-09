@@ -1,15 +1,16 @@
 <?php
 $con=mysqli_connect("localhost","root","","pap2021saopedro");
 
-$nome=$_POST['nomeCategoria1'];
-$morada=$_POST['moradaEstabelecimento1'];
-$telefone=$_POST['telefoneEstabelecimento1'];
-$email=$_POST['emailEstabelecimento1'];
-$desc=$_POST['descrEstabelecimento1'];
+$ordem=$_POST['ordemImagem'];
+$estabelecimentoId=intval($_POST['imagemEstabelecimento']);
+$imagem=$_FILES['nomeImagem']['name'];
+$novoNome="../imagens/".$imagem;
 
-copy($_FILES['tmp_name']);
+copy($_FILES['nomeImagem']['tmp_name'],$novoNome);
 
-$sql="insert into estabelecimentos(estabelecimentoNome,estabelecimentoDescricao,estabelecimentoMorada,estabelecimentoTelefone,estabelecimentoEmail) values('".$nome."','".$desc."','".$morada."','".$telefone."','".$email."');";
+copy($_FILES['nomeImagem']['tmp_name'],$novoNome);
+
+$sql="insert into imagens(imagemOrdem,imagemNome,imagemEstabelecimentoId,) values('".$ordem."','imagens/".$imagem."','".$estabelecimentoId."');";
 mysqli_query($con,$sql);
 header("location:../bootstrap-crud/testerest.php");
 ?>
