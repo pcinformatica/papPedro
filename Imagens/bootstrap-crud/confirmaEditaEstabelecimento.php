@@ -1,13 +1,29 @@
 <?php
-$con = mysqli_connect("localhost", "root", "","pap2021saopedro");
-$Nome=addslashes($_POST["estabelecimentoNome"]);
-$Morada=addslashes($_POST["estabelecimentoMorada"]);
-$Telefone=addslashes($_POST["estabelecimentoTelefone"]);
-$Email=addslashes($_POST["estabelecimentoEmail"]);
+$con=mysqli_connect("localhost","root","","pap2021saopedro");
+$Ordem=addslashes($_POST['imagemOrdem']);
+$id=intval($_POST['id']);
 
-$id=intval($_GET["id"]);
-$sql="UPDATE estabelecimentos SET estabelecimentoNome='".$Nome."', estabelecimentoMorada='".$Morada."',estabelecimentoTelefone='".$Telefone."',estabelecimentoEmail='".$Email."'
-where estabelecimentoId=".$id;
+$idEstabelecimento=intval($_POST['imagemEstabelecimento']);
+
+$imagem=$_FILES['logoImagem']['name'];
+$novoNome="images/".$imagem;
+
+$sql="Update imagens set imagemOrdem='".$Ordem."', imagemEstabelecimentoId = '".$idEstabelecimento."'";
+
+if($imagem!=''){
+    $sql.=", imagemEstabelecimentoId='imagens/".$imagem."'";
+    copy($_FILES['logoImagem']['tmp_name'],$novoNome);
+}
+
+
+$sql.=" where imagemId=".$id;
+
+
+
 
 mysqli_query($con,$sql);
-header("location:../bootstrap-crud/testerest.php");
+print_r($sql);
+//header("location:../bootstrap-crud/testerest.php");
+
+?>
+
