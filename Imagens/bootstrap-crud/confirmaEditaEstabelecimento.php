@@ -11,7 +11,7 @@ $novoNome="images/".$imagem;
 $sql="Update imagens set imagemOrdem='".$Ordem."', imagemEstabelecimentoId = '".$idEstabelecimento."'";
 
 if($imagem!=''){
-    $sql.=", imagemEstabelecimentoId='imagens/".$imagem."'";
+    $sql.=", imagemEstabelecimentoId='/images/".$imagem."'";
     copy($_FILES['logoImagem']['tmp_name'],$novoNome);
 }
 
