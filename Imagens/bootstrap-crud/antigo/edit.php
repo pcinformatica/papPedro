@@ -1,4 +1,4 @@
 <?php
-include_once("edit1.php");
+include_once("edit10.php");
 edit();
 ?>
