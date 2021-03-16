@@ -7,9 +7,9 @@ function top(){
         <title>PHPJabbers.com | Free Travel Website Template</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-        <link rel="stylesheet" href="../../../Frontoffice/assets/bootstrap/css/bootstrap.min.css" />
-        <link rel="stylesheet" href="../../../Frontoffice/assets/css/main.css" />
-        <noscript><link rel="stylesheet" href="../../../Frontoffice/assets/css/noscript.css" /></noscript>
+        <link rel="stylesheet" href="../../../../Frontoffice/assets/bootstrap/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="../../../../Frontoffice/assets/css/main.css" />
+        <noscript><link rel="stylesheet" href="../../../../Frontoffice/assets/css/noscript.css" /></noscript>
     </head>
     <body class="is-preload">
     <!-- Wrapper -->
@@ -39,24 +39,16 @@ function top(){
             <h2>Menu</h2>
 
             <ul>
-                <li><a href="../../ANTIGOS/HTMLoriginal/index.html" >Home</a></li>
-
-                <li><a href="../../ANTIGOS/HTMLoriginal/packages.html">Alojamento</a></li>
-
-                <li><a href="../../ANTIGOS/HTMLoriginal/blog.html">Blog</a></li>
-
-                <li><a href="menu/yamifood/pontosdecomida.html">Restauração</a></li>
-
+                <li><a href="../../../../Frontoffice/index.html" >Categorias</a></li>
                 <li>
-                    <a href="#" class="dropdown-toggle">Descobrir</a>
+                    <a href="#" class="dropdown-toggle">Estabelecimentos</a>
 
                     <ul>
-                        <li><a href="../../ANTIGOS/HTMLoriginal/about.html">Sobre S. Pedro</a></li>
-                        <li><a href="../../ANTIGOS/HTMLoriginal/testimonials.html" class="active">Avaliações</a></li>
-                        <li><a href="../../ANTIGOS/HTMLoriginal/terms.html">Termos</a></li>
+                        <li><a href="../lista/indexestabelecimentos.php" >Estabelecimentos</a></li>
+                        <li><a href="../lista/indexestabelecimentos2.php" class="active">Estabelecimentos - 2</a></li>
+                        <li><a href="../lista/indexslideshow.php">SlideShow</a></li>
                     </ul>
                 </li>
-                <li><a href="../../ANTIGOS/HTMLoriginal/contact.html">Contatos</a></li>
             </ul>
         </nav>
 
@@ -98,6 +90,10 @@ $result=mysqli_query($con,$sql);
 
 
 
+    <div class="d-grid gap-2 d-md-flex justify-content-md-end" data-toggle="modal" data-target="">
+        <a href="../lista/indexestabelecimentos.php" class="btn btn-primary pull-right h2">Voltar  </a>
+
+    </div>
 
 
 
@@ -140,9 +136,9 @@ $result=mysqli_query($con,$sql);
 
            echo "<td class= 'actions' >";
 
-            echo "<a class='btn btn-success btn-xs' href='../indexestabelecimentos.php'><i class='fa fa-eye'></i> Voltar </a>";
+            echo "<a class='btn btn-success btn-xs' href='../lista/indexslideshow.php'><i class='fa fa-eye'></i> SlideShow </a>";
 
-                  echo  " <a class='btn btn-warning btn-xs  justify-content-md-end'href=\"edita3.php?id=".$dados["estabelecimentoId"]."\"><i class='fa fa-pencil'></i>Editar</a>";
+                  echo  " <a class='btn btn-warning btn-xs  justify-content-md-end'href=\"../edita/edita3.php?id=".$dados["estabelecimentoId"]."\"><i class='fa fa-pencil'></i>Editar</a>";
 
                   echo  "  <a class='btn btn-danger btn-xs'  onclick=\"confirmaElimina(".$dados['estabelecimentoId'].");\"><i class='fa fa-trash'></i>Excluir</a>";
             echo "   </td>";
@@ -154,7 +150,7 @@ $result=mysqli_query($con,$sql);
     <script>
         function confirmaElimina(id) {
             if(confirm('Confirma que deseja eliminar o registo?'))
-                window.location="../bootstrap-crud/eliminaEstabelecimento2.php?id=" + id;
+                window.location="../elimina/eliminaEstabelecimento2.php?id=" + id;
         }
 
     </script>
@@ -234,11 +230,11 @@ $result=mysqli_query($con,$sql);
     </div>
 
     <!-- Scripts -->
-    <script src="../../assets/js/jquery.min.js"></script>
-    <script src="../../assets/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="../../assets/js/jquery.scrolly.min.js"></script>
-    <script src="../../assets/js/jquery.scrollex.min.js"></script>
-    <script src="../../assets/js/main.js"></script>
+    <script src="../../../../Frontoffice/assets/js/jquery.min.js"></script>
+    <script src="../../../../Frontoffice/assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../../../../Frontoffice/assets/js/jquery.scrolly.min.js"></script>
+    <script src="../../../../Frontoffice/assets/js/jquery.scrollex.min.js"></script>
+    <script src="../../../../Frontoffice/assets/js/main.js"></script>
     </body>
     </html>
 <?php

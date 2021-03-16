@@ -39,14 +39,14 @@ function top(){
             <h2>Menu</h2>
 
             <ul>
-                <li><a href="../lista/indexcategorias.php" class="active">Categorias</a></li>
+                <li><a href="../../Categorias/lista/indexcategorias.php" >Categorias</a></li>
                 <li>
                     <a href="#" class="dropdown-toggle">Estabelecimentos</a>
 
                     <ul>
-                        <li><a href="../../Estabelecimentos/lista/indexestabelecimentos.php" >Estabelecimentos</a></li>
-                        <li><a href="./../Estabelecimentos/indexestabelecimentos2.php" >Estabelecimentos - 2</a></li>
-                        <li><a href="./../Estabelecimentos/indexslideshow.php">SlideShow</a></li>
+                        <li><a href="../lista/indexestabelecimentos.php" >Estabelecimentos</a></li>
+                        <li><a href="../lista/indexestabelecimentos2.php" >Estabelecimentos - 2</a></li>
+                        <li><a href="../lista/indexslideshow.php" class="active">SlideShow</a></li>
                     </ul>
                 </li>
             </ul>
@@ -55,7 +55,7 @@ function top(){
         <!-- Main -->
         <div id="main">
             <div class="inner">
-                <h1>Página de Categorias - Administração</h1>
+                <h1>Página de Estabelecimentos - Administração</h1>
 
 
 
@@ -83,16 +83,15 @@ function table(){
 ?>
 <?php
 $con=mysqli_connect("localhost","root","","pap2021saopedro");
-$sql="select * from categorias";
+$sql="select * from imagens inner join estabelecimentos on imagemEstabelecimentoId=estabelecimentoId ";
 $result=mysqli_query($con,$sql);
 
 ?>
 
 
    <div class="d-grid gap-2 d-md-flex justify-content-md-end" data-toggle="modal" data-target="#exampleModal">
-    <a href="#" class="btn btn-primary pull-right h2">Nova Categoria</a>
+    <a href="#" class="btn btn-primary pull-right h2">Nova imagem</a>
     </div>
-
 
 
 
@@ -102,7 +101,11 @@ $result=mysqli_query($con,$sql);
         <tr>
             <th scope="col"></th>
           <th scope="col">ID</th>
-          <th scope="col">Nome da Categoria</th>
+          <th scope="col">Nome da Imagem</th>
+          <th scope="col">ID Estabelecimento</th>
+          <th scope="col">Ordem</th>
+
+
 
           <th scope="col" class="actions">Ações</th>
         </tr>
@@ -113,14 +116,17 @@ $result=mysqli_query($con,$sql);
         <?php
 
         //dados na base de dados
-        $sql="select * from categorias";
-        $result=mysqli_query($con,$sql);
+
 
         while ($dados=mysqli_fetch_array($result)) {
             echo "<tr>";
             echo " <td></td>";
-            echo "<td>".$dados['categoriaId']."</td>";
-            echo "<td>".$dados['categoriaNome']."</td>";
+            echo "<td>".$dados['imagemId']."</td>";
+            echo "<td><img src=\"../../../".$dados['imagemNome']."\"></td>";
+            echo "<td>".$dados['imagemEstabelecimentoId']."</td>";
+            echo "<td>".$dados['imagemOrdem']."</td>";
+
+
 
 
 
@@ -128,9 +134,8 @@ $result=mysqli_query($con,$sql);
 
 
 
-                  echo  " <a class='btn btn-warning btn-xs  justify-content-md-end'href=\"../editar/editacategoria.php?id=".$dados["categoriaId"]."\"><i class='fa fa-pencil'></i>Editar</a>";
 
-                  echo  "  <a class='btn btn-danger btn-xs'  onclick=\"confirmaElimina(".$dados['categoriaId'].");\"><i class='fa fa-trash'></i>Excluir</a>";
+                  echo  "  <a class='btn btn-danger btn-xs'  onclick=\"confirmaElimina(".$dados['imagemId'].");\"><i class='fa fa-trash'></i>Excluir</a>";
             echo "   </td>";
            echo "</tr>";
         }
@@ -140,7 +145,7 @@ $result=mysqli_query($con,$sql);
     <script>
         function confirmaElimina(id) {
             if(confirm('Confirma que deseja eliminar o registo?'))
-                window.location="../eliminar/eliminaCategoria.php?id=" + id;
+                window.location="../elimina/eliminaImagem.php?id=" + id;
         }
 
     </script>
@@ -153,16 +158,45 @@ $result=mysqli_query($con,$sql);
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
+                <?php
+                $con=mysqli_connect("localhost","root","","pap2021saopedro");
+                ?>
                 <div class="modal-body">
                     <?php
-                    echo "<form action=\"../adicionar/confirmaNovaCategoria.php\" method=\"post\" enctype='multipart/form-data'>";
+                    echo "<form action=\"../adicionar/confirmaNovaImagem.php\" method=\"post\" enctype='multipart/form-data'>";
 
 
-                       echo" <label>Nome: </label>";
-                      echo"  <input type=\"text\" name=\"nomeCategoria1\"><br>";
+
+                    echo" <label>Ordem: </label>";
+                    echo"  <input type=\"text\" name=\"ordemImagem\"><br>";
+
+
                          ?>
+                    <label>Imagem:</label>
+                    <input type="file" name="nomeImagem"><br>
+
+                    <select name="imagemEstabelecimento">
+                        <option value="-1">Escolha o estabelecimento...</option>
+                        <?php
+                        $sql="select * from estabelecimentos order by estabelecimentoNome";
+                        $result=mysqli_query($con,$sql);
+                        while ($dados=mysqli_fetch_array($result)){
+                            ?>
+                            <option value="<?php echo $dados['estabelecimentoId']?>"><?php echo $dados['estabelecimentoNome']?></option>
+                            <?php
+                        }
+
+
+                        ?>
+                    </select>
+
+
+
+
+
                 </div>
                 <div class="modal-footer">
+
                     <?php
                      echo "<button type='button' class='btn btn-secondary' data-dismiss='modal'>Close</button>";
                   echo" <button type=\"Submit\" class='btn btn-primary'>Save changes</button> ";
@@ -196,7 +230,7 @@ $result=mysqli_query($con,$sql);
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form action="confirmaEditaCategoria.php" method="post" enctype="multipart/form-data">
+                    <form action="../edita/confirmaEditaImagem.php" method="post" enctype="multipart/form-data">
 
                         <input type="hidden" name="id" value="<?php echo $id?>">
 
