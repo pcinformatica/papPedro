@@ -1336,20 +1336,48 @@ function bodyLen(){
 					<div id="main">
 						<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
 						  <ol class="carousel-indicators">
-						    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-						    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-						    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                              <?php
+                              $dir="../slideshowImages";
+                              $cdir = scandir($dir);
+                              $cont=0;
+                              foreach ($cdir as $key => $value){
+                                  if (!in_array($value,array(".","..")))
+                                  {
+                                  ?>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="<?php echo $cont;?>" class="
+                                <?php if($cont==0){
+                                    echo " active ";
+
+                                }?>"></li>
+                                  <?php
+                                      $cont++;
+                                  }
+
+                              }
+                              ?>
 						  </ol>
 						  <div class="carousel-inner">
-						    <div class="carousel-item active">
-						      <img class="d-block w-100" src="../images/s2.jpg" alt="First slide">
+                              <?php
+                              $cdir = scandir($dir);
+                              $cont=0;
+                              foreach ($cdir as $key => $value){
+                                  if (!in_array($value,array(".","..")))
+                                  {
+                              ?>
+						    <div class="carousel-item
+						    <?php if($cont==0){
+						        echo " active ";
+
+						        }?>">
+
+						      <img class="d-block w-100" src="<?php echo $dir."/".$value?>" alt="First slide">
 						    </div>
-						    <div class="carousel-item">
-						      <img class="d-block w-100" src="../images/prv1.jpg" alt="Second slide">
-						    </div>
-						    <div class="carousel-item">
-						      <img class="d-block w-100" src="../images/fsp2.jpg" alt="Third slide">
-						    </div>
+                              <?php
+                                      $cont++;
+                                  }
+                              }
+                              ?>
+
 						  </div>
 						  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
 						    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
