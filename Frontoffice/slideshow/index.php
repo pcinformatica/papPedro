@@ -1,5 +1,5 @@
 <?php
-include_once('includes\functions.php');
+include_once('show\functions.php');
 topind();
 Menuind();
 bodyind();
