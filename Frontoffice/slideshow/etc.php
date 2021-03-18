@@ -10,7 +10,7 @@
         {
             if (is_dir("images" . DIRECTORY_SEPARATOR . $value))
             {
-                $result[$value] = dirToArray("images" . DIRECTORY_SEPARATOR . $value);
+                $result[$value] = ("images" . DIRECTORY_SEPARATOR . $value);
             }
             else
             {
