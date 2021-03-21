@@ -3304,10 +3304,38 @@ function bodyLen(){
 
 							<div class="container-fluid">
 								<h3>Descrição</h3>
+                                <?php
+                                $con=mysqli_connect("localhost","root","","pap2021saopedro");
+                                $id=intval($_GET["id"]);
+                                $sql="select * from estabelecimentos where estabelecimentoId=".$id;
+                                $resultEstabelecimentos=mysqli_query($con,$sql);
+                                $dadosEstabelecimentos=mysqli_fetch_array($resultEstabelecimentos);
 
-								<p>A casa  tem vista para o pinhal e a área verde como seu complemento, transmitindo a sensação de liberdade e o contato com a natureza. A residência acomoda até 18 pessoas. Sendo 4 suítes com duas bi-camas cada uma. O quarto de casal tem uma cama king e banheiro conta com hidromassagem, sendo uma das poucas na região com este recurso.</p>
 
-								<p>É um espaço perfeito para acomodar família e amigos. A área de lazer é completa, tendo piscina, sala de jogos e sauna seca. A locação inclui um casal responsável para arrumar, cozinhar e cuidar da casa em horários previamente combinados.</p>
+
+
+
+
+
+
+                                ?>
+
+
+                                  <?php echo $dadosEstabelecimentos["estabelecimentoDescricao"]?></>
+
+
+<br>
+
+
+
+
+
+
+
+
+
+
+
 
 								<br>
 								<div class="col-lg-4 col-md-5">

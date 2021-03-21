@@ -7,9 +7,9 @@ function top(){
         <title>PHPJabbers.com | Free Travel Website Template</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-        <link rel="stylesheet" href="../../../../Frontoffice/assets/bootstrap/css/bootstrap.min.css" />
-        <link rel="stylesheet" href="../../../../Frontoffice/assets/css/main.css" />
-        <noscript><link rel="stylesheet" href="../../../../Frontoffice/assets/css/noscript.css" /></noscript>
+        <link rel="stylesheet" href="../../../../assets/bootstrap/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="../../../../assets/css/main.css" />
+        <noscript><link rel="stylesheet" href="../../../../assets/css/noscript.css" /></noscript>
     </head>
     <body class="is-preload">
     <!-- Wrapper -->
@@ -247,11 +247,11 @@ $result=mysqli_query($con,$sql);
     </div>
 
     <!-- Scripts -->
-    <script src="../../../../Frontoffice/assets/js/jquery.min.js"></script>
-    <script src="../../../../Frontoffice/assets/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="../../../../Frontoffice/assets/js/jquery.scrolly.min.js"></script>
-    <script src="../../../../Frontoffice/assets/js/jquery.scrollex.min.js"></script>
-    <script src="../../../../Frontoffice/assets/js/main.js"></script>
+    <script src="../../../../assets/js/jquery.min.js"></script>
+    <script src="../../../../assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../../../../assets/js/jquery.scrolly.min.js"></script>
+    <script src="../../../../assets/js/jquery.scrollex.min.js"></script>
+    <script src="../../../../assets/js/main.js"></script>
     </body>
     </html>
 <?php
