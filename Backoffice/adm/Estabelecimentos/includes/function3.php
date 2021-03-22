@@ -174,6 +174,33 @@ $result=mysqli_query($con,$sql);
                          ?>
                     <label>Imagem:</label>
                     <input type="file" name="nomeImagem"><br>
+****************************************************************************************************************************
+                    <?php
+                    if(isset($_FILES['nomeImagem']))
+                    {
+                        $ext = strtolower(substr($_FILES['nomeImagem']['name'],-4)); //Pegando extensão do arquivo
+                        $new_name = date("Y.m.d-H.i.s") . $ext; //Definindo um novo nome para o arquivo
+                        $dir = '../../../../slideshowImages/'; //Diretório para uploads
+
+                        move_uploaded_file($_FILES['nomeImagem']['tmp_name'], $dir.$new_name); //Fazer upload do arquivo
+                        echo '<div class="alert alert-success" role="alert" align="center">
+                          
+                          <img src="./slideshowImages/' . $new_name . '" class="img img-responsive img-thumbnail" width="200"> 
+                          <br>
+                          Imagem enviada com sucesso!
+                          <br>
+                         
+                          
+                          </div>';
+                    }
+                    ?>
+
+********************************************************************************************************************************
+
+
+
+
+
 
                     <select name="imagemEstabelecimento">
                         <option value="-1">Escolha o estabelecimento...</option>
@@ -183,15 +210,14 @@ $result=mysqli_query($con,$sql);
                         while ($dados=mysqli_fetch_array($result)){
                             ?>
                             <option value="<?php echo $dados['estabelecimentoId']?>"><?php echo $dados['estabelecimentoNome']?></option>
+
+
                             <?php
                         }
 
 
                         ?>
                     </select>
-
-
-
 
 
                 </div>
