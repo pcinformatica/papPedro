@@ -550,14 +550,14 @@ function bodyLen(){
                             <h1>Página Cultural</h1>
 
                             <div class="image main">
-                                <img src="images/banner-image-7-1920x500.jpg" class="img-fluid" alt="" />
+                                <img src="../images/banner-image-7-1920x500.jpg" class="img-fluid" alt="" />
                             </div>
 
                             <!-- Packages -->
                             <section class="tiles">
                                 <article class="style1">
 									<span class="image">
-										<img src="images/caminhadas.jpg" alt="" />
+										<img src="../images/caminhadas.jpg" alt="" />
 									</span>
                                     <a href="PercursosPedestres.php">
                                         <h2>Percursos Pedestres</h2>
@@ -567,7 +567,7 @@ function bodyLen(){
                                 </article>
                                 <article class="style2">
 									<span class="image">
-										<img src="images/lendas.jpg" alt="" />
+										<img src="../images/lendas.jpg" alt="" />
 									</span>
                                     <a href="Lendas.php">
                                         <h2>Histórias e Lendas</h2>
@@ -577,7 +577,7 @@ function bodyLen(){
                                 </article>
                                 <article class="style3">
 									<span class="image">
-										<img src="images/farol.jpg" alt="" />
+										<img src="../images/farol.jpg" alt="" />
 									</span>
                                     <a href="package-details3.html">
                                         <h2>Património Histórico</h2>
@@ -588,7 +588,7 @@ function bodyLen(){
 
                                 <article class="style4">
 									<span class="image">
-										<img src="images/maxresdefault.jpg" alt="" />
+										<img src="../images/maxresdefault.jpg" alt="" />
 									</span>
                                     <a href="package-details4.html">
                                         <h2>Eventos</h2>
@@ -599,7 +599,7 @@ function bodyLen(){
 
                                 <article class="style5">
 									<span class="image">
-										<img src="images/Pinhal-de-Leiria.jpg" alt="" />
+										<img src="../images/Pinhal-de-Leiria.jpg" alt="" />
 									</span>
                                     <a href="teste%20rating/package-details5.html">
                                         <h2>Pinhal de Leiria</h2>
@@ -610,7 +610,7 @@ function bodyLen(){
 
                                 <article class="style6">
 									<span class="image">
-										<img src="images/SaoPedroMoel_rua2.jpg" alt="" />
+										<img src="../images/SaoPedroMoel_rua2.jpg" alt="" />
 									</span>
                                     <a href="teste%20rating3/Better-Rating-Form/package-details6.html">
                                         <h2>Conhecer +</h2>
@@ -2804,6 +2804,7 @@ function bodyLen(){
 
                         function toppack(){
                         ?>
+
                         <!DOCTYPE HTML>
                         <html>
                         <head>
@@ -2882,7 +2883,9 @@ function bodyLen(){
 
                             function bodypack(){
                                 ?>
+                                <?php
 
+                                ?>
                                 <!-- Main -->
                                 <div id="main">
                                     <div class="inner">
@@ -3272,25 +3275,35 @@ function bodyLen(){
                                             <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
                                         </ol>
                                         <div class="carousel-inner">
-                                            <div class="carousel-item active">
-                                                <img class="d-block w-100 " src="images/c1.jpg" alt="First slide">
-                                            </div>
-                                            <div class="carousel-item">
-                                                <img class="d-block w-100" src="images/c1.2.jpg" alt="Second slide">
-                                            </div>
-                                            <div class="carousel-item">
-                                                <img class="d-block w-100" src="images/c1.3.jpg" alt="Third slide">
-                                            </div>
-                                            <div class="carousel-item">
-                                                <img class="d-block w-100" src="images/c1.4.jpg" alt="Fourth slide">
-                                            </div>
-                                            <div class="carousel-item">
-                                                <img class="d-block w-100" src="images/c1.5.jpg" alt="Fourth slide">
-                                            </div>
 
-                                            <div class="carousel-item">
-                                                <img class="d-block w-100" src="images/c1.6.jpg" alt="Fifth slide">
-                                            </div>
+                                            <?php
+                                            $controle_ativo = 2;
+                                            $result_carousel = "SELECT * FROM imagens ORDER BY imagemId";
+                                            $resultado_carousel = mysqli_query($con, $result_carousel);
+                                            while ($row_carousel = mysqli_fetch_array($resultado_carousel)) { ?>
+                                            <?php
+                                                if($controle_ativo == 2){ ?>
+
+
+                                                    <div class="carousel-item active">
+                                                    <img class="d-block w-100 " src="slideshowEstabelecimento/ <?php echo $row_carousel['ImagemNome']?>" alt="First slide">
+                                                    </div> <?php
+                                                    $controle_ativo = 1;
+                                                }else{?>
+                                                    <div class="carousel-item">
+                                                    <img class="d-block w-100 " src="slideshowEstabelecimento/<?php echo $row_carousel['ImagemNome']?>" alt="First slide">
+                                                    </div><?php
+                                                }
+
+                                            }
+?>
+
+
+
+
+
+
+
                                         </div>
                                         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
                                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -4540,3 +4553,4 @@ function bodyLen(){
                         <?php
                         }
                         ?>
+
