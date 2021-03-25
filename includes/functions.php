@@ -3255,6 +3255,7 @@ function bodyLen(){
                 $con=mysqli_connect("localhost","root","","pap2021saopedro");
 
 
+
                 ?>
 
                 <!-- Main -->
@@ -3276,27 +3277,32 @@ function bodyLen(){
                                         </ol>
                                         <div class="carousel-inner">
 
+
                                             <?php
                                             $controle_ativo = 2;
                                             $result_carousel = "SELECT * FROM imagens ORDER BY imagemId";
                                             $resultado_carousel = mysqli_query($con, $result_carousel);
                                             while ($row_carousel = mysqli_fetch_array($resultado_carousel)) { ?>
-                                            <?php
+                                                <?php
                                                 if($controle_ativo == 2){ ?>
 
 
-                                                    <div class="carousel-item active">
-                                                    <img class="d-block w-100 " src="slideshowEstabelecimento/ <?php echo $row_carousel['ImagemNome']?>" alt="First slide">
+                                                    <div class="carousel-item active ">
+                                                        <img class="d-block w-100 " src="slideshowEstabelecimento/ <?php echo $row_carousel['imagemNome']?>" alt="First slide">
                                                     </div> <?php
                                                     $controle_ativo = 1;
                                                 }else{?>
-                                                    <div class="carousel-item">
-                                                    <img class="d-block w-100 " src="slideshowEstabelecimento/<?php echo $row_carousel['ImagemNome']?>" alt="First slide">
+                                                    <div class="carousel-item ">
+                                                    <img class="d-block w-100 " src="slideshowEstabelecimento/<?php echo $row_carousel['imagemNome']?>" alt="First slide">
                                                     </div><?php
                                                 }
 
                                             }
-?>
+                                            ?>
+
+
+
+
 
 
 
