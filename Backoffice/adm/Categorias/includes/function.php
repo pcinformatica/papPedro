@@ -45,8 +45,8 @@ function top(){
 
                     <ul>
                         <li><a href="../../Estabelecimentos/lista/indexestabelecimentos.php" >Estabelecimentos</a></li>
-                        <li><a href="./../Estabelecimentos/indexestabelecimentos2.php" >Estabelecimentos - 2</a></li>
-                        <li><a href="./../Estabelecimentos/indexslideshow.php">SlideShow</a></li>
+                        <li><a href="../../Estabelecimentos/lista/indexestabelecimentos2.php" >Estabelecimentos - 2</a></li>
+                        <li><a href="../../Estabelecimentos/lista/indexslideshow.php">SlideShow</a></li>
                     </ul>
                 </li>
             </ul>

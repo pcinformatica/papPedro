@@ -8,9 +8,9 @@ function topback(){
     <title>PHPJabbers.com | Free Travel Website Template</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="../Frontoffice/assets/bootstrap/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="../Frontoffice/assets/css/2.css" />
-    <noscript><link rel="stylesheet" href="../Frontoffice/assets/css/noscript.css" /></noscript>
+    <link rel="stylesheet" href="../../assets/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../../assets/css/2.css" />
+    <noscript><link rel="stylesheet" href="../../assets/css/noscript.css" /></noscript>
 </head>
 <body class="is-preload">
 <!-- Wrapper -->
@@ -21,7 +21,7 @@ function topback(){
         <div class="inner">
 
             <!-- Logo -->
-            <a href="../Frontoffice/index.php" class="logo">
+            <a href="../../index.php" class="logo">
                 <span class="fa fa-anchor"></span> <span class="title">São Pedro de Moel </span>
             </a>
 
@@ -56,9 +56,9 @@ function topback(){
 
                     <article class="style4">
 									<span class="image">
-										<img src="../images/1c.jpg" alt="" />
+										<img src="../../images/1c.jpg" alt="" />
 									</span>
-                        <a href="">
+                        <a href="Categorias/lista/indexcategorias.php">
 
 
 
@@ -66,7 +66,7 @@ function topback(){
                                 <p>
                                     <small>
 
-                                <h2>administração Utilizador</h2>
+                                <h2>administração Categorias</h2>
                                     </small>
                                 </p>
                             </di>
@@ -75,9 +75,9 @@ function topback(){
 
                     <article class="style5">
 									<span class="image">
-										<img src="../images/1d.jpg" alt="" />
+										<img src="../../images/1d.jpg" alt="" />
 									</span>
-                        <a href="../Estabelecimentosteste/bootstrap-crud/testerest.php">
+                        <a href="Estabelecimentos/lista/indexestabelecimentos.php">
 
 
                             <p>
@@ -90,15 +90,15 @@ function topback(){
 
                     <article class="style6">
 									<span class="image">
-										<img src="../images/1e.jpg" alt="" />
+										<img src="../../images/1e.jpg" alt="" />
 									</span>
-                        <a href="../Categoriasteste/bootstrap-crud/testerest.php">
+                        <a href="index.php">
 
 
 
                             <p>
                                 <small>
-                            <h2>administração Categorias</h2>
+                            <h2>administração (Em desenvolvimento) </h2>
                                 </small>
                             </p>
                         </a>
@@ -106,9 +106,9 @@ function topback(){
 
                     <article class="style6">
 									<span class="image">
-										<img src="../images/1h.jpg" alt="" />
+										<img src="indexadm.php" alt="" />
 									</span>
-                        <a href="../Imagens/bootstrap-crud/testerest.php">
+                        <a href="">
 
 
 
@@ -196,11 +196,11 @@ function topback(){
 </div>
 
 <!-- Scripts -->
-<script src="../Frontoffice/assets/js/jquery.min.js"></script>
-<script src="../Frontoffice/assets/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="../Frontoffice/assets/js/jquery.scrolly.min.js"></script>
-<script src="../Frontoffice/assets/js/jquery.scrollex.min.js"></script>
-<script src="../Frontoffice/assets/js/main.js"></script>
+<script src="../../assets/js/jquery.min.js"></script>
+<script src="../../assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="../../assets/js/jquery.scrolly.min.js"></script>
+<script src="../../assets/js/jquery.scrollex.min.js"></script>
+<script src="../../assets/js/main.js"></script>
 
 </body>
 </html>
@@ -218,9 +218,9 @@ function topback2(){
         <title>PHPJabbers.com | Free Travel Website Template</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-        <link rel="stylesheet" href="../Frontoffice/assets/bootstrap/css/bootstrap.min.css" />
-        <link rel="stylesheet" href="../Frontoffice/assets/css/main.css" />
-        <noscript><link rel="stylesheet" href="../Frontoffice/assets/css/noscript.css" /></noscript>
+        <link rel="stylesheet" href="../../assets/bootstrap/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="../../assets/css/main.css" />
+        <noscript><link rel="stylesheet" href="../../assets/css/noscript.css" /></noscript>
     </head>
     <body class="is-preload">
     <!-- Wrapper -->
@@ -231,7 +231,7 @@ function topback2(){
         <div class="inner">
 
             <!-- Logo -->
-            <a href="../ANTIGOS/HTMLoriginal/index.html" class="logo">
+            <a href="../../index.php" class="logo">
                 <span class="fa fa-anchor"></span> <span class="title">São Pedro de Moel </span>
             </a>
 
@@ -405,11 +405,13 @@ function footerback2(){
     </div>
 
     <!-- Scripts -->
-    <script src="../Frontoffice/assets/js/jquery.min.js"></script>
-    <script src="../Frontoffice/assets/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="../Frontoffice/assets/js/jquery.scrolly.min.js"></script>
-    <script src="../Frontoffice/assets/js/jquery.scrollex.min.js"></script>
-    <script src="../Frontoffice/assets/js/main.js"></script>
+
+
+    <script src="../../../assets/js/jquery.min.js"></script>
+    <script src="../../assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/jquery.scrolly.min.js"></script>
+    <script src="../../assets/js/jquery.scrollex.min.js"></script>
+    <script src="../../assets/js/main.js"></script>
     </body>
     </html>
     <?php

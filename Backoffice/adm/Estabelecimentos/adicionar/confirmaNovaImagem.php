@@ -14,7 +14,7 @@ $ordem=addslashes($_POST['ordemImagem']);
 
 
 
-  $sql="insert into imagens(imagemNome,imagemEstabelecimentoId,imagemOrdem) values('../slideshowEstabelecimento/".$imagem."','".$estabelecimentoId."','".$ordem."');";
+  $sql="insert into imagens(imagemNome,imagemEstabelecimentoId,imagemOrdem) values('../images/".$imagem."','".$estabelecimentoId."','".$ordem."');";
 mysqli_query($con,$sql);
 header("location:../lista/indexslideshow.php");
 ?>

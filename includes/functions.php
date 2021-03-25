@@ -550,14 +550,14 @@ function bodyLen(){
                             <h1>Página Cultural</h1>
 
                             <div class="image main">
-                                <img src="../images/banner-image-7-1920x500.jpg" class="img-fluid" alt="" />
+                                <img src="images/banner-image-7-1920x500.jpg" class="img-fluid" alt="" />
                             </div>
 
                             <!-- Packages -->
                             <section class="tiles">
                                 <article class="style1">
 									<span class="image">
-										<img src="../images/caminhadas.jpg" alt="" />
+										<img src="images/caminhadas.jpg" alt="" />
 									</span>
                                     <a href="PercursosPedestres.php">
                                         <h2>Percursos Pedestres</h2>
@@ -567,7 +567,7 @@ function bodyLen(){
                                 </article>
                                 <article class="style2">
 									<span class="image">
-										<img src="../images/lendas.jpg" alt="" />
+										<img src="images/lendas.jpg" alt="" />
 									</span>
                                     <a href="Lendas.php">
                                         <h2>Histórias e Lendas</h2>
@@ -577,7 +577,7 @@ function bodyLen(){
                                 </article>
                                 <article class="style3">
 									<span class="image">
-										<img src="../images/farol.jpg" alt="" />
+										<img src="images/farol.jpg" alt="" />
 									</span>
                                     <a href="package-details3.html">
                                         <h2>Património Histórico</h2>
@@ -588,7 +588,7 @@ function bodyLen(){
 
                                 <article class="style4">
 									<span class="image">
-										<img src="../images/maxresdefault.jpg" alt="" />
+										<img src="images/maxresdefault.jpg" alt="" />
 									</span>
                                     <a href="package-details4.html">
                                         <h2>Eventos</h2>
@@ -599,7 +599,7 @@ function bodyLen(){
 
                                 <article class="style5">
 									<span class="image">
-										<img src="../images/Pinhal-de-Leiria.jpg" alt="" />
+										<img src="images/Pinhal-de-Leiria.jpg" alt="" />
 									</span>
                                     <a href="teste%20rating/package-details5.html">
                                         <h2>Pinhal de Leiria</h2>
@@ -610,7 +610,7 @@ function bodyLen(){
 
                                 <article class="style6">
 									<span class="image">
-										<img src="../images/SaoPedroMoel_rua2.jpg" alt="" />
+										<img src="images/SaoPedroMoel_rua2.jpg" alt="" />
 									</span>
                                     <a href="teste%20rating3/Better-Rating-Form/package-details6.html">
                                         <h2>Conhecer +</h2>
@@ -1084,6 +1084,7 @@ function bodyLen(){
                         ?>
                         <!DOCTYPE HTML>
                         <html>
+
                         <head>
                             <title>PHPJabbers.com | Free Travel Website Template</title>
                             <meta charset="utf-8" />
@@ -1245,15 +1246,20 @@ function bodyLen(){
 
                         </body>
                         </html>
-                    <?php
-                    }
-                    ?>
+                        <?php
+                        }
+                        ?>
+
+                        <?php
+
+                        ?>
                         <?php
 
                         function topind(){
                         ?>
                        <!DOCTYPE HTML>
 <html>
+
 	<head>
 		<title>PHPJabbers.com | Free Travel Website Template</title>
 		<meta charset="utf-8" />
@@ -1265,7 +1271,6 @@ function bodyLen(){
 	<body class="is-preload">
 		<!-- Wrapper -->
 			<div id="wrapper">
-
 				<!-- Header -->
 					<header id="header">
 						<div class="inner">
@@ -1299,7 +1304,7 @@ function bodyLen(){
 						<ul>
 							<li><a href="index.php" class="active">Home</a></li>
 
-							<li><a href="login/colorlib-regform-7/singin.html" >Login</a></li>
+							<li><a href="Backoffice/login/colorlib-regform-7/singin.html" >Login</a></li>
 
 							<li><a href="packages.php">Alojamento</a></li>
 
@@ -1337,7 +1342,7 @@ function bodyLen(){
 						<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
 						  <ol class="carousel-indicators">
                               <?php
-                              $dir="../slideshowImages";
+                              $dir="slideshowImages";
                               $cdir = scandir($dir);
                               $cont=0;
                               foreach ($cdir as $key => $value){
@@ -1403,11 +1408,12 @@ function bodyLen(){
 
 							<h2 class="h2">Alojamento</h2>
 
+
 							<!-- Packages -->
 							<section class="tiles">
 								<article class="style1">
 									<span class="image">
-										<img src="../images/c1.jpg" alt="" />
+										<img src="images/c1.jpg" alt="" />
 									</span>
 									<a href="package-details.php">
 										<h2>Casa para aluguel</h2>
@@ -1425,7 +1431,7 @@ function bodyLen(){
 								</article>
 								<article class="style2">
 									<span class="image">
-										<img src="../images/1a.jpg" alt="" />
+										<img src="images/1a.jpg" alt="" />
 									</span>
 									<a href="package-details2.php">
 										<h2>Mar e Sol Hotel Spa</h2>
@@ -1443,7 +1449,7 @@ function bodyLen(){
 								</article>
 								<article class="style3">
 									<span class="image">
-										<img src="../images/1b.jpg " alt="" />
+										<img src="images/1b.jpg " alt="" />
 									</span>
 									<a href="package-details3.html">
 										<h2>HomeMoel</h2>
@@ -1462,7 +1468,7 @@ function bodyLen(){
 
 								<article class="style4">
 									<span class="image">
-										<img src="../images/1c.jpg" alt="" />
+										<img src="images/1c.jpg" alt="" />
 									</span>
 									<a href="package-details4.html">
 										<h2>Hotel Verde Pinho</h2>
@@ -1481,7 +1487,7 @@ function bodyLen(){
 
 								<article class="style5">
 									<span class="image">
-										<img src="../images/1d.jpg" alt="" />
+										<img src="images/1d.jpg" alt="" />
 									</span>
 									<a href="teste%20rating/package-details5.html">
 										<h2>Hotel Miramar - São Pedro de Moel</h2>
@@ -1500,7 +1506,7 @@ function bodyLen(){
 
 								<article class="style6">
 									<span class="image">
-										<img src="../images/1e.jpg" alt="" />
+										<img src="images/1e.jpg" alt="" />
 									</span>
 									<a href="teste%20rating3/Better-Rating-Form/package-details6.html">
 										<h2>Orbitur S Pedro De Moel</h2>
@@ -1531,7 +1537,7 @@ function bodyLen(){
                             <section class="tiles">
                                 <article class="style1">
 									<span class="image">
-										<img src="../images/2a.jpg" alt="" />
+										<img src="images/2a.jpg" alt="" />
 									</span>
                                     <a href="package-details_rest.php">
                                         <h2>Restaurante O Penedo</h2>
@@ -1549,7 +1555,7 @@ function bodyLen(){
                                 </article>
                                 <article class="style2">
 									<span class="image">
-										<img src="../images/2c.jpg" alt="" />
+										<img src="images/2c.jpg" alt="" />
 									</span>
                                     <a href="package-details2.html">
                                         <h2>Restaurante Brisamar</h2>
@@ -1567,7 +1573,7 @@ function bodyLen(){
                                 </article>
                                 <article class="style3">
 									<span class="image">
-										<img src="../images/r3.jpg " alt="" />
+										<img src="images/r3.jpg " alt="" />
 									</span>
                                     <a href="package-details3.html">
                                         <h2>Estrela do Mar</h2>
@@ -1586,7 +1592,7 @@ function bodyLen(){
 
                                 <article class="style4">
 									<span class="image">
-										<img src="../images/r4.jpg" alt="" />
+										<img src="images/r4.jpg" alt="" />
 									</span>
                                     <a href="package-details4.html">
                                         <h2>Restaurante Central</h2>
@@ -1605,7 +1611,7 @@ function bodyLen(){
 
                                 <article class="style5">
 									<span class="image">
-										<img src="../images/r5.jpg" alt="" />
+										<img src="images/r5.jpg" alt="" />
 									</span>
                                     <a href="teste%20rating/package-details5.html">
                                         <h2>A Fonte</h2>
@@ -1624,7 +1630,7 @@ function bodyLen(){
 
                                 <article class="style6">
 									<span class="image">
-										<img src="../images/r6.jpg" alt="" />
+										<img src="images/r6.jpg" alt="" />
 									</span>
                                     <a href="teste%20rating3/Better-Rating-Form/package-details6.html">
                                         <h2>Ponto de Encontro</h2>
@@ -1698,7 +1704,7 @@ function bodyLen(){
 
 							<div class="row">
 								<div class="col-sm-4 text-center">
-									<img src="../images/blog-1-720x480.jpg" class="img-fluid" alt="" />
+									<img src="images/blog-1-720x480.jpg" class="img-fluid" alt="" />
 
 									<h2 class="m-n"><a href="#">Famoso fotógrafo chega a São Pedro de Moel</a></h2>
 
@@ -1706,7 +1712,7 @@ function bodyLen(){
 								</div>
 
 								<div class="col-sm-4 text-center">
-									<img src="../images/blog-2-720x480.jpg" class="img-fluid" alt="" />
+									<img src="images/blog-2-720x480.jpg" class="img-fluid" alt="" />
 
 									<h2 class="m-n"><a href="#">Projeto "Azul Mar" aprovada pela CMMG</a></h2>
 
@@ -1714,7 +1720,7 @@ function bodyLen(){
 								</div>
 
 								<div class="col-sm-4 text-center">
-									<img src="../images/blog-3-720x480.jpg" class="img-fluid" alt="" />
+									<img src="images/blog-3-720x480.jpg" class="img-fluid" alt="" />
 
 									<h2 class="m-n"><a href="#">Restaurante "Madeira Pinho" inaugura no Sábado </a></h2>
 
@@ -1807,7 +1813,7 @@ function bodyLen(){
 </html>
                     <?php
                     }
-                    ?>
+                         ?>
 
                         <?php
 
@@ -1908,7 +1914,7 @@ function bodyLen(){
                             <?php
 
                             function bodyalres(){
-                                ?>
+                            ?>
 
                             <!-- Main -->
                             <div id="main">
@@ -2041,13 +2047,13 @@ function bodyLen(){
 
 
 
+<?php
+}
+?>
                                     <?php
-                            }
-                            ?>
-                            <?php
 
-                            function footeralres(){
-                            ?>
+                                    function footeralres(){
+                                    ?>
 
 
                                     <!-- Footer -->
@@ -2108,66 +2114,66 @@ function bodyLen(){
 
                         </body>
                         </html>
-                    <?php
-                    }
-                    ?>
-        <?php
+                        <?php
+                        }
+                        ?>
+                        <?php
 
                         function toppackrese(){
                         ?>
-                      <!DOCTYPE HTML>
-<html>
-	<head>
-		<title>PHPJabbers.com | Free Travel Website Template</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+                        <!DOCTYPE HTML>
+                        <html>
+                        <head>
+                            <title>PHPJabbers.com | Free Travel Website Template</title>
+                            <meta charset="utf-8" />
+                            <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+                            <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+                            <link rel="stylesheet" href="assets/css/main.css" />
+                            <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 
 
 
-		<!-- Bootstrap CSS -->
+                            <!-- Bootstrap CSS -->
 
-		<!-- Site CSS -->
-		<link rel="stylesheet" href="assets/css/stylerestau.css">
-		<!-- Pickadate CSS -->
-		<link rel="stylesheet" href="css2/classic.css">
-		<link rel="stylesheet" href="css2/classic.date.css">
-		<link rel="stylesheet" href="css2/classic.time.css">
-		<!-- Responsive CSS -->
-		<link rel="stylesheet" href="css2/responsive.css">
-		<!-- Custom CSS -->
-		<link rel="stylesheet" href="css2/custom.css">
-
-
+                            <!-- Site CSS -->
+                            <link rel="stylesheet" href="assets/css/stylerestau.css">
+                            <!-- Pickadate CSS -->
+                            <link rel="stylesheet" href="css2/classic.css">
+                            <link rel="stylesheet" href="css2/classic.date.css">
+                            <link rel="stylesheet" href="css2/classic.time.css">
+                            <!-- Responsive CSS -->
+                            <link rel="stylesheet" href="css2/responsive.css">
+                            <!-- Custom CSS -->
+                            <link rel="stylesheet" href="css2/custom.css">
 
 
 
 
-	</head>
-	<body class="is-preload">
-		<!-- Wrapper -->
-			<div id="wrapper">
 
-				<!-- Header -->
-					<header id="header">
-						<div class="inner">
 
-							<!-- Logo -->
-								<a href="index.php" class="logo">
-									<span class="fa fa-anchor"></span> <span class="title">São Pedro de Moel </span>
-								</a>
+                        </head>
+                        <body class="is-preload">
+                        <!-- Wrapper -->
+                        <div id="wrapper">
 
-							<!-- Nav -->
-								<nav>
-									<ul>
-										<li><a href="#menu">Menu</a></li>
-									</ul>
-								</nav>
+                            <!-- Header -->
+                            <header id="header">
+                                <div class="inner">
 
-						</div>
-					</header>
+                                    <!-- Logo -->
+                                    <a href="index.php" class="logo">
+                                        <span class="fa fa-anchor"></span> <span class="title">São Pedro de Moel </span>
+                                    </a>
+
+                                    <!-- Nav -->
+                                    <nav>
+                                        <ul>
+                                            <li><a href="#menu">Menu</a></li>
+                                        </ul>
+                                    </nav>
+
+                                </div>
+                            </header>
 
 
 
@@ -2178,32 +2184,32 @@ function bodyLen(){
 
                             function Menupackrese(){
                                 ?>
-                               	<!-- Menu -->
-					<nav id="menu">
-						<h2>Menu</h2>
-                        <ul>
-                            <li><a href="index.php" >Home</a></li>
+                                <!-- Menu -->
+                                <nav id="menu">
+                                    <h2>Menu</h2>
+                                    <ul>
+                                        <li><a href="index.php" >Home</a></li>
 
-                            <li><a href="packages.php" >Alojamento</a></li>
+                                        <li><a href="packages.php" >Alojamento</a></li>
 
-                            <li><a href="blog.php">Blog</a></li>
+                                        <li><a href="blog.php">Blog</a></li>
 
-                            <li><a href="packagesrestaurant.php" class="active">Restauração</a></li>
-                            <li><a href="packagesrestaurant_reserva.php" class="active">Reserva</a></li>
+                                        <li><a href="packagesrestaurant.php" class="active">Restauração</a></li>
+                                        <li><a href="packagesrestaurant_reserva.php" class="active">Reserva</a></li>
 
-                            <li>
-                                <a href="#" class="dropdown-toggle">Descobrir</a>
+                                        <li>
+                                            <a href="#" class="dropdown-toggle">Descobrir</a>
 
-                                <ul>
-                                    <li><a href="about.php">Sobre S. Pedro</a></li>
-                                    <li><a href="testimonials.php">Avaliações</a></li>
-                                    <li><a href="terms.php">Termos</a></li>
-                                    <li><a href="pontosdeinteresse.php">Pontos de Interesse</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="contact.php">Contatos</a></li>
-                        </ul>
-					</nav>
+                                            <ul>
+                                                <li><a href="about.php">Sobre S. Pedro</a></li>
+                                                <li><a href="testimonials.php">Avaliações</a></li>
+                                                <li><a href="terms.php">Termos</a></li>
+                                                <li><a href="pontosdeinteresse.php">Pontos de Interesse</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="contact.php">Contatos</a></li>
+                                    </ul>
+                                </nav>
 
 
                                 <?php
@@ -2212,182 +2218,182 @@ function bodyLen(){
                             <?php
 
                             function bodypackrese(){
-                                ?>
+                            ?>
 
-                        	<!-- Main -->
-					<div id="main">
-						<div class="inner">
-							<h1>Reserva</h1>
+                            <!-- Main -->
+                            <div id="main">
+                                <div class="inner">
+                                    <h1>Reserva</h1>
 
-							<div class="image main">
-								<img src="images/all-bg.jpg" class="img-fluid" alt="" />
-							</div>
-
-
+                                    <div class="image main">
+                                        <img src="images/all-bg.jpg" class="img-fluid" alt="" />
+                                    </div>
 
 
 
-							<!-- Start Reservation -->
-							<div class="reservation-box">
-								<div class="container">
-									<div class="row">
-										<div class="col-lg-12">
-											<div class="heading-title text-center">
-												<h2>Reserva</h2>
 
-											</div>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col-lg-12 col-sm-12 col-xs-12">
-											<div class="contact-block">
-												<form id="contactForm">
-													<div class="row">
-														<div class="col-md-6">
-															<h3>Reservar Local</h3>
-															<div class="col-md-12">
-																<div class="form-group">
-																	<input id="input_date" class="ddatepicker picker__input form-control" name="date" type="text" value="" equired data-error="Insere o local">
-																	<div class="help-block with-errors"></div>
-																</div>
-															</div>
-															<div class="col-md-12">
-																<div class="form-group">
-																	<input id="input_date" class="datepicker picker__input form-control" name="date" type="text" value="" equired data-error="Insere a data">
-																	<div class="help-block with-errors"></div>
-																</div>
-															</div>
-															<div class="col-md-12">
-																<div class="form-group">
-																	<input id="input_time" class="time form-control picker__input" required data-error="Insere a hora">
-																	<div class="help-block with-errors"></div>
-																</div>
-															</div>
-															<div class="col-md-12">
-																<div class="form-group">
-																	<select class="custom-select d-block form-control" id="person" required data-error="Insere o nº de pessoas">
-																		<option disabled selected>Nº de Pessoas*</option>
-																		<option value="1">1</option>
-																		<option value="2">2</option>
-																		<option value="3">3</option>
-																		<option value="4">4</option>
-																		<option value="5">5</option>
-																		<option value="6">6</option>
-																		<option value="7">7</option>
-																	</select>
-																	<div class="help-block with-errors"></div>
-																</div>
-															</div>
-														</div>
-														<div class="col-md-6">
-															<h3>Contactos</h3>
-															<div class="col-md-12">
-																<div class="form-group">
-																	<input type="text" class="form-control" id="name" name="name" placeholder="Nome" required data-error="Insere o seu nome">
-																	<div class="help-block with-errors"></div>
-																</div>
-															</div>
-															<div class="col-md-12">
-																<div class="form-group">
-																	<input type="text" placeholder="Email" id="email" class="form-control" name="email" required data-error="Insere o seu email">
-																	<div class="help-block with-errors"></div>
-																</div>
-															</div>
-															<div class="col-md-12">
-																<div class="form-group">
-																	<input type="text" placeholder="Número" id="phone" class="form-control" name="phone" required data-error="Insere o seu nº de telemóvel">
-																	<div class="help-block with-errors"></div>
-																</div>
-															</div>
-														</div>
-														<div class="col-md-12">
-															<div class="submit-button text-center">
-																<button class="btn btn-common" id="submit" type="submit">Finalizar Reserva</button>
-																<div id="msgSubmit" class="h3 text-center hidden"></div>
-																<div class="clearfix"></div>
-															</div>
-														</div>
-													</div>
-												</form>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!-- End Reservation -->
+
+                                    <!-- Start Reservation -->
+                                    <div class="reservation-box">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-lg-12">
+                                                    <div class="heading-title text-center">
+                                                        <h2>Reserva</h2>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-12 col-sm-12 col-xs-12">
+                                                    <div class="contact-block">
+                                                        <form id="contactForm">
+                                                            <div class="row">
+                                                                <div class="col-md-6">
+                                                                    <h3>Reservar Local</h3>
+                                                                    <div class="col-md-12">
+                                                                        <div class="form-group">
+                                                                            <input id="input_date" class="ddatepicker picker__input form-control" name="date" type="text" value="" equired data-error="Insere o local">
+                                                                            <div class="help-block with-errors"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-12">
+                                                                        <div class="form-group">
+                                                                            <input id="input_date" class="datepicker picker__input form-control" name="date" type="text" value="" equired data-error="Insere a data">
+                                                                            <div class="help-block with-errors"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-12">
+                                                                        <div class="form-group">
+                                                                            <input id="input_time" class="time form-control picker__input" required data-error="Insere a hora">
+                                                                            <div class="help-block with-errors"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-12">
+                                                                        <div class="form-group">
+                                                                            <select class="custom-select d-block form-control" id="person" required data-error="Insere o nº de pessoas">
+                                                                                <option disabled selected>Nº de Pessoas*</option>
+                                                                                <option value="1">1</option>
+                                                                                <option value="2">2</option>
+                                                                                <option value="3">3</option>
+                                                                                <option value="4">4</option>
+                                                                                <option value="5">5</option>
+                                                                                <option value="6">6</option>
+                                                                                <option value="7">7</option>
+                                                                            </select>
+                                                                            <div class="help-block with-errors"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <h3>Contactos</h3>
+                                                                    <div class="col-md-12">
+                                                                        <div class="form-group">
+                                                                            <input type="text" class="form-control" id="name" name="name" placeholder="Nome" required data-error="Insere o seu nome">
+                                                                            <div class="help-block with-errors"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-12">
+                                                                        <div class="form-group">
+                                                                            <input type="text" placeholder="Email" id="email" class="form-control" name="email" required data-error="Insere o seu email">
+                                                                            <div class="help-block with-errors"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-12">
+                                                                        <div class="form-group">
+                                                                            <input type="text" placeholder="Número" id="phone" class="form-control" name="phone" required data-error="Insere o seu nº de telemóvel">
+                                                                            <div class="help-block with-errors"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-12">
+                                                                    <div class="submit-button text-center">
+                                                                        <button class="btn btn-common" id="submit" type="submit">Finalizar Reserva</button>
+                                                                        <div id="msgSubmit" class="h3 text-center hidden"></div>
+                                                                        <div class="clearfix"></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End Reservation -->
 
 
 
 
                                     <?php
-                            }
-                            ?>
-                            <?php
+                                    }
+                                    ?>
+                                    <?php
 
-                            function footerpackrese(){
-                            ?>
+                                    function footerpackrese(){
+                                    ?>
 
-<!-- Footer -->
-					<footer id="footer">
-						<div class="inner">
-							<section>
-								<ul class="icons">
-									<li><a href="#" class="icon style2 fa-twitter"><span class="label">Twitterr</span></a></li>
-									<li><a href="#" class="icon style2 fa-facebook"><span class="label">Facebook</span></a></li>
-									<li><a href="#" class="icon style2 fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="#" class="icon style2 fa-linkedin"><span class="label">LinkedIn</span></a></li>
-								</ul>
+                                    <!-- Footer -->
+                                    <footer id="footer">
+                                        <div class="inner">
+                                            <section>
+                                                <ul class="icons">
+                                                    <li><a href="#" class="icon style2 fa-twitter"><span class="label">Twitterr</span></a></li>
+                                                    <li><a href="#" class="icon style2 fa-facebook"><span class="label">Facebook</span></a></li>
+                                                    <li><a href="#" class="icon style2 fa-instagram"><span class="label">Instagram</span></a></li>
+                                                    <li><a href="#" class="icon style2 fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                                                </ul>
 
-								&nbsp;
-							</section>
+                                                &nbsp;
+                                            </section>
 
-							<ul class="copyright">
-								<li>Copyright © 2020 Company Name </li>
-								<li>Template by: <a href="https://www.phpjabbers.com/">PHPJabbers.com</a></li>
-							</ul>
-						</div>
-					</footer>
+                                            <ul class="copyright">
+                                                <li>Copyright © 2020 Company Name </li>
+                                                <li>Template by: <a href="https://www.phpjabbers.com/">PHPJabbers.com</a></li>
+                                            </ul>
+                                        </div>
+                                    </footer>
 
-			</div>
+                                </div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/main.js"></script>
-		<a href="#" id="back-to-top" title="Back to top" style="display: none;">&uarr;</a>
+                                <!-- Scripts -->
+                                <script src="assets/js/jquery.min.js"></script>
+                                <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+                                <script src="assets/js/jquery.scrolly.min.js"></script>
+                                <script src="assets/js/jquery.scrollex.min.js"></script>
+                                <script src="assets/js/main.js"></script>
+                                <a href="#" id="back-to-top" title="Back to top" style="display: none;">&uarr;</a>
 
-		<!-- ALL JS FILES -->
-						<a href="#" id="back-to-top" title="Back to top" style="display: none;">&uarr;</a>
+                                <!-- ALL JS FILES -->
+                                <a href="#" id="back-to-top" title="Back to top" style="display: none;">&uarr;</a>
 
-						<!-- ALL JS FILES -->
-						<script src="js2/jquery-3.2.1.min.js"></script>
-						<script src="js2/popper.min.js"></script>
-						<script src="js2/bootstrap.min.js"></script>
-						<!-- ALL PLUGINS -->
-						<script src="js2/jquery.superslides.min.js"></script>
-						<script src="js2/images-loded.min.js"></script>
-						<script src="js2/isotope.min.js"></script>
-						<script src="js2/baguetteBox.min.js"></script>
-						<script src="js2/picker.js"></script>
-						<script src="js2/picker.date.js"></script>
-						<script src="js2/picker.time.js"></script>
-						<script src="js2/legacy.js"></script>
-						<script src="js2/form-validator.min.js"></script>
-						<script src="js2/contact-form-script.js"></script>
-						<script src="js2/custom.js"></script>
-
-
+                                <!-- ALL JS FILES -->
+                                <script src="js2/jquery-3.2.1.min.js"></script>
+                                <script src="js2/popper.min.js"></script>
+                                <script src="js2/bootstrap.min.js"></script>
+                                <!-- ALL PLUGINS -->
+                                <script src="js2/jquery.superslides.min.js"></script>
+                                <script src="js2/images-loded.min.js"></script>
+                                <script src="js2/isotope.min.js"></script>
+                                <script src="js2/baguetteBox.min.js"></script>
+                                <script src="js2/picker.js"></script>
+                                <script src="js2/picker.date.js"></script>
+                                <script src="js2/picker.time.js"></script>
+                                <script src="js2/legacy.js"></script>
+                                <script src="js2/form-validator.min.js"></script>
+                                <script src="js2/contact-form-script.js"></script>
+                                <script src="js2/custom.js"></script>
 
 
 
 
-	</body>
-</html>
-                    <?php
-                    }
-                    ?>
+
+
+                        </body>
+                        </html>
+                        <?php
+                        }
+                        ?>
 
                         <?php
 
@@ -2472,7 +2478,7 @@ function bodyLen(){
                             <?php
 
                             function bodypackrest(){
-                            ?>
+                                ?>
 
                                 <!-- Main -->
                                 <div id="main">
@@ -2756,13 +2762,13 @@ function bodyLen(){
 
 
 
-                                    <?php
-                                    }
-                                    ?>
-                                    <?php
+                                <?php
+                            }
+                            ?>
+                            <?php
 
-                                    function footerpackrest(){
-                                    ?>
+                            function footerpackrest(){
+                            ?>
 
 
                             <!-- Footer -->
@@ -3141,34 +3147,30 @@ function bodyLen(){
                         <?php
                         }
                         ?>
-  <?php
+                        <?php
 
                         function toppackd(){
                         ?>
                         <!DOCTYPE HTML>
-<html>
-	<head>
-		<title>PHPJabbers.com | Free Travel Website Template</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
-		<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.css" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="stylesheet" href="assets/css/stylemap.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+                        <html>
+                        <head>
+                            <title>PHPJabbers.com | Free Travel Website Template</title>
+                            <meta charset="utf-8" />
+                            <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+                            <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+                            <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.css" />
+                            <link rel="stylesheet" href="assets/css/main.css" />
+                            <link rel="stylesheet" href="assets/css/stylemap.css" />
+                            <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 
 
 
-		<!-- Prata for body  -->
-		<link href='https://fonts.googleapis.com/css?family=Prata' rel='stylesheet' type='text/css'>
-		<!-- Tangerine for small title -->
-		<link href='https://fonts.googleapis.com/css?family=Tangerine' rel='stylesheet' type='text/css'>
-		<!-- Open Sans for title -->
-		<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-
-
-
-
+                            <!-- Prata for body  -->
+                            <link href='https://fonts.googleapis.com/css?family=Prata' rel='stylesheet' type='text/css'>
+                            <!-- Tangerine for small title -->
+                            <link href='https://fonts.googleapis.com/css?family=Tangerine' rel='stylesheet' type='text/css'>
+                            <!-- Open Sans for title -->
+                            <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 
 
 
@@ -3180,30 +3182,33 @@ function bodyLen(){
 
 
 
-	</head>
-	<body class="is-preload">
-		<!-- Wrapper -->
-			<div id="wrapper">
 
-				<!-- Header -->
-					<header id="header">
-						<div class="inner">
 
-							<!-- Logo -->
-								<a href="index.php" class="logo">
-									<span class="fa fa-anchor"></span> <span class="title">São Pedro de Moel </span>
-								</a>
 
-							<!-- Nav -->
-								<nav>
-									<ul>
-										<li><a href="#menu">Menu</a></li>
-									</ul>
-								</nav>
 
-						</div>
-					</header>
+                        </head>
+                        <body class="is-preload">
+                        <!-- Wrapper -->
+                        <div id="wrapper">
 
+                            <!-- Header -->
+                            <header id="header">
+                                <div class="inner">
+
+                                    <!-- Logo -->
+                                    <a href="index.php" class="logo">
+                                        <span class="fa fa-anchor"></span> <span class="title">São Pedro de Moel </span>
+                                    </a>
+
+                                    <!-- Nav -->
+                                    <nav>
+                                        <ul>
+                                            <li><a href="#menu">Menu</a></li>
+                                        </ul>
+                                    </nav>
+
+                                </div>
+                            </header>
 
 
 
@@ -3214,387 +3219,103 @@ function bodyLen(){
 
                             function Menupackd(){
                                 ?>
-                                	<!-- Menu -->
-					<nav id="menu">
-						<h2>Menu</h2>
-						<ul>
-							<li><a href="index.php" >Home</a></li>
+                                <!-- Menu -->
+                                <nav id="menu">
+                                    <h2>Menu</h2>
+                                    <ul>
+                                        <li><a href="index.php" >Home</a></li>
 
-							<li><a href="packages.php">Alojamento</a></li>
-							<li><a href="alojamento_reserva.php" class="active">Reserva</a></li>
-							<li><a href="blog.php">Blog</a></li>
+                                        <li><a href="packages.php">Alojamento</a></li>
+                                        <li><a href="alojamento_reserva.php" class="active">Reserva</a></li>
+                                        <li><a href="blog.php">Blog</a></li>
 
-							<li><a href="packagesrestaurant.php">Restauração</a></li>
+                                        <li><a href="packagesrestaurant.php">Restauração</a></li>
 
-							<li>
-								<a href="#" class="dropdown-toggle">Descobrir</a>
+                                        <li>
+                                            <a href="#" class="dropdown-toggle">Descobrir</a>
 
-								<ul>
-									<li><a href="about.php">Sobre S. Pedro</a></li>
-									<li><a href="testimonials.php" class="active">Avaliações</a></li>
-									<li><a href="terms.php">Termos</a></li>
-                                    <li><a href="pontosdeinteresse.php">Pontos de Interesse</a></li>
-								</ul>
-							</li>
-							<li><a href="contact.php">Contatos</a></li>
-						</ul>
-					</nav>
+                                            <ul>
+                                                <li><a href="about.php">Sobre S. Pedro</a></li>
+                                                <li><a href="testimonials.php" class="active">Avaliações</a></li>
+                                                <li><a href="terms.php">Termos</a></li>
+                                                <li><a href="pontosdeinteresse.php">Pontos de Interesse</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="contact.php">Contatos</a></li>
+                                    </ul>
+                                </nav>
 
 
                                 <?php
                             }
                             ?>
 
-                ?>
-                <?php
-
-                function bodypackd(){
-                ?>
-
-                <?php
-                $con=mysqli_connect("localhost","root","","pap2021saopedro");
-
-
-
-                ?>
-
-                <!-- Main -->
-                <div id="main">
-                    <div class="inner">
-                        <h1>Casa luxuosa em São Pedro de Moel <span class="pull-right">€1094 - €1500</span></h1>
-
-                        <div class="container-fluid">
-                            <div class="row">
-                                <div class="col-lg-12 col-md-12">
-                                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                                        <ol class="carousel-indicators">
-                                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                                            <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-                                            <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
-                                            <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
-                                        </ol>
-                                        <div class="carousel-inner">
-
-
-                                            <?php
-                                            $controle_ativo = 2;
-                                            $result_carousel = "SELECT * FROM imagens ORDER BY imagemId";
-                                            $resultado_carousel = mysqli_query($con, $result_carousel);
-                                            while ($row_carousel = mysqli_fetch_array($resultado_carousel)) { ?>
-                                                <?php
-                                                if($controle_ativo == 2){ ?>
-
-
-                                                    <div class="carousel-item active ">
-                                                        <img class="d-block w-100 " src="slideshowEstabelecimento/ <?php echo $row_carousel['imagemNome']?>" alt="First slide">
-                                                    </div> <?php
-                                                    $controle_ativo = 1;
-                                                }else{?>
-                                                    <div class="carousel-item ">
-                                                    <img class="d-block w-100 " src="slideshowEstabelecimento/<?php echo $row_carousel['imagemNome']?>" alt="First slide">
-                                                    </div><?php
-                                                }
-
-                                            }
-                                            ?>
-
-
-
-
-
-
-
-
-
-
-
-                                        </div>
-                                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                            <span class="sr-only">Previous</span>
-                                        </a>
-                                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                            <span class="sr-only">Next</span>
-                                        </a>
-                                    </div>
-                                </div>
-
-
-                            </div>
-                        </div>
-
-                        <br>
-                        <br>
-
-                        <div class="container-fluid">
-                            <h3>Descrição</h3>
-                            <?php
-                            $con=mysqli_connect("localhost","root","","pap2021saopedro");
-                            $id=intval($_GET["id"]);
-                            $sql="select * from estabelecimentos where estabelecimentoId=".$id;
-                            $resultEstabelecimentos=mysqli_query($con,$sql);
-                            $dadosEstabelecimentos=mysqli_fetch_array($resultEstabelecimentos);
-
-
-
-
-
-
-
-
-                            ?>
-
-
-                            <?php echo $dadosEstabelecimentos["estabelecimentoDescricao"]?></>
-
-
-                        <br>
-
-
-
-
-
-
-
-
-
-
-
-
-                        <br>
-                        <div class="col-lg-4 col-md-5">
-                            <h3>Informações //teste</h3>
-
-                            <p>
-                                - 	Acessível: Disponiblidade <br>
-                                - Mínimo de 2 diárias <br>
-                                - Hidromassagem <br>
-                                - Acesso à internet <br>
-                                - T6 <br>
-                                -Estacionamento
-                            </p>
-
-                            <span class="image main"><img src="images/map.jpg" alt="" /></span>
-
-                            <a href="#footer" class="button primary scrolly">Enquiry</a>
-                        </div>
-
-                        <h3>Disponibilidade &amp; Preços</h3>
-
-                        <div class="table-responsive">
-                            <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table">
-                                <thead>
-                                <tr>
-                                    <th>Pacote</th>
-                                    <th>De</th>
-                                    <th>Até</th>
-                                    <th>Preço</th>
-                                </tr>
-                                </thead>
-
-                                <tbody>
-                                <tr>
-                                    <td>Natal</td>
-                                    <td>01-11-2020</td>
-                                    <td>27-12-2020</td>
-                                    <td>€ 1200 por noite</td>
-                                </tr>
-
-                                <tr>
-                                    <td>Ano Novo</td>
-                                    <td>28-2020</td>
-                                    <td>3-01-2021</td>
-                                    <td>€ 1500 por noite</td>
-                                </tr>
-
-                                <tr>
-                                    <td>Janeiro</td>
-                                    <td>4-01-2021</td>
-                                    <td>31-01-2021</td>
-                                    <td>€ 1094 por noite</td>
-                                </tr>
-                                <tr>
-                                    <td>Romântico</td>
-                                    <td>01-02-2020</td>
-                                    <td>31-02-2020</td>
-                                    <td>€ 1094 por noite</td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </div>
-
-                        <br>
-
-                        <h3>Info</h3>
-
-                        <ul class="list-group list-group-no-border">
-                            <li class="list-group-item">
-                                <div class="row">
-                                    <div class="col-md-2 col-sm-3">
-                                        <p class="pjVpProductPolicyTitle">
-                                            <strong>Check-in</strong>
-                                        </p>
-                                    </div>
-                                    <div class="col-md-10 col-sm-9">
-                                        <p>
-                                            Perguntar pela disponiblidade.
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
-
-                            <li class="list-group-item">
-                                <div class="row">
-                                    <div class="col-md-2 col-sm-3">
-                                        <p>
-                                            <strong>Check-out</strong>
-                                        </p>
-                                    </div>
-
-                                    <div class="col-md-10 col-sm-9">
-                                        <p>
-                                            Perguntar pela disponiblidade.
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
-
-                            <li class="list-group-item">
-                                <div class="row">
-                                    <div class="col-md-2 col-sm-3">
-                                        <p>
-                                            <strong>Animais</strong>
-                                        </p>
-                                    </div>
-                                    <div class="col-md-10 col-sm-9">
-                                        <p>
-                                            Permetida ter animais.
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
-
-
-
-                        </ul>
-
-
-                    </div>
-                </div>
-
-
-                <!--START SCROLL TOP BUTTON -->
-                <a class="scrollToTop" href="#">
-                    <i class="fa fa-angle-up"></i>
-                </a>
-                <!-- END SCROLL TOP BUTTON -->
-
-                <!-- Start header section -->
-
-                <!-- End header section -->
-
-
-                <!-- Start slider  -->
-
-
-                <!-- Top slider single slide -->
-
-
-
-
-
-
-
-
-
-
-                <!-- Start Map section -->
-                <section id="mu-map">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3067.340411692422!2d-9.027388888116578!3d39.75446477913937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd22057614184209%3A0x28b689c316955980!2sAv.%20das%20Piscinas%2026%2C%202430-492%20M.nha%20Grande!5e0!3m2!1spt-BR!2spt!4v1605265482844!5m2!1spt-BR!2spt" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-                </section>
-                <!-- End Map section -->
-                <br>
-            </div>
-
-        <br>
-
-
-
-
-        <?php
-        }
-        ?>
                             <?php
 
                             function footerpackd(){
                             ?>
 
 
-                         <!-- Footer -->
-					<footer id="footer">
-						<div class="inner">
-							<section>
-								<h2>Reserva</h2>
-								<form method="post" action="#">
-									<div class="fields">
-										<div class="field half">
-											<input type="text" name="name" id="name" placeholder="Nome" />
-										</div>
+                            <!-- Footer -->
+                            <footer id="footer">
+                                <div class="inner">
+                                    <section>
+                                        <h2>Reserva</h2>
+                                        <form method="post" action="#">
+                                            <div class="fields">
+                                                <div class="field half">
+                                                    <input type="text" name="name" id="name" placeholder="Nome" />
+                                                </div>
 
-										<div class="field half">
-											<input type="text" name="email" id="email" placeholder="Email" />
-										</div>
+                                                <div class="field half">
+                                                    <input type="text" name="email" id="email" placeholder="Email" />
+                                                </div>
 
-										<div class="field half">
-											<input type="text" name="phone" id="phone" placeholder="Telemóvel" />
-										</div>
+                                                <div class="field half">
+                                                    <input type="text" name="phone" id="phone" placeholder="Telemóvel" />
+                                                </div>
 
-										<div class="field quarter">
-											<input type="text" placeholder="De 08.07.2020" />
-										</div>
+                                                <div class="field quarter">
+                                                    <input type="text" placeholder="De 08.07.2020" />
+                                                </div>
 
-										<div class="field quarter">
-											<input type="text" placeholder="Até 08.07.2020" />
-										</div>
+                                                <div class="field quarter">
+                                                    <input type="text" placeholder="Até 08.07.2020" />
+                                                </div>
 
-										<div class="field">
-											<textarea name="message" id="message" rows="3" placeholder="Mensagem"></textarea>
-										</div>
+                                                <div class="field">
+                                                    <textarea name="message" id="message" rows="3" placeholder="Mensagem"></textarea>
+                                                </div>
 
-										<div class="field text-right">
-											<label>&nbsp;</label>
+                                                <div class="field text-right">
+                                                    <label>&nbsp;</label>
 
-											<ul class="actions">
-												<li><input type="submit" value="Enviar inquérito" class="primary" /></li>
-											</ul>
-										</div>
-									</div>
-								</form>
-							</section>
-							<section>
-								<h2>Contacto Info</h2>
+                                                    <ul class="actions">
+                                                        <li><input type="submit" value="Enviar inquérito" class="primary" /></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </section>
+                                    <section>
+                                        <h2>Contacto Info</h2>
 
-								<ul class="alt">
-									<li><span class="fa fa-envelope-o"></span> <a href="#">contact@company.com</a></li>
-									<li><span class="fa fa-phone"></span> +1 333 4040 5566 </li>
-									<li><span class="fa fa-mobile"></span> +1 333 4040 5566 </li>
-									<li><span class="fa fa-map-pin"></span> 212 Barrington Court New York, ABC 10001 United States of America</li>
-								</ul>
-							</section>
+                                        <ul class="alt">
+                                            <li><span class="fa fa-envelope-o"></span> <a href="#">contact@company.com</a></li>
+                                            <li><span class="fa fa-phone"></span> +1 333 4040 5566 </li>
+                                            <li><span class="fa fa-mobile"></span> +1 333 4040 5566 </li>
+                                            <li><span class="fa fa-map-pin"></span> 212 Barrington Court New York, ABC 10001 United States of America</li>
+                                        </ul>
+                                    </section>
 
-							<ul class="copyright">
-								<li>Copyright © 2020 Company Name </li>
-								<li>Template by: <a href="https://www.phpjabbers.com/">PHPJabbers.com</a></li>
-							</ul>
-						</div>
-					</footer>
+                                    <ul class="copyright">
+                                        <li>Copyright © 2020 Company Name </li>
+                                        <li>Template by: <a href="https://www.phpjabbers.com/">PHPJabbers.com</a></li>
+                                    </ul>
+                                </div>
+                            </footer>
 
-			</div>
-
-
+                        </div>
 
 
 
@@ -3611,34 +3332,36 @@ function bodyLen(){
 
 
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/main.js"></script>
-		<!-- jQuery library -->
-		<script src="assets/js/jquery.min.js"></script>
-		<!-- Include all compiled plugins (below), or include individual files as needed -->
-		<script src="assets/js/bootstrap.js"></script>
-		<!-- Slick slider -->
-		<script type="text/javascript" src="assets/js/slick.js"></script>
-		<!-- Counter -->
-		<script type="text/javascript" src="assets/js/simple-animated-counter.js"></script>
-		<!-- Gallery Lightbox -->
-		<script type="text/javascript" src="assets/js/jquery.magnific-popup.min.js"></script>
-		<!-- Date Picker -->
-		<script type="text/javascript" src="assets/js/bootstrap-datepicker.js"></script>
-		<!-- Ajax contact form  -->
-		<script type="text/javascript" src="assets/js/app.js"></script>
-
-		<!-- Custom js -->
-		<script src="assets/js/custom.js"></script>
 
 
+                        <!-- Scripts -->
+                        <script src="assets/js/jquery.min.js"></script>
+                        <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+                        <script src="assets/js/jquery.scrolly.min.js"></script>
+                        <script src="assets/js/jquery.scrollex.min.js"></script>
+                        <script src="assets/js/main.js"></script>
+                        <!-- jQuery library -->
+                        <script src="assets/js/jquery.min.js"></script>
+                        <!-- Include all compiled plugins (below), or include individual files as needed -->
+                        <script src="assets/js/bootstrap.js"></script>
+                        <!-- Slick slider -->
+                        <script type="text/javascript" src="assets/js/slick.js"></script>
+                        <!-- Counter -->
+                        <script type="text/javascript" src="assets/js/simple-animated-counter.js"></script>
+                        <!-- Gallery Lightbox -->
+                        <script type="text/javascript" src="assets/js/jquery.magnific-popup.min.js"></script>
+                        <!-- Date Picker -->
+                        <script type="text/javascript" src="assets/js/bootstrap-datepicker.js"></script>
+                        <!-- Ajax contact form  -->
+                        <script type="text/javascript" src="assets/js/app.js"></script>
 
-	</body>
-</html>
+                        <!-- Custom js -->
+                        <script src="assets/js/custom.js"></script>
+
+
+
+                        </body>
+                        </html>
                         <?php
                         }
                         ?>
@@ -4559,4 +4282,291 @@ function bodyLen(){
                         <?php
                         }
                         ?>
+
+                        <?php
+
+                        function bodypackd(){
+                        ?>
+
+                        <?php
+                        $con=mysqli_connect("localhost","root","","pap2021saopedro");
+
+
+
+                        ?>
+
+                        <!-- Main -->
+                        <div id="main">
+                            <div class="inner">
+                                <h1>Casa luxuosa em São Pedro de Moel <span class="pull-right">€1094 - €1500</span></h1>
+
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-lg-12 col-md-12">
+                                            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                                                <ol class="carousel-indicators">
+                                                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                                                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                                                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                                                    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                                                    <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+                                                    <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+                                                </ol>
+                                                <div class="carousel-inner">
+
+
+                                                    <?php
+                                                    $controle_ativo = 2;
+                                                    $result_carousel = "SELECT * FROM imagens ORDER BY imagemId";
+                                                    $resultado_carousel = mysqli_query($con, $result_carousel);
+                                                    while ($row_carousel = mysqli_fetch_array($resultado_carousel)) { ?>
+                                                        <?php
+                                                        if($controle_ativo == 2){ ?>
+
+
+                                                            <div class="carousel-item active ">
+                                                                <img class="d-block w-100 " src="slideshowEstabelecimento/ <?php echo $row_carousel['imagemNome']?>" alt="First slide">
+                                                            </div> <?php
+                                                            $controle_ativo = 1;
+                                                        }else{?>
+                                                            <div class="carousel-item ">
+                                                            <img class="d-block w-100 " src="slideshowEstabelecimento/<?php echo $row_carousel['imagemNome']?>" alt="First slide">
+                                                            </div><?php
+                                                        }
+
+                                                    }
+                                                    ?>
+
+
+
+
+
+
+
+
+
+
+
+                                                </div>
+                                                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                    <span class="sr-only">Previous</span>
+                                                </a>
+                                                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                    <span class="sr-only">Next</span>
+                                                </a>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+
+                                <br>
+                                <br>
+
+                                <div class="container-fluid">
+                                    <h3>Descrição</h3>
+                                    <?php
+                                    $con=mysqli_connect("localhost","root","","pap2021saopedro");
+                                    $id=intval($_GET["id"]);
+                                    $sql="select * from estabelecimentos where estabelecimentoId=".$id;
+                                    $resultEstabelecimentos=mysqli_query($con,$sql);
+                                    $dadosEstabelecimentos=mysqli_fetch_array($resultEstabelecimentos);
+
+
+
+
+
+
+
+
+                                    ?>
+
+
+                                    <?php echo $dadosEstabelecimentos["estabelecimentoDescricao"]?></>
+
+
+                                <br>
+
+
+
+
+
+
+
+
+
+
+
+
+                                <br>
+                                <div class="col-lg-4 col-md-5">
+                                    <h3>Informações //teste</h3>
+
+                                    <p>
+                                        - 	Acessível: Disponiblidade <br>
+                                        - Mínimo de 2 diárias <br>
+                                        - Hidromassagem <br>
+                                        - Acesso à internet <br>
+                                        - T6 <br>
+                                        -Estacionamento
+                                    </p>
+
+                                    <span class="image main"><img src="images/map.jpg" alt="" /></span>
+
+                                    <a href="#footer" class="button primary scrolly">Enquiry</a>
+                                </div>
+
+                                <h3>Disponibilidade &amp; Preços</h3>
+
+                                <div class="table-responsive">
+                                    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table">
+                                        <thead>
+                                        <tr>
+                                            <th>Pacote</th>
+                                            <th>De</th>
+                                            <th>Até</th>
+                                            <th>Preço</th>
+                                        </tr>
+                                        </thead>
+
+                                        <tbody>
+                                        <tr>
+                                            <td>Natal</td>
+                                            <td>01-11-2020</td>
+                                            <td>27-12-2020</td>
+                                            <td>€ 1200 por noite</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Ano Novo</td>
+                                            <td>28-2020</td>
+                                            <td>3-01-2021</td>
+                                            <td>€ 1500 por noite</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Janeiro</td>
+                                            <td>4-01-2021</td>
+                                            <td>31-01-2021</td>
+                                            <td>€ 1094 por noite</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Romântico</td>
+                                            <td>01-02-2020</td>
+                                            <td>31-02-2020</td>
+                                            <td>€ 1094 por noite</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <br>
+
+                                <h3>Info</h3>
+
+                                <ul class="list-group list-group-no-border">
+                                    <li class="list-group-item">
+                                        <div class="row">
+                                            <div class="col-md-2 col-sm-3">
+                                                <p class="pjVpProductPolicyTitle">
+                                                    <strong>Check-in</strong>
+                                                </p>
+                                            </div>
+                                            <div class="col-md-10 col-sm-9">
+                                                <p>
+                                                    Perguntar pela disponiblidade.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="list-group-item">
+                                        <div class="row">
+                                            <div class="col-md-2 col-sm-3">
+                                                <p>
+                                                    <strong>Check-out</strong>
+                                                </p>
+                                            </div>
+
+                                            <div class="col-md-10 col-sm-9">
+                                                <p>
+                                                    Perguntar pela disponiblidade.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="list-group-item">
+                                        <div class="row">
+                                            <div class="col-md-2 col-sm-3">
+                                                <p>
+                                                    <strong>Animais</strong>
+                                                </p>
+                                            </div>
+                                            <div class="col-md-10 col-sm-9">
+                                                <p>
+                                                    Permetida ter animais.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </li>
+
+
+
+                                </ul>
+
+
+                            </div>
+                        </div>
+
+
+                        <!--START SCROLL TOP BUTTON -->
+                        <a class="scrollToTop" href="#">
+                            <i class="fa fa-angle-up"></i>
+                        </a>
+                        <!-- END SCROLL TOP BUTTON -->
+
+                        <!-- Start header section -->
+
+                        <!-- End header section -->
+
+
+                        <!-- Start slider  -->
+
+
+                        <!-- Top slider single slide -->
+
+
+
+
+
+
+
+
+
+
+                        <!-- Start Map section -->
+                        <section id="mu-map">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3067.340411692422!2d-9.027388888116578!3d39.75446477913937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd22057614184209%3A0x28b689c316955980!2sAv.%20das%20Piscinas%2026%2C%202430-492%20M.nha%20Grande!5e0!3m2!1spt-BR!2spt!4v1605265482844!5m2!1spt-BR!2spt" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                        </section>
+                        <!-- End Map section -->
+                        <br>
+                    </div>
+
+                    <br>
+
+
+
+
+                    <?php
+                    }
+                    ?>
+
+
+
+
+
 
