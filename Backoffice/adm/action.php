@@ -57,13 +57,13 @@ if(isset($_POST["action"]))
         $output = '
   <table class="table table-bordered table-striped">
    <tr>
-    <th>Folder Name</th>
-    <th>Total File</th>
-    <th>Size</th>
+    <th>Nome Pasta</th>
+    <th>Total Ficheiros</th>
+    <th>Tamanho</th>
     <th>Update</th>
-    <th>Delete</th>
+    <th>Eliminar</th>
     <th>Upload File</th>
-    <th>View Uploaded File</th>
+    <th>Ver Ficheiros</th>
    </tr>
    ';
         if(count($folder) > 0)

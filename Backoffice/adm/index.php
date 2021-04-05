@@ -11,10 +11,10 @@
 <body>
 <br /><br />
 <div class="container">
-    <h2 align="center">PHP Filesystem with Ajax JQuery</a></h2>
+    <h2 align="center">Sistema de Ficheiros</a></h2>
     <br />
     <div align="right">
-        <button type="button" name="create_folder" id="create_folder" class="btn btn-success">Create</button>
+        <button type="button" name="create_folder" id="create_folder" class="btn btn-success">Adicionar Pasta</button>
     </div>
     <br />
     <div class="table-responsive" id="folder_table">

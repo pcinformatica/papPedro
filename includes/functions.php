@@ -4008,6 +4008,30 @@ function bodyLen(){
                                         <div class="container-fluid">
                                             <h3>Descrição</h3>
 
+                                            <?php
+                                            $con=mysqli_connect("localhost","root","","pap2021saopedro");
+                                            $id=intval($_GET["id"]);
+                                            $sql="select * from estabelecimentos where estabelecimentoId=".$id;
+                                            $resultEstabelecimentos=mysqli_query($con,$sql);
+                                            $dadosEstabelecimentos=mysqli_fetch_array($resultEstabelecimentos);
+
+
+
+
+
+
+
+
+                                            ?>
+
+
+                                            <?php echo $dadosEstabelecimentos["estabelecimentoDescricao"]?></>
+
+
+
+
+
+
                                             <p>Os hóspedes poderão desfrutar de cozinha gourmet no restaurante, enquanto observam uma variedade de cores no céu durante o pôr-do-sol. O bar propõe um ambiente relaxante para tomar uma bebida à noite, com televisões de ecrã plano e cadeiras verdes.</p>
 
                                             <p>O restaurante O Penedo encontra-se a 1 hora de carro do Aeroporto de Lisboa. A vila piscatória da Nazaré está a 20 km e o Santuário de Fátima fica a 50 km. A vila medieval de Óbidos encontra-se a 60 km e as praias de Peniche, com suas óptimas condições de surf, estão a cerca de 80 km. </p>
