@@ -622,10 +622,115 @@ function topLen(){
                         <div class="inner">
                             <h1>Página Cultural</h1>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                             <div class="image main">
                                 <img src="images/banner-image-7-1920x500.jpg" class="img-fluid" alt=""/>
                             </div>
+                            <?php
+                            include_once("config.inc.php");
+                            $con = mysqli_connect("localhost", "root", "", "pap2021saopedro");
+                            $con->set_charset("utf8");
+                            $sql = "SELECT * 
+from cultural";
+                            $resultado = mysqli_query($con, $sql);
 
+
+                            ?>
+                            <section class="tiles">
+                                <?php
+                                while ($dados = mysqli_fetch_array($resultado)) {
+                                    ?>
+
+
+                                    <article class="style1">
+                                                <span class="image">
+                                                    <img src="<?php echo $dados ['culturalURL'] ?>" alt=""/>
+                                                </span>
+                                        <a href="package-details.php?id=<?php echo $dados  ['culturalId'] ?>">
+                                            <h2><?php echo $dados  ['culturalNome'] ?></h2>
+
+
+
+                                        </a>
+                                    </article>
+                                    <?php
+                                } ?>
+                            </section>
                             <!-- Packages -->
                             <section class="tiles">
                                 <article class="style1">
@@ -1583,7 +1688,11 @@ function topLen(){
                                         include_once("config.inc.php");
                                         $con = mysqli_connect("localhost", "root", "", "pap2021saopedro");
                                         $con->set_charset("utf8");
-                                        $sql = "SELECT * from  estabelecimentos  right join estabelecimentocategorias on estabelecimentoCategoriaCategoriaId = 1 and estabelecimentoCategoriaEstabelecimentoId = estabelecimentoId ";
+                                       $sql = "SELECT * 
+from  estabelecimentos  inner join estabelecimentocategorias on estabelecimentoCategoriaEstabelecimentoId = estabelecimentoId 
+inner join categorias on estabelecimentoCategoriaCategoriaId = categoriaId
+where categoriaNome='Alojamento'";
+
                                         $resultado = mysqli_query($con, $sql);
 
 
@@ -1601,7 +1710,7 @@ function topLen(){
                                                     <a href="package-details.php?id=<?php echo $dados  ['estabelecimentoId'] ?>">
                                                         <h2><?php echo $dados  ['estabelecimentoNome'] ?></h2>
 
-                                                        <p><strong>€1094.00 - €1500.00</strong></p>
+                                                        <p><strong>€<?php echo $dados  ['estabelecimentoPrecoMin'] ?> - €<?php echo $dados  ['estabelecimentoPrecoMax'] ?></strong></p>
 
                                                         <p>
                                                             <small>
@@ -1613,7 +1722,7 @@ function topLen(){
                                                     </a>
                                                 </article>
                                                 <?php
-                                            } ?>
+                                            }?>
                                         </section>
 
                                         <p class="text-center"><a href="packages.php">Ver Alojamento &nbsp;<i
@@ -1628,7 +1737,10 @@ function topLen(){
                                         include_once("config.inc.php");
                                         $con = mysqli_connect("localhost", "root", "", "pap2021saopedro");
                                         $con->set_charset("utf8");
-                                        $sql = "SELECT * from  estabelecimentos  right join estabelecimentocategorias on estabelecimentoCategoriaCategoriaId = 2 and estabelecimentoCategoriaEstabelecimentoId = estabelecimentoId ";
+                                        $sql = "SELECT * 
+from  estabelecimentos  inner join estabelecimentocategorias on estabelecimentoCategoriaEstabelecimentoId = estabelecimentoId 
+inner join categorias on estabelecimentoCategoriaCategoriaId = categoriaId
+where categoriaNome='Alojamento'";
                                         $resultado = mysqli_query($con, $sql);
 
 
@@ -1646,7 +1758,7 @@ function topLen(){
                                                     <a href="package-details.php?id=<?php echo $dados  ['estabelecimentoId'] ?>">
                                                         <h2><?php echo $dados  ['estabelecimentoNome'] ?></h2>
 
-                                                        <p><strong>€1094.00 - €1500.00</strong></p>
+                                                        <p><strong>€<?php echo $dados  ['estabelecimentoPrecoMin'] ?> - €<?php echo $dados  ['estabelecimentoPrecoMax'] ?></strong></p>
 
                                                         <p>
                                                             <small>
@@ -1688,6 +1800,30 @@ function topLen(){
                                                 <p><strong>- Ana Luíza</strong></p>
                                             </div>
                                         </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
                                         <p class="text-center"><a href="testimonials.php">Consulte mais informação
                                                 &nbsp;<i class="fa fa-long-arrow-right"></i></a></p>
@@ -1736,6 +1872,42 @@ function topLen(){
                             }
 
                             ?>
+
+                            <?php
+
+                            function wys()
+                            {
+                                ?>
+
+
+
+
+
+
+
+
+
+
+
+
+                                <?php
+                            }
+                            ?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                             <?php
 
                             function footerind(){
