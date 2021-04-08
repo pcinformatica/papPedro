@@ -25,10 +25,29 @@ $dadosEstabelecimentos=mysqli_fetch_array($resultEstabelecimentos);
 
 
 
-
 <section class="store" style="padding:50px">
         <a href="Backoffice.php"><button type="button" class="btn btn-danger">Voltar</button></a>
         <hr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         <form action="../edita/confirmaEditaEstabelecimento3.php?id=<?php echo $id ?>" method="post" enctype="multipart/form-data">
             <label style="color:black; font-size: 15px" class="badge badge-dark">Nome de Estabelecimento: </label>
             <input type="text"  name="estabelecimentoNome" value="<?php echo $dadosEstabelecimentos["estabelecimentoNome"]?>"><hr>
@@ -95,7 +114,8 @@ $dadosEstabelecimentos=mysqli_fetch_array($resultEstabelecimentos);
                 });
             </script>
 
-            <textarea name="reviewTexto" id="myTextarea" ><?php echo $dadosEstabelecimentos["estabelecimentoDescricao"]?></textarea>
+            <textarea name="estabelecimentoDescricao" id="myTextarea" ><?php echo $dadosEstabelecimentos["estabelecimentoDescricao"]?></textarea>
+
 
 
 
