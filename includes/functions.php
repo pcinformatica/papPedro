@@ -1740,7 +1740,7 @@ where categoriaNome='Alojamento'";
                                         $sql = "SELECT * 
 from  estabelecimentos  inner join estabelecimentocategorias on estabelecimentoCategoriaEstabelecimentoId = estabelecimentoId 
 inner join categorias on estabelecimentoCategoriaCategoriaId = categoriaId
-where categoriaNome='Alojamento'";
+where categoriaNome='Restauracao'";
                                         $resultado = mysqli_query($con, $sql);
 
 
