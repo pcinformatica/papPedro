@@ -31,7 +31,7 @@ $dadosEstabelecimentos=mysqli_fetch_array($resultEstabelecimentos);
 
             <link href="summernote.css" rel="stylesheet">
             <script src='../js2/tinymce/tinymce.min.js'></script>
-
+            <label style="color:white; font-size: 15px" class="badge badge-dark">Descrição do Estabelecimento: </label>
             <script>
 
                 tinymce.init({
@@ -93,7 +93,7 @@ $dadosEstabelecimentos=mysqli_fetch_array($resultEstabelecimentos);
 
             <textarea name="estabelecimentoDescricao" id="myTextarea" ><?php echo $dadosEstabelecimentos["estabelecimentoDescricao"]?></textarea>
 
-
+            <hr>
 
 
 
@@ -113,7 +113,7 @@ $dadosEstabelecimentos=mysqli_fetch_array($resultEstabelecimentos);
             <label style="color:white; font-size: 15px" class="badge badge-dark">Preço Max do Estabelecimento: </label>
             <input type="text"  name="estabelecimentoPrecoMax" value="<?php echo $dadosEstabelecimentos["estabelecimentoPrecoMax"]?>">
 
-
+            <hr>
             <script>
                 function preview_image(event) {
                     var reader = new FileReader();
