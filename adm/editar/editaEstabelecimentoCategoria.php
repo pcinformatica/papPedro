@@ -17,17 +17,27 @@ $dadosEstabelecimentos=mysqli_fetch_array($resultEstabelecimentos);
         <hr>
         <form action="../editar/confirmaEditaEstabelecimento.php?id=<?php echo $id ?>" method="post" enctype="multipart/form-data">
 
+
+
             <label style="color:white; font-size: 15px" class="badge badge-dark">Nome de Estabelecimento: </label>
             <input type="text"  name="estabelecimentoNome" value="<?php echo $dadosEstabelecimentos["estabelecimentoNome"]?>"><hr>
 
-            <label style="color:white; font-size: 15px" class="badge badge-dark">Morada do Estabelecimento: </label>
-            <input type="text"  name="estabelecimentoMorada" value="<?php echo $dadosEstabelecimentos["estabelecimentoMorada"]?>"><hr>
+            <select name="categoriaEstabelecimento">
+                <option value="-1">Escolha a categoria...</option>
+                <?php
+                $sql="select * from categorias order by categoriaNome";
+                $result=mysqli_query($con,$sql);
+                while ($dados=mysqli_fetch_array($result)){
+                    ?>
+                    <option value="<?php echo $dados['estabelecimentoId']?>"><?php echo $dados['estabelecimentoNome']?></option>
 
-            <label style="color:white; font-size: 15px" class="badge badge-dark">Telefone do Estabelecimento: </label>
-            <input type="text"  name="estabelecimentoTelefone" value="<?php echo $dadosEstabelecimentos["estabelecimentoTelefone"]?>"><hr>
 
-            <label style="color:white; font-size: 15px" class="badge badge-dark">Email do Estabelecimento: </label>
-            <input type="text"  name="estabelecimentoEmail" value="<?php echo $dadosEstabelecimentos["estabelecimentoEmail"]?>"><hr>
+                    <?php
+                }
+
+
+                ?>
+            </select>
 
             <link href="summernote.css" rel="stylesheet">
             <script src='../js2/tinymce/tinymce.min.js'></script>
@@ -97,72 +107,10 @@ $dadosEstabelecimentos=mysqli_fetch_array($resultEstabelecimentos);
 
 
 
-
-
-
-
-            <label style="color:white; font-size: 15px" class="badge badge-dark">Latitude do Estabelecimento: </label>
-            <input type="text"  name="estabelecimentoLatitude" value="<?php echo $dadosEstabelecimentos["estabelecimentoLatitude"]?>">
-
-            <label style="color:white; font-size: 15px" class="badge badge-dark">Longitude do Estabelecimento: </label>
-            <input type="text"  name="estabelecimentoLongitude" value="<?php echo $dadosEstabelecimentos["estabelecimentoLongitude"]?>">
-
-            <label style="color:white; font-size: 15px" class="badge badge-dark">Preço Min do Estabelecimento: </label>
-            <input type="text"  name="estabelecimentoPrecoMin" value="<?php echo $dadosEstabelecimentos["estabelecimentoPrecoMin"]?>">
-
-            <label style="color:white; font-size: 15px" class="badge badge-dark">Preço Max do Estabelecimento: </label>
-            <input type="text"  name="estabelecimentoPrecoMax" value="<?php echo $dadosEstabelecimentos["estabelecimentoPrecoMax"]?>">
-
-
-
             <hr>
-
-
-
-
-
-
-
-
-
-
-
-
-            <hr>
-            <script>
-                function preview_image(event) {
-                    var reader = new FileReader();
-                    reader.onload = function () {
-                        var output = document.getElementById('output_image');
-                        output.src = reader.result;
-                    }
-                    reader.readAsDataURL(event.target.files[0]);
-                }
-            </script>
-            <div class="container">
-                <h2 align="center" style="margin-top: 10%">
-
-                        <input type="hidden" name="imagemId" value="<?php echo $id ?>">
-
-                        <label>Imagem:</label><br>
-                        <img width="400" id="output_image" src="../../<?php echo $dadosEstabelecimentos['estabelecimentoURL']?>"><br>
-                    <input type="file" name="nomeImagem"><br>
-
-
-            </div>
-
 
 
             <input type="Submit"  aria-describedby="inputGroup-sizing-sm" class="btn btn-success" value="Edita" ><br>
-
-
-
-
-
-
-
-
-
 
 
         </form>
