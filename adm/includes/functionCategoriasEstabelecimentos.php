@@ -136,7 +136,18 @@ $result=mysqli_query($con,$sql);
         <?php
 
         //dados na base de dados
-        $sql="select * from estabelecimentocategorias";
+        $sql=" SELECT *
+        from  estabelecimentos  inner join estabelecimentocategorias on estabelecimentoCategoriaEstabelecimentoId = estabelecimentoId 
+inner join categorias on estabelecimentoCategoriaCategoriaId = categoriaId";
+
+
+
+
+
+
+
+
+
 
         // inner join categorias on
         //inner join on where categoriaId=".$id
@@ -145,8 +156,8 @@ $result=mysqli_query($con,$sql);
         while ($dados=mysqli_fetch_array($result)) {
             echo "<tr>";
             echo " <td></td>";
-            echo "<td>".$dados['estabelecimentoCategoriaCategoriaId']."</td>";
-            echo "<td>".$dados['estabelecimentoCategoriaEstabelecimentoId']."</td>";
+            echo "<td>".$dados['categoriaNome']."</td>";
+            echo "<td>".$dados['estabelecimentoNome']."</td>";
             echo "<td>".$dados['estabelecimentoCategoriaDescricao']."</td>";
 
 
@@ -155,7 +166,7 @@ $result=mysqli_query($con,$sql);
 
            echo "<td class= 'actions' >";
 
-            echo  "<a class='btn btn-success btn-xs' href='listaslideshow.php'><i class='fa fa-eye'></i> Slideshow </a>";
+            echo  "<a class='btn btn-success btn-xs' href='listaestabelecimentos.php'><i class='fa fa-eye'></i> Slideshow </a>";
 
                   echo  " <a class='btn btn-warning btn-xs  justify-content-md-end'href=\"../editar/editaEstabelecimentoCategoria.php?id=".$dados["estabelecimentoId"]."\"><i class='fa fa-pencil'></i>Editar</a>";
 

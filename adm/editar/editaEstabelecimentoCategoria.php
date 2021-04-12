@@ -3,7 +3,9 @@
 
 $con=mysqli_connect("localhost","root","","pap2021saopedro");
 $id=intval($_GET["id"]);
-$sql="select * from estabelecimentos where estabelecimentoId=".$id;
+$sql="SELECT *
+        from  estabelecimentos  inner join estabelecimentocategorias on estabelecimentoCategoriaEstabelecimentoId = estabelecimentoId 
+inner join categorias on estabelecimentoCategoriaCategoriaId = categoriaId where estabelecimentoId=".$id;
 $resultEstabelecimentos=mysqli_query($con,$sql);
 $dadosEstabelecimentos=mysqli_fetch_array($resultEstabelecimentos);
 ?>
@@ -25,11 +27,12 @@ $dadosEstabelecimentos=mysqli_fetch_array($resultEstabelecimentos);
             <select name="categoriaEstabelecimento">
                 <option value="-1">Escolha a categoria...</option>
                 <?php
-                $sql="select * from categorias order by categoriaNome";
+                $sql="SELECT *
+        from  categorias  order by categoriaNome";
                 $result=mysqli_query($con,$sql);
                 while ($dados=mysqli_fetch_array($result)){
                     ?>
-                    <option value="<?php echo $dados['estabelecimentoId']?>"><?php echo $dados['estabelecimentoNome']?></option>
+                    <option value="<?php echo $dados['categoriaId']?>"><?php echo $dados['categoriaNome']?></option>
 
 
                     <?php
@@ -37,7 +40,7 @@ $dadosEstabelecimentos=mysqli_fetch_array($resultEstabelecimentos);
 
 
                 ?>
-            </select>
+            </select><hr>
 
             <link href="summernote.css" rel="stylesheet">
             <script src='../js2/tinymce/tinymce.min.js'></script>
@@ -101,7 +104,7 @@ $dadosEstabelecimentos=mysqli_fetch_array($resultEstabelecimentos);
                 });
             </script>
 
-            <textarea name="estabelecimentoDescricao" id="myTextarea" ><?php echo $dadosEstabelecimentos["estabelecimentoDescricao"]?></textarea>
+            <textarea name="estabelecimentoCategoriaDescricao" id="myTextarea" ><?php echo $dadosEstabelecimentos["estabelecimentoCategoriaDescricao"]?></textarea>
 
             <hr>
 
