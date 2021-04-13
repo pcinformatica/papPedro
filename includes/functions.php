@@ -627,77 +627,6 @@ function topLen(){
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                             <div class="image main">
                                 <img src="images/banner-image-7-1920x500.jpg" class="img-fluid" alt=""/>
                             </div>
@@ -705,8 +634,9 @@ function topLen(){
                             include_once("config.inc.php");
                             $con = mysqli_connect("localhost", "root", "", "pap2021saopedro");
                             $con->set_charset("utf8");
-                            $sql = "SELECT * 
-from cultural";
+                            $sql = "SELECT * from  setores 
+inner join categorias on setorCategoriaId = categoriaId
+";
                             $resultado = mysqli_query($con, $sql);
 
 
@@ -719,10 +649,10 @@ from cultural";
 
                                     <article class="style1">
                                                 <span class="image">
-                                                    <img src="<?php echo $dados ['culturalURL'] ?>" alt=""/>
+                                                    <img src="<?php echo $dados ['setorURL'] ?>" alt=""/>
                                                 </span>
-                                        <a href="package-details.php?id=<?php echo $dados  ['culturalId'] ?>">
-                                            <h2><?php echo $dados  ['culturalNome'] ?></h2>
+                                        <a href="cultural.php?id=<?php echo $dados  ['setorId'] ?>">
+                                            <h2><?php echo $dados  ['setorNome'] ?></h2>
 
 
 
@@ -730,75 +660,7 @@ from cultural";
                                     </article>
                                     <?php
                                 } ?>
-                            </section>
-                            <!-- Packages -->
-                            <section class="tiles">
-                                <article class="style1">
-									<span class="image">
-										<img src="images/caminhadas.jpg" alt=""/>
-									</span>
-                                    <a href="PercursosPedestres.php">
-                                        <h2>Percursos Pedestres</h2>
 
-
-                                    </a>
-                                </article>
-                                <article class="style2">
-									<span class="image">
-										<img src="images/lendas.jpg" alt=""/>
-									</span>
-                                    <a href="Lendas.php">
-                                        <h2>Histórias e Lendas</h2>
-
-
-                                    </a>
-                                </article>
-                                <article class="style3">
-									<span class="image">
-										<img src="images/farol.jpg" alt=""/>
-									</span>
-                                    <a href="package-details3.html">
-                                        <h2>Património Histórico</h2>
-
-
-                                    </a>
-                                </article>
-
-                                <article class="style4">
-									<span class="image">
-										<img src="images/maxresdefault.jpg" alt=""/>
-									</span>
-                                    <a href="package-details4.html">
-                                        <h2>Eventos</h2>
-
-
-                                    </a>
-                                </article>
-
-                                <article class="style5">
-									<span class="image">
-										<img src="images/Pinhal-de-Leiria.jpg" alt=""/>
-									</span>
-                                    <a href="teste%20rating/package-details5.html">
-                                        <h2>Pinhal de Leiria</h2>
-
-
-                                    </a>
-                                </article>
-
-                                <article class="style6">
-									<span class="image">
-										<img src="images/SaoPedroMoel_rua2.jpg" alt=""/>
-									</span>
-                                    <a href="teste%20rating3/Better-Rating-Form/package-details6.html">
-                                        <h2>Conhecer +</h2>
-
-
-                                    </a>
-                                </article>
-
-
-                            </section>
                         </div>
                     </div>
 
@@ -887,10 +749,22 @@ from cultural";
 
                     function bodyped(){
                     ?>
+
+                    <?php
+                    $con = mysqli_connect("localhost", "root", "", "pap2021saopedro");
+                    $id = intval($_GET["id"]);
+                    $sql = "  SELECT * 
+from  cultural  inner join setorcultural  where culturalId=".$id;
+
+                  //  $sql = "select * from estabelecimentos where estabelecimentoId=" . $id;
+                    $resultCultural = mysqli_query($con, $sql);
+                    $dadosCultural = mysqli_fetch_array($resultCultural);
+                    ?>
+
                     <!-- Main -->
                     <div id="main">
                         <div class="inner">
-                            <h1>Percursos Pedestres</h1>
+                            <h1><?php echo $dadosCultural["culturalNome"] ?> </h1>
 
                             <div class="image main">
                                 <img src="images/banner-image-8-1920x500.jpg" class="img-fluid" alt=""/>
