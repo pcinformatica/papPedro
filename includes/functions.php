@@ -1032,32 +1032,48 @@ inner join categorias on setorCategoriaId = categoriaId
                                     <div class="row">
                                         <div class="col-9">
                                             <div class="row">
-                                                <div class="col-sm-6 text-center">
-                                                    <img src="images/blog-1-720x480.jpg" class="img-fluid" alt=""/>
 
-                                                    <h2 class="m-n"><a href="blog-post.php">Famoso fotógrafo chega a São
-                                                            Pedro de Moel</a></h2>
+                                                <?php
+                                                $con = mysqli_connect("localhost", "root", "", "pap2021saopedro");
+                                                $sql = "SELECT * from noticias";
 
-                                                    <p> John Doe &nbsp;|&nbsp; 12/06/2020 10:30</p>
-                                                </div>
+                                                $resultado = mysqli_query($con, $sql);
 
-                                                <div class="col-sm-6 text-center">
-                                                    <img src="images/blog-2-720x480.jpg" class="img-fluid" alt=""/>
 
-                                                    <h2 class="m-n"><a href="blog-post.html">Projeto "Azul Mar" aprovada
-                                                            pela CMMG</a></h2>
+                                                ?>
 
-                                                    <p> John Doe &nbsp;|&nbsp; 12/06/2020 10:30</p>
-                                                </div>
+                                                <?php
+                                                while ($dados = mysqli_fetch_array($resultado)) {
+                                                    ?>
 
-                                                <div class="col-sm-6 text-center">
-                                                    <img src="images/blog-3-720x480.jpg" class="img-fluid" alt=""/>
+                                                    <div class="col-sm-6 text-center">
+                                                        <img src="<?php echo $dados ['noticiaURL'] ?>" class="img-fluid" alt=""/>
 
-                                                    <h2 class="m-n"><a href="blog-post.html">Restaurante "Madeira Pinho"
-                                                            inaugura no Sábado</a></h2>
+                                                        <h2 class="m-n"><a href="blog-post.php?id=<?php echo $dados  ['noticiaId'] ?>"><?php echo $dados  ['noticiaTitulo'] ?></a></h2>
 
-                                                    <p> John Doe &nbsp;|&nbsp; 12/06/2020 10:30</p>
-                                                </div>
+                                                        <p> John Doe &nbsp;|&nbsp; <?php echo $dados  ['noticiaData'] ?> <?php echo $dados  ['noticiasH'] ?> </p>
+                                                    </div>
+
+
+
+
+
+
+                                                    <?php
+                                                }?>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
                                             </div>
@@ -1178,26 +1194,38 @@ inner join categorias on setorCategoriaId = categoriaId
                             function bodypost()
                             {
                                 ?>
+                                <?php
+                                $con = mysqli_connect("localhost", "root", "", "pap2021saopedro");
 
+                                $id = intval($_GET["id"]);
+                                $sql = "SELECT * from noticias  where noticiaId=".$id;
+                                $resultado = mysqli_query($con, $sql);
+                                $dados = mysqli_fetch_array($resultado);
+                                ?>
                                 <!-- Main -->
                                 <div id="main">
                                     <div class="inner">
-                                        <h1>Famoso fotógrafo chega a São Pedro de Moel</h1>
+                                        <h1><?php echo $dados ['noticiaTitulo'] ?></h1>
 
                                         <div class="image main">
-                                            <img src="images/blog-fullscreen-1-1920x700.jpg" class="img-fluid" alt=""/>
+                                            <img src="<?php echo $dados ['noticiaURLFundo'] ?>" class="img-fluid" alt=""/>
                                         </div>
 
-                                        <p>Fotografar paisagens naturais continua sendo um dos fundamentos da
-                                            fotografia. Para descobrir as diferentes maneiras de revelar a beleza da
-                                            natureza, inspire-se em um dos maiores profissionais do mundo (curso online
-                                            de fotografia)!</p>
 
-                                        <p>Nascido em 1902 em San Francisco, Ansel Adams era fotógrafo, mas também
-                                            ambientalista norteamericano. Determinado a conservar a natureza em seu
-                                            estado mais puro, ele era apaixonado pelas muitas paisagens do oeste
-                                            americano, também fotografando parques naturais como o famoso Parque
-                                            Yosemite.</p>
+
+
+
+
+
+
+
+
+
+
+
+                                        <p><?php echo $dados ['noticiaDescricao'] ?></p>
+
+
 
                                     </div>
                                 </div>
