@@ -753,107 +753,183 @@ inner join categorias on setorCategoriaId = categoriaId
                     <?php
                     $con = mysqli_connect("localhost", "root", "", "pap2021saopedro");
                     $id = intval($_GET["id"]);
-                    $sql = "  SELECT * 
-from  cultural  inner join setorcultural  where culturalId=".$id;
+                    $sql = "  SELECT * from  cultural   inner  join setorcultural on setorculturalCulturalId = culturalId where culturalId=".$id;
 
-                  //  $sql = "select * from estabelecimentos where estabelecimentoId=" . $id;
+
                     $resultCultural = mysqli_query($con, $sql);
-                    $dadosCultural = mysqli_fetch_array($resultCultural);
+
+
                     ?>
 
                     <!-- Main -->
                     <div id="main">
                         <div class="inner">
-                            <h1><?php echo $dadosCultural["culturalNome"] ?> </h1>
+
+                            <?php
+                            if( $resultCultural = mysqli_query($con, $sql)){
+                                $con = mysqli_connect("localhost", "root", "", "pap2021saopedro");
+                                $id = intval($_GET["id"]);
+                                $sql = "  SELECT * from  cultural   inner  join setorcultural on setorculturalCulturalId = culturalId where culturalId=".$id;
+
+
+                                $resultCultural1 = mysqli_query($con, $sql);
+                                $dadosCultural1 = mysqli_fetch_array( $resultCultural1);
+
+                            ?>
+                            <h1><?php echo $dadosCultural1["culturalNome"] ?> </h1>
 
                             <div class="image main">
-                                <img src="images/banner-image-8-1920x500.jpg" class="img-fluid" alt=""/>
+                                <img src="<?php echo $dadosCultural1 ['culturalURL'] ?>" class="img-fluid" alt=""/>
                             </div>
+                            <?php
+                            }
+                            ?>
 
-                            <h2 class="m-n">Características do Percurso</h2>
-                            <p><b>Nome</b> Da Orla Costeira ao Ribeiro de São Pedro <br>
-                                <b>Código</b> MGR PR3<br>
-                                <b>Tipologia</b> Circular com dois troços lineares de ida e volta<br>
-                                <b>Distância</b> 11,<br>
-                                <b>Duração aproximada</b> 4:00h<br>
-                                <b>Tipo de piso</b> Caminhos de natureza<br>
-                                <b>Grau de dificuldade</b> Médio<br>
-                                <b>Local de Partida </b> Parque Vale do Ribeiro de S.Pedro de Moel<br>
-                                <b>Local de Chegada </b> Parque Vale do Ribeiro de S.Pedro de Moel<br>
-                                <b>Coordenadas geográficas </b> <br>
-                            <h2 class="m-n">Ficheiros</h2>
-                            <img src="../../../a_logotipos/logo_icon_pdf_14_14.gif" width="16" height="16">
-                            <a href="http://www.walkingportugal.com/z_distritos_portugal/Leiria/Marinha_Grande/MGR_pr1_pr2_pr3_percursos_pedestres_da_marinha_grande_folheto.pdf"
-                               target="_blank">MGR
-                                PR3 Da Orla Costeira ao Ribeiro de S&atilde;o Pedro
-                                - Folheto</a><br>
 
-                            <img src="../../../a_logotipos/logo_icon_mp3_15_15.JPG" width="15" height="15">
-                            <a href="http://www.walkingportugal.com/z_distritos_portugal/Leiria/Marinha_Grande/MGR_pr3_da_orla_costeira_ao_ribeiro_de_sao_pedro_audio.mp3"
-                               target="_blank">MGR
-                                PR3 Da Orla Costeira ao Ribeiro de S&atilde;o Pedro
-                                - &Aacute;udio</a> </font></p>
+
+                            <?php
+                          while(  $dadosCultural2 = mysqli_fetch_array( $resultCultural)){
+
+
+                              ?>
+
+                            <h2 class="m-n"><?php echo $dadosCultural2 ['setorculturalDescricaoTitu'] ?></h2>
+                            <p><?php echo $dadosCultural2 ['setorculturalDescricao'] ?> <br>
                             </p>
-                            <h2 class="m-n">Marcação do Percurso e Edição de Guia</h2>
-                            <p> Câmara Municipal da Marinha Grande<br>
-                                Praça Guilherme Stephens 2430-9560 Marinha Grande<br>
-                                Telf 244 573 300 Email geral@cm-mgrande.pt<br>
-                            </p>
-                            <h2 class="m-n">Descrição e Motivos de Interesse</h2>
-                            <p>O percurso do Ribeiro de São Pedro é de pequena rota, com uma extensão de 9,5km (opcional
-                                até 11,7km), de grau de dificuldade moderada e cujos pontos de interesse são ao nível do
-                                patrimonio natural e construído, paisagístico e florestal. O percurso inicia-se no
-                                Parque Vale do Ribeiro de S. Pedro de Moel, concelho da Marinha Grande, nas traseiras da
-                                característica Praça Afonso Lopes Vieira, “desenhada” pelo arquitecto Camilo Korrodi.
-                                Subindo pela encosta Norte do vale, atravessa-se a povoação de São Pedro de Moel em
-                                direcção à Estrada Atlântica – pista ciclável e pedestre paralela à costa. No seguimento
-                                da pista, 100 metros a Norte, pare para observar o belíssimo Farol do Penedo da Saudade.
-                                Inaugurado em 1912, este farol foi construído sobre uma planície de abrasão marinha, 30
-                                a 40 metros acima do nível do mar, e possui um feixe de luz que atinge as 41milhas.
-                                Seguindo o percurso sobre a arriba no sentido Norte, poderá contemplar uma magnífica
-                                paisagem costeira típica do litoral rochoso português, onde estão presentes alguns
-                                endemismos, como a flor-da-saudade (Armeria welwitschii) e o Limonium (Limonium sp.) –
-                                habitat natural 1240 “Arribas com vegetação das costas mediterrânicas com Limonium spp.
-                                endémicas”. À medida que se aproxima do Penedo do Cabo, situado entre a pequena Praia da
-                                Concha e a Praia Velha, apercebe-se de uma mudança brusca na paisagem. Este é um dos
-                                locais onde poderá fazer uma pausa para observar a transição entre um litoral rochoso a
-                                Sul e um litoral arenoso a Norte. Descendo agora o passadiço de madeira em direcção à
-                                Praia Velha, depara-se com um cordão dunar singular. Esta praia tornou-se nos dias de
-                                hoje um local privilegiado para observar as plantas que colonizam ecossistemas dunares e
-                                que estão perfeitamente adaptadas à sobrevivência num meio de condições adversas. Entre
-                                elas podemos encontrar os frágeis cordeirinhos-da-praia (Otanthus maritimus), o
-                                lírio-da-praia (Pancratium maritimum), e o estorno (Ammophila arenaria). No areal desta
-                                praia desagua o Ribeiro de São Pedro que atravessa a Mata no sentido Nascente-Poente e
-                                tem um pequeno caudal frequentemente “empurrado” pelo vento até ao topo Sul da Praia. No
-                                local designado por Canto do Ribeiro, o percurso segue para o interior da Mata Nacional
-                                através de uma estrada florestal que margina o Ribeiro. Este trajecto situa-se no seio
-                                de um bosque ribeirinho de enorme beleza, constituído por amieiros (Alnus glutinosa),
-                                choupos (Populus nigra), salgueiros (Salix sp.), loureiros (Laurus nobilis),
-                                carvalhos-americanos (Quercus rubra), carvalhos-alvarinhos (Quercus robur), acácias
-                                (Acacia melanoxylon), eucaliptos (Eucalyptus globulus), entre várias espécies de
-                                árvores. Do ponto de vista faunístico este local adquire natural importância, uma vez
-                                que constitui uma área de refúgio e de biodiversidade, proporcionando alimento para
-                                diversas espécies de répteis, aves e mamíferos, dos quais se destacam a trepadeira-azul
-                                (Sitta europaea), a gineta (Genetta genetta), o esquilo-vermelho (Sciurus vulgaris), a
-                                lontra (Lutra lutra), a rã-ibérica (Rana
-                                iberica) e o lagarto-de-água (Lacerta schreiberi). No local designado por Ponte Nova
-                                ainda se conserva hoje o açude de uma das duas serrações hidráulicas que laboraram no
-                                interior do Pinhal do Rei desde finais do séc. XVIII / princípios do séc. XIX. Este é um
-                                dos locais onde poderá fazer uma paragem para observar vestígios de antigas serrações e
-                                moinhos hidráulicos. Retomando o trajecto por estrada florestal, chega ao lugar das
-                                Árvores. Neste local tenha atenção à direcção do percurso, que deixa de se fazer por
-                                estrada florestal para seguir um trilho situado no interior da mata. Nas imediações de
-                                São Pedro de Moel atravessa agora um dos locais de lazer, formado essencialmente por
-                                eucaliptos e acácias, privilegiado pelos seus recantos repousantes e ambiente fresco. No
-                                seguimento deste trilho, deparar-se-á com uma estrada florestal, através da qual o
-                                percurso se faz durante alguns metros até entrar novamente no Pinhal (à esquerda). A
-                                partir deste ponto inicia-se o percurso de regresso ao lugar de São Pedro de Moel,
-                                através do arrife e aceiro que contornam o talhão n.º 270 da Mata Nacional, em direcção
-                                ao Parque de Campismo do Inatel. Destacam-se ao longo deste trajecto os pinheiros-bravos
-                                serpentes e o Habitat semi-natural 2270 “Dunas com florestas de Pinus pinaster”.
-                                Chegando à entrada principal do Parque de Campismo do Inatel, o percurso segue de volta
-                                a São Pedro de Moel.
-                            </p>
+
+
+
+
+                    <?php
+                                }
+                    ?>
+
+                            <?php
+                            if( $resultCultural = mysqli_query($con, $sql) ){
+                                $con = mysqli_connect("localhost", "root", "", "pap2021saopedro");
+                                $id = intval($_GET["id"]);
+                                $sql = "  SELECT * from  cultural   inner  join caracteristicas on caracteristicaCulturalId = culturalId where culturalId=".$id;
+
+
+                                $resultCultural1 = mysqli_query($con, $sql);
+                                $dadosCultural3 = mysqli_fetch_array( $resultCultural1);
+
+                                ?>
+                                    <?php
+                                    if( $dadosCultural3 ){
+
+
+                                    ?>
+                                        <h2 class="m-n">Características do Percurso</h2>
+                                        <p><b>Nome</b> <?php echo $dadosCultural3["caracteristicaNome"] ?> <br>
+                                            <b>Código</b> <?php echo $dadosCultural3["caracteristicaCodigo"] ?><br>
+                                            <b>Tipologia</b> <?php echo $dadosCultural3["caracteristicaTipologia"] ?><br>
+                                            <b>Distância</b> <?php echo $dadosCultural3["caracteristicaDistancia"] ?><br>
+                                            <b>Duração aproximada</b><?php echo $dadosCultural3["caracteristicaDuracaoAproximada"] ?>h<br>
+                                            <b>Tipo de piso</b> <?php echo $dadosCultural3["caracteristicaTipoPiso"] ?><br>
+                                            <b>Grau de dificuldade</b> <?php echo $dadosCultural3["caracteristicaGrauDificuldade"] ?><br>
+                                            <b>Local de Partida </b> <?php echo $dadosCultural3["caracteristicaLocalPartida"] ?><br>
+                                            <b>Local de Chegada </b> <?php echo $dadosCultural3["caracteristicaLocalChegada"] ?><br>
+                                            <b>Coordenadas geográficas </b><?php echo $dadosCultural3["caracteristicaCoordenadaGeograficas"] ?> <br>
+
+
+                                    <?php
+                                    }
+                                    ?>
+
+
+
+                                <?php
+                            }
+                            ?>
+
+
+                                            <?php
+                                            if( $resultCultural = mysqli_query($con, $sql) ){
+                                            $con = mysqli_connect("localhost", "root", "", "pap2021saopedro");
+                                            $id = intval($_GET["id"]);
+                                            $sql = "  SELECT * from  cultural   inner  join Ficheiros on ficheiroCulturalId = culturalId where culturalId=".$id;
+
+
+                                            $resultCultural6 = mysqli_query($con, $sql);
+
+
+                                            ?>
+                                            <?php
+                                            if( $resultCultural6  ) {
+                                            $con = mysqli_connect("localhost", "root", "", "pap2021saopedro");
+                                            $id = intval($_GET["id"]);
+                                            $sql = "  SELECT * from  cultural   inner  join Ficheiros on ficheiroCulturalId = culturalId where culturalId=".$id;
+
+
+                                            $resultCultural9 = mysqli_query($con, $sql);
+                                            $dadosCultural8 = mysqli_fetch_array( $resultCultural9)
+                                            ?>
+                                            <?php
+                                            if( $dadosCultural8  ) {
+                                            ?>
+                                                         <h2 class="m-n">Ficheiros</h2>
+                                                <?php
+                                                }
+                                                ?>
+                                            <?php
+                                            }
+                                                ?>
+                                            <?php
+                                            while(  $dadosCultural7 = mysqli_fetch_array( $resultCultural6)){
+
+
+                                            ?>
+
+
+
+                        <img src="../../../a_logotipos/logo_icon_pdf_14_14.gif" width="16" height="16">
+                            <a href="<?php echo $dadosCultural7 ['ficheiroURL'] ?>"
+                               target="_blank"><?php echo $dadosCultural7 ['ficheiroNome'] ?></a><br>
+
+
+
+
+
+
+                        <?php
+                        }
+                        ?>
+
+
+
+                                <?php
+                                }
+                                ?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
                         </div>
