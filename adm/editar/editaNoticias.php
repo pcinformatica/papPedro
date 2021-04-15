@@ -3,9 +3,8 @@
 
 $con=mysqli_connect("localhost","root","","pap2021saopedro");
 $id=intval($_GET["id"]);
-$sql="SELECT *
-        from  estabelecimentos  inner join estabelecimentocategorias on estabelecimentoCategoriaEstabelecimentoId = estabelecimentoId 
-inner join categorias on estabelecimentoCategoriaCategoriaId = categoriaId where estabelecimentoId=".$id;
+
+$sql="select * from noticias where noticiaId=".$id;
 $resultEstabelecimentos=mysqli_query($con,$sql);
 $dadosEstabelecimentos=mysqli_fetch_array($resultEstabelecimentos);
 ?>
@@ -15,42 +14,33 @@ $dadosEstabelecimentos=mysqli_fetch_array($resultEstabelecimentos);
 
 
 
-        <a href="../lista/listaestabelecimentoscategorias.php"><button type="button" class="btn btn-danger">Voltar</button></a>
+        <a href="../lista/listaNoticias.php"><button type="button" class="btn btn-danger">Voltar</button></a>
         <hr>
-        <form action="../editar/confirmaEditaEstabelecimentoCategoria.php?id=<?php echo $id ?>" method="post" enctype="multipart/form-data">
+        <form action="../editar/confirmaEditaNoticias.php?id=<?php echo $id ?>" method="post" enctype="multipart/form-data">
+
+            <label style="color:white; font-size: 15px" class="badge badge-dark">Nome da Notícia: </label>
+            <input type="text"  name="noticiaNome" value="<?php echo $dadosEstabelecimentos["noticiaTitulo"]?>"><hr>
+
+            <div class="form-group row">
+                <label for="example-date-input" class="col-2 col-form-label">Data</label>
+                <div class="col-10">
+                    <input class="form-control" type="date"  name="Data" value="<?php echo $dadosEstabelecimentos["noticiaData"]?>" id="example-date-input">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="example-time-input" class="col-2 col-form-label">Hora</label>
+                <div class="col-10">
+                    <input class="form-control" type="time" name="Hora" value="<?php echo $dadosEstabelecimentos["noticiasH"]?>" id="example-time-input">
+                </div>
+            </div>
+            </div>
 
 
-
-            <label style="color:white; font-size: 15px" class="badge badge-dark">Nome de Estabelecimento: </label>
-            <input type="text"  name="estabelecimentoNome" value="<?php echo $dadosEstabelecimentos["estabelecimentoNome"]?>"><hr>
-
-
-
-
-
-
-            <label style="color:white; font-size: 15px" class="badge badge-dark">Categoria: </label>
-            <select name="categoriaEstabelecimento">
-                <option value="-1"><?php echo $dadosEstabelecimentos["categoriaNome"]?></option>
-                <?php
-                $sql="SELECT *
-        from  categorias  order by categoriaNome";
-                $result=mysqli_query($con,$sql);
-                while ($dados=mysqli_fetch_array($result)){
-                    ?>
-                    <option value="<?php echo $dados['categoriaId']?>"><?php echo $dados['categoriaNome']?></option>
-
-
-                    <?php
-                }
-
-
-                ?>
-            </select><hr>
 
             <link href="summernote.css" rel="stylesheet">
             <script src='../js2/tinymce/tinymce.min.js'></script>
-            <label style="color:white; font-size: 15px" class="badge badge-dark">Descrição do Estabelecimento: </label>
+            <label style="color:white; font-size: 15px" class="badge badge-dark">Descrição da Notícia: </label>
             <script>
 
                 tinymce.init({
@@ -110,16 +100,57 @@ $dadosEstabelecimentos=mysqli_fetch_array($resultEstabelecimentos);
                 });
             </script>
 
-            <textarea name="estabelecimentoDescricao"  id="myTextarea" ><?php echo $dadosEstabelecimentos["estabelecimentoCategoriaDescricao"]?></textarea>
+            <textarea name="noticiaDescricao" id="myTextarea" ><?php echo $dadosEstabelecimentos["noticiaDescricao"]?></textarea>
 
             <hr>
 
 
 
+
+
             <hr>
+
+
+
+
+            <hr>
+            <script>
+                function preview_image(event) {
+                    var reader = new FileReader();
+                    reader.onload = function () {
+                        var output = document.getElementById('output_image');
+                        output.src = reader.result;
+                    }
+                    reader.readAsDataURL(event.target.files[0]);
+                }
+            </script>
+            <div class="container">
+                <h2 align="center" style="margin-top: 10%">
+
+                        <input type="hidden" name="imagemId" value="<?php echo $id ?>">
+
+                        <label>Imagem Inicial:</label><br>
+                        <img width="400" id="output_image" src="../../<?php echo $dadosEstabelecimentos['noticiaURL']?>"><br>
+                    <input type="file" name="nomeImagem"><br>
+
+
+            </div>
+
+
+            <hr>
+
 
 
             <input type="Submit"  aria-describedby="inputGroup-sizing-sm" class="btn btn-success" value="Edita" ><br>
+
+
+
+
+
+
+
+
+
 
 
         </form>

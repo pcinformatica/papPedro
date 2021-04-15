@@ -82,26 +82,27 @@ function table(){
 ?>
 <?php
 $con=mysqli_connect("localhost","root","","pap2021saopedro");
-$sql="select * from cultural inner join setores on setoresSetorId=setorId ";
+$sql="select * from setores inner join categorias on setorCategoriaId=categoriaId ";
 $result=mysqli_query($con,$sql);
 
 ?>
 
 
    <div class="d-grid gap-2 d-md-flex justify-content-md-end" data-toggle="modal" data-target="#exampleModal">
-    <a href="#" class="btn btn-primary pull-right h2">Novo  Cultural</a>
+    <a href="#" class="btn btn-primary pull-right h2">Novo Setor</a>
     </div>
 
 
 
 
-   <table class="table table-striped">
+   <table class="table table-striped">";
       <thead>
         <tr>
             <th scope="col"></th>
           <th scope="col">ID</th>
-          <th scope="col">Nome do Cultural</th>
-          <th scope="col">ID Setor</th>
+          <th scope="col">Nome do Setor</th>
+            <th scope="col">Imagem do setor</th>
+          <th scope="col">ID Categoria</th>
 
 
 
@@ -121,9 +122,10 @@ $result=mysqli_query($con,$sql);
             echo "<tr>";
             echo " <td></td>";
 
-            echo "<td>".$dados['culturalId']."</td>";
-            echo "<td>".$dados['culturalNome']."</td>";
+            echo "<td>".$dados['setorId']."</td>";
             echo "<td>".$dados['setorNome']."</td>";
+            echo "<td><img src=\"../../".$dados['setorURL']."\"></td>";
+            echo "<td>".$dados['categoriaNome']."</td>";
 
 
 
@@ -171,7 +173,7 @@ $result=mysqli_query($con,$sql);
     <script>
         function confirmaElimina(id) {
             if(confirm('Confirma que deseja eliminar o registo?'))
-                window.location="../eliminar/eliminaCultural.php?id=" + id;
+                window.location="../eliminar/eliminaSetor.php?id=" + id;
         }
 
     </script>
@@ -184,32 +186,35 @@ $result=mysqli_query($con,$sql);
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
+                <?php
+                $con=mysqli_connect("localhost","root","","pap2021saopedro");
+                ?>
                 <div class="modal-body">
                     <?php
-                    echo "<form action=\"../adicionar/confirmaNovaCultural.php\" method=\"post\" enctype='multipart/form-data'>";
-
-
-                    echo" <label>Nome: </label>";
-                    echo"  <input type=\"text\" name=\"nomeCategoria1\"><br>";
+                    echo "<form action=\"../adicionar/confirmaNovoSetor.php\" method=\"post\" enctype='multipart/form-data'>";
 
 
 
-                    ?>
+                    echo" <label>Nome do setor: </label>";
+                    echo"  <input type=\"text\" name=\"nomeSetor\"><br>";
+
+
+                         ?>
                     <label>Imagem:</label>
                     <input type="file" name="nomeImagem"><br>
 
 
 
 
-                    <select name="categoriaEstabelecimento">
-                        <option value="-1">Escolha o setor: </option>
+
+                    <select name="imagemCategoria">
+                        <option value="-1">Escolha a Categoria...</option>
                         <?php
-                        $sql="SELECT *
-        from  setores order by setorNome";
+                        $sql="select * from categorias order by categoriaNome";
                         $result=mysqli_query($con,$sql);
                         while ($dados=mysqli_fetch_array($result)){
                             ?>
-                            <option value="<?php echo $dados['setorId']?>"><?php echo $dados['setorNome']?></option>
+                            <option value="<?php echo $dados['categoriaId']?>"><?php echo $dados['categoriaNome']?></option>
 
 
                             <?php
@@ -217,21 +222,15 @@ $result=mysqli_query($con,$sql);
 
 
                         ?>
-                    </select><hr>
-
-
-
-
-
-
+                    </select>
 
 
                 </div>
                 <div class="modal-footer">
 
                     <?php
-                    echo "<button type='button' class='btn btn-secondary' data-dismiss='modal'>Close</button>";
-                    echo" <button type=\"Submit\" class='btn btn-primary'>Save changes</button> ";
+                     echo "<button type='button' class='btn btn-secondary' data-dismiss='modal'>Close</button>";
+                  echo" <button type=\"Submit\" class='btn btn-primary'>Save changes</button> ";
                     ?>
 
                 </div>

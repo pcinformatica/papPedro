@@ -82,6 +82,7 @@ function top(){
 
 
 
+
                 <br>
 
 
@@ -198,6 +199,24 @@ $result=mysqli_query($con,$sql);
 
 
                          ?>
+
+                    <select name="categoriaEstabelecimento">
+                        <option value="-1">Escolha a categoria...</option>
+                        <?php
+                        $sql="SELECT *
+        from  categorias  order by categoriaNome";
+                        $result=mysqli_query($con,$sql);
+                        while ($dados=mysqli_fetch_array($result)){
+                            ?>
+                            <option value="<?php echo $dados['categoriaId']?>"><?php echo $dados['categoriaNome']?></option>
+
+
+                            <?php
+                        }
+
+
+                        ?>
+                    </select><hr>
                 </div>
                 <div class="modal-footer">
 

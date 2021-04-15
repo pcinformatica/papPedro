@@ -3,9 +3,10 @@
 
 $con=mysqli_connect("localhost","root","","pap2021saopedro");
 $id=intval($_GET["id"]);
-$sql="select * from cultural where culturalId=".$id;
-$resultCultural=mysqli_query($con,$sql);
-$dadosCultural=mysqli_fetch_array($resultCultural);
+
+$sql="select * from noticias where noticiaId=".$id;
+$resultEstabelecimentos=mysqli_query($con,$sql);
+$dadosEstabelecimentos=mysqli_fetch_array($resultEstabelecimentos);
 ?>
 <!DOCTYPE HTML>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -13,23 +14,15 @@ $dadosCultural=mysqli_fetch_array($resultCultural);
 
 
 
-        <a href="../lista/listacultural.php"><button type="button" class="btn btn-danger">Voltar</button></a>
+        <a href="../lista/listaNoticias.php"><button type="button" class="btn btn-danger">Voltar</button></a>
         <hr>
-        <form action="../editar/confirmaEditaCultural.php?id=<?php echo $id ?>" method="post" enctype="multipart/form-data">
+        <form action="../editar/confirmaEditaNoticia.php?id=<?php echo $id ?>" method="post" enctype="multipart/form-data">
 
-            <label style="color:white; font-size: 15px" class="badge badge-dark">Nome de Estabelecimento: </label>
-            <input type="text"  name="culturalNome" value="<?php echo $dadosCultural["culturalNome"]?>"><hr>
+            <label style="color:white; font-size: 15px" class="badge badge-dark">Nome da Notícia: </label>
+            <input type="text"  name="noticiaNome" value="<?php echo $dadosEstabelecimentos["noticiaTitulo"]?>"><hr>
 
 
             <hr>
-
-
-
-
-
-
-
-
 
 
 
@@ -50,12 +43,15 @@ $dadosCultural=mysqli_fetch_array($resultCultural);
 
                         <input type="hidden" name="imagemId" value="<?php echo $id ?>">
 
-                        <label>Imagem:</label><br>
-                        <img width="400" id="output_image" src="../../<?php echo $dadosCultural['culturalURL']?>"><br>
+                        <label>Imagem Inicial:</label><br>
+                        <img width="400" id="output_image" src="../../<?php echo $dadosEstabelecimentos['noticiaURLFundo']?>"><br>
                     <input type="file" name="nomeImagem"><br>
 
 
             </div>
+
+
+            <hr>
 
 
 

@@ -73,7 +73,8 @@ function top(){
         <!-- Main -->
         <div id="main">
             <div class="inner">
-                <h1>Página de Estabelecimentos - Administração</h1>
+                <h1>Página de Estabelecimentos - Informação Adicional</h1>
+
 
 
 
@@ -108,7 +109,7 @@ $result=mysqli_query($con,$sql);
 
 
    <div class="d-grid gap-2 d-md-flex justify-content-md-end" data-toggle="modal" data-target="#exampleModal">
-    <a href="#" class="btn btn-primary pull-right h2">Novo estabelecimento</a>
+    <a href="#" class="btn btn-primary pull-right h2">Nova Informação</a>
 
    </div>
 
@@ -166,7 +167,7 @@ inner join categorias on estabelecimentoCategoriaCategoriaId = categoriaId";
 
            echo "<td class= 'actions' >";
 
-            echo  "<a class='btn btn-success btn-xs' href='listaestabelecimentos.php'><i class='fa fa-eye'></i> Slideshow </a>";
+            echo  "<a class='btn btn-success btn-xs' href='listaestabelecimentos.php'><i class='fa fa-eye'></i> Estabelecimentos</a>";
 
                   echo  " <a class='btn btn-warning btn-xs  justify-content-md-end'href=\"../editar/editaEstabelecimentoCategoria.php?id=".$dados["estabelecimentoId"]."\"><i class='fa fa-pencil'></i>Editar</a>";
 
@@ -180,7 +181,7 @@ inner join categorias on estabelecimentoCategoriaCategoriaId = categoriaId";
     <script>
         function confirmaElimina(id) {
             if(confirm('Confirma que deseja eliminar o registo?'))
-                window.location="../eliminar/eliminaEstabelecimento.php?id=" + id;
+                window.location="../eliminar/eliminaEstabelecimentoCategoria.php?id=" + id;
         }
 
     </script>
@@ -195,20 +196,47 @@ inner join categorias on estabelecimentoCategoriaCategoriaId = categoriaId";
                 </div>
                 <div class="modal-body">
                     <?php
-                    echo "<form action=\"../adicionar/confirmaNovoEstabelecimento.php\" method=\"post\" enctype='multipart/form-data'>";
+                    echo "<form action=\"../adicionar/confirmaNovoEstabelecimentoCategoria.php\" method=\"post\" enctype='multipart/form-data'>";
 
 
-                       echo" <label>Nome: </label>";
-                      echo"  <input type=\"text\" name=\"nomeCategoria1\"><br>";
-                    echo" <label>Morada: </label>";
-                    echo"  <input type=\"text\" name=\"moradaEstabelecimento1\"><br>";
-                    echo" <label>Telefone: </label>";
-                    echo"  <input type=\"text\" name=\"telefoneEstabelecimento1\"><br>";
-                    echo" <label>Email: </label>";
-                    echo"  <input type=\"text\" name=\"emailEstabelecimento1\"><br>";
+
 
 
                          ?>
+                    <select name="Categoria">
+                        <option value="-1">Escolha a categoria...</option>
+                        <?php
+                        $sql="SELECT *
+        from  categorias  order by categoriaNome";
+                        $result=mysqli_query($con,$sql);
+                        while ($dados=mysqli_fetch_array($result)){
+                            ?>
+                            <option value="<?php echo $dados['categoriaId']?>"><?php echo $dados['categoriaNome']?></option>
+
+
+                            <?php
+                        }
+
+
+                        ?>
+                    </select><hr>
+                    <select name="Estabelecimento">
+                        <option value="-1">Escolha o estabelecimento...</option>
+                        <?php
+                        $sql="SELECT *
+        from  estabelecimentos  order by estabelecimentoNome";
+                        $result=mysqli_query($con,$sql);
+                        while ($dados=mysqli_fetch_array($result)){
+                            ?>
+                            <option value="<?php echo $dados['estabelecimentoId']?>"><?php echo $dados['estabelecimentoNome']?></option>
+
+
+                            <?php
+                        }
+
+
+                        ?>
+                    </select><hr>
                 </div>
                 <div class="modal-footer">
 
