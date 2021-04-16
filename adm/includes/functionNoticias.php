@@ -156,7 +156,7 @@ $result=mysqli_query($con,$sql);
 
            echo "<td class= 'actions' >";
 
-            echo  " <a class='btn btn-success btn-xs  justify-content-md-end'href=\"../editar/editaNoticiaImagem.php?id=".$dados["noticiaId"]."\"><i class='fa fa-pencil'></i>Editar Imagem</a>";
+            echo  " <a class='btn btn-success btn-xs  justify-content-md-end'href=\"../editar/editaNoticiaImagem.php?id=".$dados["noticiaId"]."\"><i class='fa fa-pencil'></i>Imagem Fundo</a>";
 
                   echo  " <a class='btn btn-warning btn-xs  justify-content-md-end'href=\"../editar/editaNoticias.php?id=".$dados["noticiaId"]."\"><i class='fa fa-pencil'></i>Editar</a>";
 

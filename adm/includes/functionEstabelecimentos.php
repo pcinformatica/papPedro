@@ -199,7 +199,6 @@ $result=mysqli_query($con,$sql);
 
 
                          ?>
-
                     <select name="categoriaEstabelecimento">
                         <option value="-1">Escolha a categoria...</option>
                         <?php
@@ -216,7 +215,8 @@ $result=mysqli_query($con,$sql);
 
 
                         ?>
-                    </select><hr>
+                    </select>
+                <hr>
                 </div>
                 <div class="modal-footer">
 

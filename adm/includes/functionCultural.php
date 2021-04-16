@@ -54,7 +54,7 @@ function top(){
         <!-- Main -->
         <div id="main">
             <div class="inner">
-                <h1>Página de Estabelecimentos - Administração</h1>
+                <h1>Página de Cultural - Administração</h1>
 
 
 
@@ -134,7 +134,7 @@ $result=mysqli_query($con,$sql);
 
            echo "<td class= 'actions' >";
 
-
+            echo "<a class='btn btn-success btn-xs' href='listaDescricao.php'><i class='fa fa-eye'></i> Descrição</a>";
             echo  " <a class='btn btn-warning btn-xs  justify-content-md-end'href=\"../editar/editaSetores.php?id=".$dados["setorId"]."\"><i class='fa fa-pencil'></i>Editar</a>";
 
 
