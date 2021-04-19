@@ -115,13 +115,16 @@ $result=mysqli_query($con,$sql);
         <?php
 
         //dados na base de dados
+        $con=mysqli_connect("localhost","root","","pap2021saopedro");
+        $sql="select * from setorcultural inner join cultural on setorculturalCulturalId=culturalId  ";
+        $result=mysqli_query($con,$sql);
 
 
         while ($dados=mysqli_fetch_array($result)) {
             echo "<tr>";
             echo " <td></td>";
 
-            echo "<td>".$dados['setorculturalId']."</td>";
+            echo "<td>".$dados['culturalId']."</td>";
             echo "<td>".$dados['setorculturalDescricaoTitu']."</td>";
             echo "<td>".$dados['culturalNome']."</td>";
 

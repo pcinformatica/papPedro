@@ -179,7 +179,7 @@ $result=mysqli_query($con,$sql);
     <script>
         function confirmaElimina(id) {
             if(confirm('Confirma que deseja eliminar o registo?'))
-                window.location="../elimina/eliminaImagem.php?id=" + id;
+                window.location="../eliminar/eliminaImagem.php?id=" + id;
         }
 
     </script>

@@ -22,7 +22,7 @@ $dadosEstabelecimentos=mysqli_fetch_array($resultEstabelecimentos);
 
 
             <label style="color:white; font-size: 15px" class="badge badge-dark">Nome da Descrição: </label>
-            <input type="text"  name="descricaoNome" value="<?php echo $dadosEstabelecimentos["setorculturalDescricaoTitu"]?>"><hr>
+            <input type="text"  name="descricaoNome" value="<?php echo $dadosEstabelecimentos["setorculturalDescricaoTitu"]?>">
 
 
 

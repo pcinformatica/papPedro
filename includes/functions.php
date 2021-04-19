@@ -1667,9 +1667,9 @@ inner join categorias on setorCategoriaId = categoriaId
                                         $con = mysqli_connect("localhost", "root", "", "pap2021saopedro");
                                         $con->set_charset("utf8");
                                        $sql = "SELECT * 
-from  estabelecimentos  inner join estabelecimentocategorias on estabelecimentoCategoriaEstabelecimentoId = estabelecimentoId 
-inner join categorias on estabelecimentoCategoriaCategoriaId = categoriaId
-where categoriaNome='Alojamento'";
+from  estabelecimentos 
+inner join categorias on estabelecimentoCategoriaId = categoriaId
+where categoriaNome='Alojamento' limit 6" ;
 
                                         $resultado = mysqli_query($con, $sql);
 
@@ -1712,13 +1712,15 @@ where categoriaNome='Alojamento'";
 
                                         <!-- Packages -->
                                         <?php
+
                                         include_once("config.inc.php");
                                         $con = mysqli_connect("localhost", "root", "", "pap2021saopedro");
                                         $con->set_charset("utf8");
                                         $sql = "SELECT * 
-from  estabelecimentos  inner join estabelecimentocategorias on estabelecimentoCategoriaEstabelecimentoId = estabelecimentoId 
-inner join categorias on estabelecimentoCategoriaCategoriaId = categoriaId
-where categoriaNome='Restauracao'";
+from  estabelecimentos 
+inner join categorias on estabelecimentoCategoriaId = categoriaId
+where categoriaNome='Restauracao' limit 6" ;
+
                                         $resultado = mysqli_query($con, $sql);
 
 

@@ -18,7 +18,7 @@ $novoNome="../images/".$imagem;
   $sql= " update estabelecimentos SET estabelecimentoNome='".$Nome."', estabelecimentoMorada='".$Morada."',estabelecimentoTelefone='".$Telefone."',estabelecimentoEmail='".$Email."', estabelecimentoDescricao='".$Descricao1."',estabelecimentoLatitude='".$Latitude."',estabelecimentoLongitude='".$Longitude."',estabelecimentoPrecoMin='".$PrecMin."',estabelecimentoPrecoMax='".$PrecMax."'";
 if($imagem!=''){
     $sql.=", estabelecimentoURL='images/".$imagem."'";
-    copy($_FILES['imagem']['tmp_name'],$novoNome);
+    copy($_FILES['images']['tmp_name'],$novoNome);
 }
 $sql.=" where estabelecimentoId=".$id;
 

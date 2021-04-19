@@ -4,7 +4,7 @@ $con=mysqli_connect("localhost","root","","pap2021saopedro");
 
 
 $imagem=$_FILES['nomeImagem']['name'];
-$novoNome="slideshowEstabelecimento/".$imagem;
+$novoNome="images/".$imagem;
 copy($_FILES['nomeImagem']['tmp_name'],$novoNome);
 
 $estabelecimentoId=intval($_POST['imagemEstabelecimento']);
