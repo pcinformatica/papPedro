@@ -4,7 +4,7 @@
 $con=mysqli_connect("localhost","root","","pap2021saopedro");
 $id=intval($_GET["id"]);
 
-$sql="select * from caracteristicas inner join cultural where culturalId=".$id;
+$sql="select * from caracteristicas inner join cultural  where caracteristicaId=".$id;
 $resultEstabelecimentos=mysqli_query($con,$sql);
 $dadosEstabelecimentos=mysqli_fetch_array($resultEstabelecimentos);
 ?>
@@ -77,11 +77,11 @@ $dadosEstabelecimentos=mysqli_fetch_array($resultEstabelecimentos);
                 <option value="-1"><?php echo  $dadosEstabelecimentos["culturalNome"]?></option>
                 <?php
                 $sql="SELECT *
-        from  categorias  order by categoriaNome";
+        from  cultural  order by culturalNome";
                 $result=mysqli_query($con,$sql);
                 while ($dados=mysqli_fetch_array($result)){
                     ?>
-                    <option value="<?php echo $dados['categoriaId']?>"><?php echo $dados['categoriaNome']?></option>
+                    <option value="<?php echo $dados['culturalId']?>"><?php echo $dados['culturalNome']?></option>
 
 
                     <?php

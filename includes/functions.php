@@ -1587,6 +1587,39 @@ inner join categorias on setorCategoriaId = categoriaId
 
                                 <!-- Main -->
                                 <div id="main">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                                     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                                         <ol class="carousel-indicators">
                                             <?php
