@@ -73,15 +73,23 @@ $dadosEstabelecimentos=mysqli_fetch_array($resultEstabelecimentos);
 
 
             <label style="color:white; font-size: 15px" class="badge badge-dark">Categoria: </label>
+
             <select name="categoriaEstabelecimento">
                 <option value="-1"><?php echo  $dadosEstabelecimentos["culturalNome"]?></option>
+
                 <?php
                 $sql="SELECT *
-        from  cultural  order by culturalNome";
+                      from  cultural  order by culturalNome";
                 $result=mysqli_query($con,$sql);
                 while ($dados=mysqli_fetch_array($result)){
                     ?>
                     <option value="<?php echo $dados['culturalId']?>"><?php echo $dados['culturalNome']?></option>
+
+
+
+
+
+
 
 
                     <?php
@@ -93,7 +101,7 @@ $dadosEstabelecimentos=mysqli_fetch_array($resultEstabelecimentos);
 
             <label style="color:white; font-size: 15px" class="badge badge-dark">Categoria: </label>
             <select name="categoriaEstabelecimento2">
-                <option value="-1"><?php echo  $dadosEstabelecimentos["caracteristicaGrauDificuldade"]?></option>
+                <option ><?php echo  $dadosEstabelecimentos["caracteristicaGrauDificuldade"]?></option>
                 <?php
 
 

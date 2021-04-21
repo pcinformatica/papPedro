@@ -14,7 +14,7 @@ $novoNome2="../images/".$imagem;
 if($con ){
 
 
-  $sql= " update noticias SET noticiaTitulo='".$Nome."'";
+ echo  $sql= " update noticias SET noticiaTitulo='".$Nome."'";
 if($imagem!=''){
     $sql.=", noticiaURLFundo='images/".$imagem."'";
     copy($_FILES['imagem']['tmp_name'],$novoNome);
@@ -27,4 +27,4 @@ mysqli_query($con,$sql);
 
 
 
- header("location:../lista/listaNoticias.php");
+ //header("location:../lista/listaNoticias.php");

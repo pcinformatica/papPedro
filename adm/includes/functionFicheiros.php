@@ -54,7 +54,7 @@ function top(){
         <!-- Main -->
         <div id="main">
             <div class="inner">
-                <h1>Página de Cultural - Administração</h1>
+                <h1>Página de Ficheiros - Administração</h1>
 
 
 
@@ -82,14 +82,14 @@ function table(){
 ?>
 <?php
 $con=mysqli_connect("localhost","root","","pap2021saopedro");
-$sql="select * from cultural inner join setores on setoresSetorId=setorId ";
+$sql="select * from ficheiros inner join cultural on ficheiroCulturalId=culturalId ";
 $result=mysqli_query($con,$sql);
 
 ?>
 
 
    <div class="d-grid gap-2 d-md-flex justify-content-md-end" data-toggle="modal" data-target="#exampleModal">
-    <a href="#" class="btn btn-primary pull-right h2">Novo  Cultural</a>
+    <a href="#" class="btn btn-primary pull-right h2">Novo  Ficheiro</a>
     </div>
 
 
@@ -100,8 +100,8 @@ $result=mysqli_query($con,$sql);
         <tr>
             <th scope="col"></th>
           <th scope="col">ID</th>
-          <th scope="col">Nome do Cultural</th>
-          <th scope="col">ID Setor</th>
+          <th scope="col">Nome do Ficheiro</th>
+          <th scope="col">ID Cultural</th>
 
 
 
@@ -121,9 +121,9 @@ $result=mysqli_query($con,$sql);
             echo "<tr>";
             echo " <td></td>";
 
-            echo "<td>".$dados['culturalId']."</td>";
+            echo "<td>".$dados['ficheiroId']."</td>";
+            echo "<td>".$dados['ficheiroNome']."</td>";
             echo "<td>".$dados['culturalNome']."</td>";
-            echo "<td>".$dados['setorNome']."</td>";
 
 
 
@@ -134,12 +134,12 @@ $result=mysqli_query($con,$sql);
 
            echo "<td class= 'actions' >";
 
-            echo "<a class='btn btn-success btn-xs' href='listaDescricao.php'><i class='fa fa-eye'></i> Descrição</a>";
-            echo  " <a class='btn btn-warning btn-xs  justify-content-md-end'href=\"../editar/editaCultural.php?id=".$dados["setorId"]."\"><i class='fa fa-pencil'></i>Editar</a>";
-            echo  " <a class='btn btn-warning btn-xs  justify-content-md-end'href=\"../editar/editacaracteristica.php?id=".$dados["culturalId"]."\"><i class='fa fa-pencil'></i>Caracteristicas</a>";
+
+            echo  " <a class='btn btn-warning btn-xs  justify-content-md-end'href=\"../editar/editaficheiros.php?id=".$dados["ficheiroId"]."\"><i class='fa fa-pencil'></i>Editar</a>";
 
 
-                  echo  "  <a class='btn btn-danger btn-xs'  onclick=\"confirmaElimina(".$dados['culturalId'].");\"><i class='fa fa-trash'></i>Excluir</a>";
+
+                  echo  "  <a class='btn btn-danger btn-xs'  onclick=\"confirmaElimina(".$dados['ficheiroId'].");\"><i class='fa fa-trash'></i>Excluir</a>";
             echo "   </td>";
            echo "</tr>";
         }
@@ -172,7 +172,7 @@ $result=mysqli_query($con,$sql);
     <script>
         function confirmaElimina(id) {
             if(confirm('Confirma que deseja eliminar o registo?'))
-                window.location="../eliminar/eliminaCultural.php?id=" + id;
+                window.location="../eliminar/eliminaFicheiros.php?id=" + id;
         }
 
     </script>
@@ -187,30 +187,30 @@ $result=mysqli_query($con,$sql);
                 </div>
                 <div class="modal-body">
                     <?php
-                    echo "<form action=\"../adicionar/confirmaNovaCultural.php\" method=\"post\" enctype='multipart/form-data'>";
+                    echo "<form action=\"../adicionar/confirmaNovoFicheiro.php\" method=\"post\" enctype='multipart/form-data'>";
 
 
                     echo" <label>Nome: </label>";
                     echo"  <input type=\"text\" name=\"nomeCategoria1\"><br>";
 
-
+                    echo" <label>URL: </label>";
+                    echo"  <input type=\"text\" name=\"nomeCategoria2\"><br>";
 
                     ?>
-                    <label>Imagem:</label>
-                    <input type="file" name="nomeImagem"><br>
+
 
 
 
 
                     <select name="categoriaEstabelecimento">
-                        <option value="-1">Escolha o setor: </option>
+                        <option value="-1">Escolha a página: </option>
                         <?php
                         $sql="SELECT *
-        from  setores order by setorNome";
+        from  cultural order by culturalNome";
                         $result=mysqli_query($con,$sql);
                         while ($dados=mysqli_fetch_array($result)){
                             ?>
-                            <option value="<?php echo $dados['setorId']?>"><?php echo $dados['setorNome']?></option>
+                            <option value="<?php echo $dados['culturalId']?>"><?php echo $dados['culturalNome']?></option>
 
 
                             <?php

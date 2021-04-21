@@ -11,18 +11,36 @@ $Part=$_POST["caracteristicaLocalPartida"];
 $Cheg=$_POST["caracteristicaLocalChegada"];
 $CD=$_POST["caracteristicaCoordenadaGeograficas"];
 
+
 $Hora=addslashes($_POST["Hora"]);
-$Cat=$_POST["categoriaEstabelecimento"];
-$Cat2=$_POST["categoriaEstabelecimento2"];
+$Cat=addslashes($_POST["categoriaEstabelecimento"]);
+$Cat2=addslashes($_POST["categoriaEstabelecimento2"]);
 
- echo $sql="UPDATE caracteristicas SET caracteristicaNome='".$Nome."',caracteristicaCodigo='".$Cod."', caracteristicaTipologia='".$Tip."',
+
+
+
+
+echo $sql="UPDATE caracteristicas SET caracteristicaNome='".$Nome."',caracteristicaCodigo='".$Cod."', caracteristicaTipologia='".$Tip."',
  caracteristicaDistancia='".$Dist."',caracteristicaTipoPiso='".$Piso."',caracteristicaLocalPartida='".$Part."',
- caracteristicaLocalChegada='".$Cheg."',caracteristicaCoordenadaGeograficas='".$CD."', caracteristicaCulturalId='".$Cat."'
-caracteristicaGrauDificuldade='".$Cat2."',
-,caracteristicaDuracaoAproximada='".$Hora."'";
+ caracteristicaLocalChegada='".$Cheg."',caracteristicaCoordenadaGeograficas='".$CD."' , caracteristicaDuracaoAproximada='".$Hora."', caracteristicaGrauDificuldade='".$Cat2."' where caracteristicaId=".$id;
+mysqli_query($con,$sql);
 
 
- mysqli_query($con,$sql);
+
+
+if($id=intval($_GET["id"])){
+
+     $sql="UPDATE caracteristicas SET caracteristicaCulturalId='".$Cat."' where caracteristicaId=".$id;
+    mysqli_query($con,$sql);
+
+
+}
+
+
+
+
+
+
 
 
 
