@@ -121,7 +121,7 @@ $result=mysqli_query($con,$sql);
             echo "<tr>";
             echo " <td></td>";
             echo "<td>".$dados['imagemId']."</td>";
-            echo "<td><img src=\"../../".$dados['imagemNome']."\"></td>";
+            echo "<td><img src=\"../".$dados['imagemNome']."\"></td>";
             echo "<td>".$dados['imagemEstabelecimentoId']."</td>";
             echo "<td>".$dados['imagemOrdem']."</td>";
 
