@@ -46,6 +46,7 @@ function top(){
                     <ul>
                         <li><a href="../lista/listaestabelecimentos.php" >Estabelecimentos</a></li>
                         <li><a href="../lista/listaslideshow.php" class="active">SlideShow</a></li>
+                        <li><a href="../lista/KJKKKLKLLKLKKLLKKLKLKLKLKLKLKLKLKLKLKFÇLLFLFLLLLLLLLLFLFLLLDLLLLLLLLLDLLDLDLLDDLDKDKLDLLFLFKCKCKKCKCKCKCKCKCKCKCKCK" class="active">SlideShow</a></li>
                     </ul>
                 </li>
             </ul>

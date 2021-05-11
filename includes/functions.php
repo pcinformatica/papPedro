@@ -1108,6 +1108,109 @@ inner join categorias on setorCategoriaId = categoriaId
                             </div>
                         </div>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        <!-- Js Plugins -->
+                        <script src="js/jquery-3.3.1.min.js"></script>
+                        <script src="js/bootstrap.min.js"></script>
+                        <script src="js/jquery.magnific-popup.min.js"></script>
+                        <script src="js/jquery.slicknav.js"></script>
+                        <script src="js/owl.carousel.min.js"></script>
+                        <script src="js/jquery.nice-select.min.js"></script>
+                        <script src="js/mixitup.min.js"></script>
+                        <script src="js/main.js"></script>
+                        <script src="js/common.js"></script>
+
+
+                        <script>
+                            $('document').ready(function () {
+
+                                <?php
+                                if($menu == ESTABELECIMENTOSP){
+                                ?>
+
+                                $('#searchEstabelecimento').keyup(function () {
+                                    fillTableEstabelecimentosProcurar(this.value, $('#searchCategoria').val(), $('#searchDistrito').val());
+                                });
+                                $('#searchCategoria').change(function () {
+                                    fillTableEstabelecimentosProcurar($('#searchEstabelecimento').val(), this.value, $('#searchDistrito').val());
+                                });
+                                $('#searchDistrito').change(function () {
+                                    fillTableEstabelecimentosProcurar($('#searchEstabelecimento').val(), $('#searchCategoria').val(), this.value);
+                                });
+                                fillTableEstabelecimentosProcurar();
+
+                                <?php }
+                                if ($menu == GALERIA){
+                                ?>
+                                $('#search').keyup(function () {
+                                    fillTableImagens(this.value,<?php echo $id ?>);
+                                });
+                                fillTableImagens('',<?php echo $id ?>);
+                                <?php }
+                                ?>
+                                <?php
+                                if ($menu == RESERVAS){
+                                ?>
+                                $('#search').keyup(function () {
+                                    fillTableReservas(this.value,<?php echo $id ?>);
+                                });
+                                fillTableReservas('',<?php echo $id ?>);
+                                <?php
+                                }if($menu == SINGLE){
+                                ?>
+                                listaComentarios(<?php echo $id ?>);
+                                <?php
+                                }if($menu == RESERVASADMIN){
+                                ?>
+                                $('#tableContent').keyup(function () {
+                                    fillTableReservasAdmin(this.value,<?php echo $id ?>);
+
+                                });
+                                fillTableReservasAdmin(<?php echo $id ?>);
+                                <?php
+                                if($menu == HOME ){
+                                ?>
+                                $('#tableContent').keyup(function () {
+                                    valido(this.value);
+                                });
+                                valido();
+                                <?php
+                                }
+                                }
+                                ?>
+                            })
+                        </script>
+
+
+
+
+
+
+
                         <?php
                         }
                         ?>
@@ -1553,11 +1656,20 @@ inner join categorias on setorCategoriaId = categoriaId
 
                                         <li><a href="Backoffice/login/colorlib-regform-7/singin.html">Login</a></li>
 
+
                                         <li><a href="packages.php">Alojamento</a></li>
 
                                         <li><a href="blog.php">Blog</a></li>
 
-                                        <li><a href="packagesrestaurant.php">Restauração</a></li>
+                                        <li><a href="packagesrestaurant.php">Restauração222</a></li>
+                                        <li><a href="#" data-toggle="modal" data-target="#login">Login</a> </li>
+                                        <li><a href="#" data-toggle="modal" data-target="#login">Loginfff</a> </li>
+
+
+
+
+
+
 
 
                                         <li>
@@ -1568,9 +1680,10 @@ inner join categorias on setorCategoriaId = categoriaId
                                                 <li><a href="testimonials.php">Avaliações</a></li>
                                                 <li><a href="terms.php">Termos</a></li>
                                                 <li><a href="pontosdeinteresse.php">Pontos de Interesse</a></li>
+
                                             </ul>
                                         </li>
-                                        <li><a href="contact.php">Contatos</a></li>
+                                        <li><a href="contactos.php">Concactos</a></li>
                                     </ul>
                                 </nav>
 
@@ -1795,7 +1908,11 @@ where categoriaNome='Restauracao' limit 6" ;
 
 
 
+                                        <div class="location-search1 col-lg-12 mt-3 ">
+                                            <h5>Nome do Estabelecimento</h5>
 
+                                            <input class="location-search1 nice-select1" type="text" id="searchEstabelecimento">
+                                        </div>
 
 
 
