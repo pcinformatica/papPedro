@@ -4,5 +4,5 @@ $id=intval($_GET['id']);
 $sql= "delete from cultural where culturalId = '$id'";
 
 mysqli_query($con,$sql);
-header("location:../lista/listacultural.php");
+header("location:listacultural.php");
 ?>

@@ -19,5 +19,5 @@ if($resultado){
 
 
 
-header("location:../lista/listaEstabelecimentos.php");
+header("location:listaEstabelecimentos.php");
 ?>

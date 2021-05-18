@@ -1,5 +1,5 @@
 <?php
-include_once("../includes/functionCultural.php");
+include_once("includes/functionCultural.php");
 top();
 table();
 footer();?>

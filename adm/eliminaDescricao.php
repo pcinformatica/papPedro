@@ -4,7 +4,7 @@ $id=intval($_GET['id']);
 $sql= "delete from setorcultural where setorculturalId = '$id'";
 
 mysqli_query($con,$sql);
-header("location:../lista/listaDescricao.php");
+header("location:listaDescricao.php");
 ?>
 
 

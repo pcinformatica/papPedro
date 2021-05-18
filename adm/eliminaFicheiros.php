@@ -4,5 +4,5 @@ $id=intval($_GET['id']);
  $sql= "delete from ficheiros where ficheiroId = '$id'";
 
 mysqli_query($con,$sql);
-header("location:../lista/listaficheiros.php");
+header("location:listaficheiros.php");
 ?>

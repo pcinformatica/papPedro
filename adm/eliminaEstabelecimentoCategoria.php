@@ -14,5 +14,5 @@ $resultado = mysqli_query($con,$sql);
 
 
 
-header("location:../lista/listaestabelecimentoscategorias.php");
+header("location:listaestabelecimentoscategorias.php");
 ?>

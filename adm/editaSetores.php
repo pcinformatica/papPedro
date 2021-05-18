@@ -12,9 +12,9 @@ $dadosCategorias=mysqli_fetch_array($resultCategorias);
 
 
 
-        <a href="../lista/listaSetores.php"><button type="button" class="btn btn-danger">Voltar</button></a>
+        <a href="listaSetores.php"><button type="button" class="btn btn-danger">Voltar</button></a>
         <hr>
-        <form action="../editar/confirmaEditaSetores.php?id=<?php echo $id ?>" method="post" enctype="multipart/form-data">
+        <form action="confirmaEditaSetores.php?id=<?php echo $id ?>" method="post" enctype="multipart/form-data">
 
             <label style="color:white; font-size: 15px" class="badge badge-dark">Nome do Setor: </label>
             <input type="text"  name="setorNome" value="<?php echo $dadosCategorias["setorNome"]?>"><hr>

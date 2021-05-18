@@ -4,5 +4,5 @@ $id=intval($_GET['id']);
 $sql= "delete from imagens where imagemId = '$id'";
 
 mysqli_query($con,$sql);
-header("location:../lista/listaslideshow.php");
+header("location:listaslideshow.php");
 ?>
