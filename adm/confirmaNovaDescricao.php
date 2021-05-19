@@ -9,5 +9,5 @@ copy($_FILES['tmp_name']);
 
 $sql="insert into setorcultural(setorculturalDescricaoTitu,setorculturalCulturalId) values('".$nome."','".$cultural."');";
 mysqli_query($con,$sql);
-header("location:../lista/listaDescricao.php");
+header("location:listaDescricao.php");
 ?>

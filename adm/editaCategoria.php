@@ -14,9 +14,9 @@ $dadosCategorias=mysqli_fetch_array($resultCategorias);
 
 
     <section class="store" style="padding:50px">
-        <a href="../lista/listaCategorias.php"><button type="button" class="btn btn-light"">Voltar</button></a>
+        <a href="listaCategorias.php"><button type="button" class="btn btn-light"">Voltar</button></a>
         <hr>
-        <form action="../editar/confirmaEditaCategoria.php?id=<?php echo $id ?>" method="post" enctype="multipart/form-data">
+        <form action="confirmaEditaCategoria.php?id=<?php echo $id ?>" method="post" enctype="multipart/form-data">
             <label style="color:white; font-size: 15px" class="badge badge-dark">Nome: </label>
             <input type="text"  name="categoriaNome" value="<?php echo $dadosCategorias["categoriaNome"]?>"><hr>
             <input type="Submit" class="btn btn-success" value="Edita" ><br>

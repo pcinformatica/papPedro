@@ -8,5 +8,5 @@ copy($_FILES['tmp_name']);
 
 $sql="insert into categorias(categoriaNome) values('".$nome."');";
 mysqli_query($con,$sql);
-header("location:../lista/listaCategorias.php");
+header("location:listaCategorias.php");
 ?>

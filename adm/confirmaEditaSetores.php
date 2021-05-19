@@ -20,4 +20,4 @@ $sql.=" where setorId=".$id;
 
 
 mysqli_query($con,$sql);
-header("location:../lista/listaSetores.php");
+header("location:listaSetores.php");

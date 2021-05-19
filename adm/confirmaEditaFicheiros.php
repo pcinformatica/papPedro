@@ -20,4 +20,4 @@ if($id=intval($_GET["id"])) {
     mysqli_query($con, $sql);
 }
 
-// header("location:../lista/listaficheiros.php");
+// header("location:listaficheiros.php");

@@ -13,9 +13,9 @@ $dadosCultural=mysqli_fetch_array($resultCultural);
 
 
 
-        <a href="../lista/listacultural.php"><button type="button" class="btn btn-danger">Voltar</button></a>
+        <a href="listacultural.php"><button type="button" class="btn btn-danger">Voltar</button></a>
         <hr>
-        <form action="../editar/confirmaEditaCultural.php?id=<?php echo $id ?>" method="post" enctype="multipart/form-data">
+        <form action="confirmaEditaCultural.php?id=<?php echo $id ?>" method="post" enctype="multipart/form-data">
 
             <label style="color:white; font-size: 15px" class="badge badge-dark">Nome de Estabelecimento: </label>
             <input type="text"  name="culturalNome" value="<?php echo $dadosCultural["culturalNome"]?>"><hr>

@@ -13,6 +13,6 @@ $id=intval($_GET["id"]);
  $sql="UPDATE estabelecimentocategorias SET estabelecimentoCategoriaCategoriaId='".$estabelecimentoId."',estabelecimentoCategoriaDescricao='".$Descricao1."'where estabelecimentoCategoriaEstabelecimentoId=".$id;
 
 mysqli_query($con,$sql);
- header("location:../lista/listaestabelecimentoscategorias.php");
+ header("location:listaestabelecimentoscategorias.php");
 ?>
 

@@ -20,4 +20,4 @@ $sql.=" where culturalId=".$id;
 
 
 mysqli_query($con,$sql);
-header("location:../lista/listacultural.php");
+header("location:listacultural.php");

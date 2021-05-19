@@ -14,9 +14,9 @@ $dadosEstabelecimentos=mysqli_fetch_array($resultEstabelecimentos);
 
 
 
-        <a href="../lista/listaficheiros.php"><button type="button" class="btn btn-danger">Voltar</button></a>
+        <a href="listaficheiros.php"><button type="button" class="btn btn-danger">Voltar</button></a>
         <hr>
-        <form action="../editar/confirmaEditaFicheiros.php?id=<?php echo $id ?>" method="post" enctype="multipart/form-data">
+        <form action="confirmaEditaFicheiros.php?id=<?php echo $id ?>" method="post" enctype="multipart/form-data">
 
             <label style="color:white; font-size: 15px" class="badge badge-dark">Nome da Caracteristica: </label>
             <input type="text"  name="ficheiroNome" value="<?php echo $dadosEstabelecimentos["ficheiroNome"]?>">

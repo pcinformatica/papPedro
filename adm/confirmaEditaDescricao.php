@@ -14,6 +14,6 @@ $id=intval($_GET["id"]);
 $sql="UPDATE setorcultural SET setorculturalCulturalId='".$estabelecimentoId."',setorculturalDescricao='".$Descricao1."', setorculturalDescricaoTitu='".$nomeId."' where setorculturalId=".$id;
 
 mysqli_query($con,$sql);
- header("location:../lista/listaDescricao.php");
+ header("location:listaDescricao.php");
 ?>
 

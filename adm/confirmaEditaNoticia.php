@@ -27,4 +27,4 @@ mysqli_query($con,$sql);
 
 
 
- //header("location:../lista/listaNoticias.php");
+ //header("location:listaNoticias.php");

@@ -11,5 +11,5 @@ copy($_FILES['nomeImagem']['tmp_name'],$novoNome);
 
   $sql="insert into cultural(culturalNome,culturalURL,setoresSetorId) values('".$nome."','images/".$imagem."','".$setor."');";
 mysqli_query($con,$sql);
-  header("location:../lista/listacultural.php");
+  header("location:listacultural.php");
 ?>

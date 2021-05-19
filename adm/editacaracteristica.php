@@ -14,9 +14,9 @@ $dadosEstabelecimentos=mysqli_fetch_array($resultEstabelecimentos);
 
 
 
-        <a href="../lista/listacultural.php"><button type="button" class="btn btn-danger">Voltar</button></a>
+        <a href="listacultural.php"><button type="button" class="btn btn-danger">Voltar</button></a>
         <hr>
-        <form action="../editar/confirmaEditaCaracteristica.php?id=<?php echo $id ?>" method="post" enctype="multipart/form-data">
+        <form action="confirmaEditaCaracteristica.php?id=<?php echo $id ?>" method="post" enctype="multipart/form-data">
 
             <label style="color:white; font-size: 15px" class="badge badge-dark">Nome da Caracteristica: </label>
             <input type="text"  name="caracteristicaNome" value="<?php echo $dadosEstabelecimentos["caracteristicaNome"]?>">

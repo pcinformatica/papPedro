@@ -27,4 +27,4 @@ $sql.=" where estabelecimentoId=".$id;
 
 
 mysqli_query($con,$sql);
-header("location:../lista/listaestabelecimentos.php");
+header("location:listaestabelecimentos.php");

@@ -13,5 +13,5 @@ $cat=$_POST['categoriaEstabelecimento'];
 
  $sql="insert into estabelecimentos(estabelecimentoNome,estabelecimentoDescricao,estabelecimentoMorada,estabelecimentoTelefone,estabelecimentoEmail,estabelecimentoCategoriaId) values('".$nome."','".$desc."','".$morada."','".$telefone."','".$email."','".$cat."');";
 mysqli_query($con,$sql);
-header("location:../lista/listaestabelecimentos.php");
+header("location:listaestabelecimentos.php");
 ?>

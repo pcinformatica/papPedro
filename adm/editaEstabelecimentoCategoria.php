@@ -15,9 +15,9 @@ $dadosEstabelecimentos=mysqli_fetch_array($resultEstabelecimentos);
 
 
 
-        <a href="../lista/listaestabelecimentoscategorias.php"><button type="button" class="btn btn-danger">Voltar</button></a>
+        <a href="listaestabelecimentoscategorias.php"><button type="button" class="btn btn-danger">Voltar</button></a>
         <hr>
-        <form action="../editar/confirmaEditaEstabelecimentoCategoria.php?id=<?php echo $id ?>" method="post" enctype="multipart/form-data">
+        <form action="confirmaEditaEstabelecimentoCategoria.php?id=<?php echo $id ?>" method="post" enctype="multipart/form-data">
 
 
 

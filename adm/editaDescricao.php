@@ -15,9 +15,9 @@ $dadosEstabelecimentos=mysqli_fetch_array($resultEstabelecimentos);
 
 
 
-        <a href="../lista/listaDescricao.php"><button type="button" class="btn btn-danger">Voltar</button></a>
+        <a href="listaDescricao.php"><button type="button" class="btn btn-danger">Voltar</button></a>
         <hr>
-        <form action="../editar/confirmaEditaDescricao.php?id=<?php echo $id ?>" method="post" enctype="multipart/form-data">
+        <form action="confirmaEditaDescricao.php?id=<?php echo $id ?>" method="post" enctype="multipart/form-data">
 
 
 
@@ -49,7 +49,7 @@ $dadosEstabelecimentos=mysqli_fetch_array($resultEstabelecimentos);
             </select><hr>
 
             <link href="summernote.css" rel="stylesheet">
-            <script src='../js2/tinymce/tinymce.min.js'></script>
+            <script src='js2/tinymce/tinymce.min.js'></script>
             <label style="color:white; font-size: 15px" class="badge badge-dark">Descrição para a Página: </label>
             <script>
 
