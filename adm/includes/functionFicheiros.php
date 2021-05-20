@@ -15,41 +15,6 @@ function top(){
     <!-- Wrapper -->
     <div id="wrapper">
 
-        <!-- Header -->
-        <header id="header">
-            <div class="inner">
-
-                <!-- Logo -->
-                <a href="../../index.php" class="logo">
-                    <span class="fa fa-anchor"></span> <span class="title">São Pedro de Moel </span>
-                </a>
-
-                <!-- Nav -->
-                <nav>
-                    <ul>
-                        <li><a href="#menu">Menu</a></li>
-                    </ul>
-                </nav>
-
-            </div>
-        </header>
-
-        <!-- Menu -->
-        <nav id="menu">
-            <h2>Menu</h2>
-
-            <ul>
-                <li><a href="../lista/listaCategorias.php" >Categorias</a></li>
-                <li>
-                    <a href="#" class="dropdown-toggle">Estabelecimentos</a>
-
-                    <ul>
-                        <li><a href="../lista/listaestabelecimentos.php" >Estabelecimentos</a></li>
-                        <li><a href="../lista/listaslideshow.php" class="active">SlideShow</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
 
         <!-- Main -->
         <div id="main">
