@@ -89,7 +89,7 @@ $result=mysqli_query($con,$sql);
 
 
            echo "<td class= 'actions' >";
-            echo  " <a class='btn btn-warning btn-xs  justify-content-md-end'href=\"../editar/editaCategoria.php?id=".$dados["categoriaId"]."\"><i class='fa fa-pencil'></i>Editar</a>";
+            echo  " <a class='btn btn-warning btn-xs  justify-content-md-end'href=\"../adm/editaCategoria.php?id=".$dados["categoriaId"]."\"><i class='fa fa-pencil'></i>Editar</a>";
 
             echo  "  <a class='btn btn-danger btn-xs'  onclick=\"confirmaElimina(".$dados['categoriaId'].");\"><i class='fa fa-trash'></i>Excluir</a>";
 
@@ -110,7 +110,7 @@ $result=mysqli_query($con,$sql);
     <script>
         function confirmaElimina(id) {
             if(confirm('Confirma que deseja eliminar o registo?'))
-                window.location="../eliminar/eliminaCategoria.php?id=" + id;
+                window.location="../adm/eliminaCategoria.php?id=" + id;
         }
 
     </script>
@@ -126,7 +126,7 @@ $result=mysqli_query($con,$sql);
                 </div>
                 <div class="modal-body">
                     <?php
-                    echo "<form action=\"../adicionar/confirmaNovaCategoria.php\" method=\"post\" enctype='multipart/form-data'>";
+                    echo "<form action=\"../adm/confirmaNovaCategoria.php\" method=\"post\" enctype='multipart/form-data'>";
 
 
                        echo" <label>Nome: </label>";

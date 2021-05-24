@@ -104,7 +104,7 @@ $result=mysqli_query($con,$sql);
 
             echo  "<a class='btn btn-success btn-xs' href='listaslideshow.php'><i class='fa fa-eye'></i> Slideshow </a>";
 
-                  echo  " <a class='btn btn-warning btn-xs  justify-content-md-end'href=\"../editar/editaEstabelecimento.php?id=".$dados["estabelecimentoId"]."\"><i class='fa fa-pencil'></i>Editar</a>";
+                  echo  " <a class='btn btn-warning btn-xs  justify-content-md-end'href=\"../adm/editaEstabelecimento.php?id=".$dados["estabelecimentoId"]."\"><i class='fa fa-pencil'></i>Editar</a>";
 
                   echo  "  <a class='btn btn-danger btn-xs'  onclick=\"confirmaElimina(".$dados['estabelecimentoId'].");\"><i class='fa fa-trash'></i>Excluir</a>";
             echo "   </td>";
@@ -116,7 +116,7 @@ $result=mysqli_query($con,$sql);
     <script>
         function confirmaElimina(id) {
             if(confirm('Confirma que deseja eliminar o registo?'))
-                window.location="../eliminar/eliminaEstabelecimento.php?id=" + id;
+                window.location="eliminaEstabelecimento.php?id=" + id;
         }
 
     </script>
@@ -131,7 +131,7 @@ $result=mysqli_query($con,$sql);
                 </div>
                 <div class="modal-body">
                     <?php
-                    echo "<form action=\"../adicionar/confirmaNovoEstabelecimento.php\" method=\"post\" enctype='multipart/form-data'>";
+                    echo "<form action=\"confirmaNovoEstabelecimento.php\" method=\"post\" enctype='multipart/form-data'>";
 
 
                        echo" <label>Nome: </label>";

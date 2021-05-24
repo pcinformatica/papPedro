@@ -1661,7 +1661,7 @@ inner join categorias on setorCategoriaId = categoriaId
 
                                         <li><a href="blog.php">Blog</a></li>
 
-                                        <li><a href="packagesrestaurant.php">Restauração222</a></li>
+                                        <li><a href="packagesrestaurant.php">Restauração</a></li>
                                         <li><a href="#" data-toggle="modal" data-target="#login">Login</a> </li>
                                         <li><a href="#" data-toggle="modal" data-target="#login">Loginfff</a> </li>
 
@@ -2822,10 +2822,10 @@ where categoriaNome='Restauracao' limit 6" ;
                             <!-- Main -->
                             <div id="main">
                                 <div class="inner">
-                                    <h1>Alojamento</h1>
+                                    <h1>Restauração</h1>
 
                                     <div class="image main">
-                                        <img src="images/banner-image-7-1920x500.jpg" class="img-fluid" alt=""/>
+                                        <img src="images/rest1a.jpg" class="img-fluid" alt=""/>
                                     </div>
 
                                     <?php
@@ -2835,7 +2835,7 @@ where categoriaNome='Restauracao' limit 6" ;
                                     $sql = "SELECT * 
 from  estabelecimentos 
 inner join categorias on estabelecimentoCategoriaId = categoriaId
-where categoriaNome='Alojamento' " ;
+where categoriaNome='Restauracao' " ;
 
                                     $resultado = mysqli_query($con, $sql);
 
@@ -2858,8 +2858,7 @@ where categoriaNome='Alojamento' " ;
 
                                                     <p>
                                                         <small>
-                                                            <i class="fa fa-calendar"></i> Disponibilidade &nbsp;
-                                                            <i class="fa fa-cube"></i> Mínimo de 2 diárias &nbsp;
+                                                            <i class="fa fa-calendar"></i> Disponibilidade &nbsp;&nbsp;
                                                             <i class="fa fa-wifi"></i> Acesso à internet
                                                         </small>
                                                     </p>

@@ -19,7 +19,7 @@ function topCategorias(){
         <div class="inner">
 
             <!-- Logo -->
-            <a href="../../Frontoffice/index.html" class="logo">
+            <a href="../index.php" class="logo">
                 <span class="fa fa-anchor"></span> <span class="title">São Pedro de Moel </span>
             </a>
 
@@ -38,16 +38,16 @@ function topCategorias(){
         <h2>Menu</h2>
 
         <ul>
-            <li><a href="../lista/listaCategorias.php" class="active">Categorias</a></li>
+            <li><a href="../adm/listaCategorias.php" class="active">Categorias</a></li>
             <li>
                 <a href="#" class="dropdown-toggle">Estabelecimentos</a>
 
                 <ul>
-                    <li><a href="../lista/listaestabelecimentos.php" >Estabelecimentos</a></li>
-                    <li><a href="../lista/listaslideshow.php">SlideShow</a></li>
-                    <li><a href="../lista/listacultural.php">Cultural</a></li>
-                    <li><a href="../lista/listanoticias.php">Notícias</a></li>
-                    <li><a href="../lista/listaSetores.php">Setores</a></li>
+                    <li><a href="../adm/listaestabelecimentos.php" >Estabelecimentos</a></li>
+                    <li><a href="../adm/listaslideshow.php">SlideShow</a></li>
+                    <li><a href="../adm/listacultural.php">Cultural</a></li>
+                    <li><a href="../adm/listanoticias.php">Notícias</a></li>
+                    <li><a href="../adm/listaSetores.php">Setores</a></li>
                 </ul>
             </li>
         </ul>
