@@ -1683,7 +1683,7 @@ inner join categorias on setorCategoriaId = categoriaId
 
                                             </ul>
                                         </li>
-                                        <li><a href="contactos.php">Concactos</a></li>
+                                        <li><a href="contact.php">Contactos</a></li>
                                     </ul>
                                 </nav>
 
@@ -2816,25 +2816,45 @@ where categoriaNome='Restauracao' limit 6" ;
                             {
                                 ?>
 
-                                <!-- Main -->
-                                <div id="main">
-                                    <div class="inner">
-                                        <h1>Restauração</h1>
+                            <?php
 
-                                        <div class="image main">
-                                            <img src="images/all-bg.jpg" class="img-fluid" alt=""/>
-                                        </div>
+                            ?>
+                            <!-- Main -->
+                            <div id="main">
+                                <div class="inner">
+                                    <h1>Alojamento</h1>
 
-                                        <!-- Packages -->
-                                        <section class="tiles">
+                                    <div class="image main">
+                                        <img src="images/banner-image-7-1920x500.jpg" class="img-fluid" alt=""/>
+                                    </div>
+
+                                    <?php
+                                    include_once("config.inc.php");
+                                    $con = mysqli_connect("localhost", "root", "", "pap2021saopedro");
+                                    $con->set_charset("utf8");
+                                    $sql = "SELECT * 
+from  estabelecimentos 
+inner join categorias on estabelecimentoCategoriaId = categoriaId
+where categoriaNome='Alojamento' " ;
+
+                                    $resultado = mysqli_query($con, $sql);
+
+
+                                    ?>
+                                    <section class="tiles">
+                                        <?php
+                                        while ($dados = mysqli_fetch_array($resultado)) {
+                                            ?>
+
+
                                             <article class="style1">
-									<span class="image">
-										<img src="images/2a.jpg" alt=""/>
-									</span>
-                                                <a href="package-details_rest.php">
-                                                    <h2>Restaurante O Penedo</h2>
+                                                <span class="image">
+                                                    <img src="<?php echo $dados ['estabelecimentoURL'] ?>" alt=""/>
+                                                </span>
+                                                <a href="package-details.php?id=<?php echo $dados  ['estabelecimentoId'] ?>">
+                                                    <h2><?php echo $dados  ['estabelecimentoNome'] ?></h2>
 
-                                                    <p><strong>€1094.00 - €1500.00</strong></p>
+                                                    <p><strong>€<?php echo $dados  ['estabelecimentoPrecoMin'] ?> - €<?php echo $dados  ['estabelecimentoPrecoMax'] ?></strong></p>
 
                                                     <p>
                                                         <small>
@@ -2845,259 +2865,19 @@ where categoriaNome='Restauracao' limit 6" ;
                                                     </p>
                                                 </a>
                                             </article>
-                                            <article class="style2">
-									<span class="image">
-										<img src="images/2c.jpg" alt=""/>
-									</span>
-                                                <a href="package-details2.html">
-                                                    <h2>Restaurante Brisamar</h2>
-
-                                                    <p><strong>€120.00 - €500.00</strong></p>
-
-                                                    <p>
-                                                        <small>
-                                                            <i class="fa fa-calendar"></i> Disponibilidade &nbsp;
-                                                            <i class="fa fa-cube"></i>Mínimo de 1 diária
-                                                            <i class="fa fa-shower"></i> Spa
-                                                        </small>
-                                                    </p>
-                                                </a>
-                                            </article>
-                                            <article class="style3">
-									<span class="image">
-										<img src="images/r3.jpg " alt=""/>
-									</span>
-                                                <a href="package-details3.html">
-                                                    <h2>Estrela do Mar</h2>
-
-                                                    <p><strong>€300.00 - €400.00</strong></p>
-
-                                                    <p>
-                                                        <small>
-                                                            <i class="fa fa-calendar"></i> Disponibilidade
-                                                            <i class="fa fa-cube"></i> Mínimo de 1 diária
-                                                            <i class="fa fa-coffee"></i> Café da manhã incluído
-                                                        </small>
-                                                    </p>
-                                                </a>
-                                            </article>
-
-                                            <article class="style4">
-									<span class="image">
-										<img src="images/r4.jpg" alt=""/>
-									</span>
-                                                <a href="package-details4.html">
-                                                    <h2>Restaurante Central</h2>
-
-                                                    <p><strong>€120.00 - €400.00</strong></p>
-
-                                                    <p>
-                                                        <small>
-                                                            <i class="fa fa-calendar"></i> Disponibilidade
-                                                            <i class="fa fa-cube"></i> Mínimo de 1 diária &nbsp;
-                                                            <i class="fa fa-car"></i> Estacionamento
-                                                        </small>
-                                                    </p>
-                                                </a>
-                                            </article>
-
-                                            <article class="style5">
-									<span class="image">
-										<img src="images/r5.jpg" alt=""/>
-									</span>
-                                                <a href="teste%20rating/package-details5.html">
-                                                    <h2>A Fonte</h2>
-
-                                                    <p><strong>€300.00 - €400.00</strong></p>
-
-                                                    <p>
-                                                        <small>
-                                                            <i class="fa fa-calendar"></i> Disponibilidade
-                                                            <i class="fa fa-cube"></i> Mínimo de 1 diária &nbsp;
-                                                            <i class="fa fa-coffee"></i> Café da manhã incluido
-                                                        </small>
-                                                    </p>
-                                                </a>
-                                            </article>
-
-                                            <article class="style6">
-									<span class="image">
-										<img src="images/r6.jpg" alt=""/>
-									</span>
-                                                <a href="teste%20rating3/Better-Rating-Form/package-details6.html">
-                                                    <h2>Ponto de Encontro</h2>
-
-                                                    <p><strong>€300.00 - €400.00</strong></p>
-
-                                                    <p>
-                                                        <small>
-                                                            <i class="fa fa-calendar"></i> Disponibilidade&nbsp;
-                                                            <i class="fa fa-cube"></i> Mínimo de 1 diária
-                                                            <i class="fa fa-life-ring"></i> Piscina
-                                                        </small>
-                                                    </p>
-                                                </a>
-                                            </article>
-
-                                            <article class="style6">
-									<span class="image">
-										<img src="images/r9.jpg" alt=""/>
-									</span>
-                                                <a href="package-details7.html">
-                                                    <h2>Pastelaria Arco Íris</h2>
-
-                                                    <p><strong>€300.00 - €400.00</strong></p>
-
-                                                    <p>
-                                                        <small>
-                                                            <i class="fa fa-calendar"></i> Disponibilidade&nbsp;
-                                                            <i class="fa fa-cube"></i> Mínimo de 1 diária
-                                                            <i class="fa fa-life-ring"></i> Piscina
-                                                        </small>
-                                                    </p>
-                                                </a>
-                                            </article>
-
-                                            <article class="style6">
-									<span class="image">
-										<img src="images/r7.jpg" alt=""/>
-									</span>
-                                                <a href="package-details8.html">
-                                                    <h2>Old Beach</h2>
-
-                                                    <p><strong>€300.00 - €400.00</strong></p>
-
-                                                    <p>
-                                                        <small>
-                                                            <i class="fa fa-calendar"></i> Disponibilidade&nbsp;
-                                                            <i class="fa fa-cube"></i> Mínimo de 1 diária
-                                                            <i class="fa fa-car"></i> Estacionamento
-                                                        </small>
-                                                    </p>
-                                                </a>
-                                            </article>
-
-                                            <article class="style6">
-									<span class="image">
-										<img src="images/r8.jpg" alt=""/>
-									</span>
-                                                <a href="package-details9.html">
-                                                    <h2>Bambi</h2>
-
-                                                    <p><strong>€300.00 - €400.00</strong></p>
-
-                                                    <p>
-                                                        <small>
-                                                            <i class="fa fa-calendar"></i> Disponibilidade&nbsp;
-                                                            <i class="fa fa-cube"></i> Mínimo de 1 diária
-                                                            <i class="fa fa-life-ring"></i> Piscina
-                                                        </small>
-                                                    </p>
-                                                </a>
-                                            </article>
-
-                                            <article class="style6">
-									<span class="image">
-										<img src="images/r13.jpg" alt=""/>
-									</span>
-                                                <a href="package-details10.html">
-                                                    <h2>Topi´s Pub</h2>
-
-                                                    <p><strong>€300.00 - €400.00</strong></p>
-
-                                                    <p>
-                                                        <small>
-                                                            <i class="fa fa-calendar"></i> Disponibilidade&nbsp;
-                                                            <i class="fa fa-cube"></i> Mínimo de 1 diária
-                                                            <i class="fa fa-car"></i> Estacionamento
-                                                        </small>
-                                                    </p>
-                                                </a>
-                                            </article>
-                                            <article class="style6">
-									<span class="image">
-										<img src="images/r10.jpg" alt=""/>
-									</span>
-                                                <a href="package-details10.html">
-                                                    <h2>O Velho Marinheiro</h2>
-
-                                                    <p><strong>€300.00 - €400.00</strong></p>
-
-                                                    <p>
-                                                        <small>
-                                                            <i class="fa fa-calendar"></i> Disponibilidade&nbsp;
-                                                            <i class="fa fa-cube"></i> Mínimo de 1 diária
-                                                            <i class="fa fa-car"></i> Estacionamento
-                                                        </small>
-                                                    </p>
-                                                </a>
-                                            </article>
-                                            <article class="style6">
-									<span class="image">
-										<img src="images/r11.jpg" alt=""/>
-									</span>
-                                                <a href="package-details10.html">
-                                                    <h2>Café da Praia</h2>
-
-                                                    <p><strong>€300.00 - €400.00</strong></p>
-
-                                                    <p>
-                                                        <small>
-                                                            <i class="fa fa-calendar"></i> Disponibilidade&nbsp;
-                                                            <i class="fa fa-cube"></i> Mínimo de 1 diária
-                                                            <i class="fa fa-car"></i> Estacionamento
-                                                        </small>
-                                                    </p>
-                                                </a>
-                                            </article>
-
-                                            <article class="style6">
-									<span class="image">
-										<img src="images/r14.jpg" alt=""/>
-									</span>
-                                                <a href="package-details10.html">
-                                                    <h2>Bar Iceberg</h2>
-
-                                                    <p><strong>€300.00 - €400.00</strong></p>
-
-                                                    <p>
-                                                        <small>
-                                                            <i class="fa fa-calendar"></i> Disponibilidade&nbsp;
-                                                            <i class="fa fa-cube"></i> Mínimo de 1 diária
-                                                            <i class="fa fa-car"></i> Estacionamento
-                                                        </small>
-                                                    </p>
-                                                </a>
-                                            </article>
-                                            <article class="style6">
-									<span class="image">
-										<img src="images/r15.jpg" alt=""/>
-									</span>
-                                                <a href="package-details10.html">
-                                                    <h2>Gelataria Iceberg</h2>
-
-                                                    <p><strong>€300.00 - €400.00</strong></p>
-
-                                                    <p>
-                                                        <small>
-                                                            <i class="fa fa-calendar"></i> Disponibilidade&nbsp;
-                                                            <i class="fa fa-cube"></i> Mínimo de 1 diária
-                                                            <i class="fa fa-car"></i> Estacionamento
-                                                        </small>
-                                                    </p>
-                                                </a>
-                                            </article>
+                                            <?php
+                                        }?>
+                                    </section>
 
 
-                                        </section>
-                                    </div>
-                                </div>
+
+                                    <?php
+                                    }
+
+                                    ?>
 
 
-                                <?php
-                            }
 
-                            ?>
                             <?php
 
                             function footerpackrest(){
@@ -3241,200 +3021,47 @@ where categoriaNome='Restauracao' limit 6" ;
                                             <img src="images/banner-image-7-1920x500.jpg" class="img-fluid" alt=""/>
                                         </div>
 
-                                        <!-- Packages -->
+                                        <?php
+                                        include_once("config.inc.php");
+                                        $con = mysqli_connect("localhost", "root", "", "pap2021saopedro");
+                                        $con->set_charset("utf8");
+                                        $sql = "SELECT * 
+from  estabelecimentos 
+inner join categorias on estabelecimentoCategoriaId = categoriaId
+where categoriaNome='Alojamento' " ;
+
+                                        $resultado = mysqli_query($con, $sql);
+
+
+                                        ?>
                                         <section class="tiles">
-                                            <article class="style1">
-									<span class="image">
-										<img src="images/c1.jpg" alt=""/>
-									</span>
-                                                <a href="package-details.php">
-                                                    <h2>Casa para aluguar</h2>
-
-                                                    <p><strong>€1094.00 - €1500.00</strong></p>
-
-                                                    <p>
-                                                        <small>
-                                                            <i class="fa fa-calendar"></i> Disponibilidade &nbsp;
-                                                            <i class="fa fa-cube"></i> Mínimo de 2 diárias &nbsp;
-                                                            <i class="fa fa-wifi"></i> Acesso à internet
-                                                        </small>
-                                                    </p>
-                                                </a>
-                                            </article>
-                                            <article class="style2">
-									<span class="image">
-										<img src="images/1a.jpg" alt=""/>
-									</span>
-                                                <a href="package-details2.php">
-                                                    <h2>Mar e Sol Hotel Spa</h2>
-
-                                                    <p><strong>€120.00 - €500.00</strong></p>
-
-                                                    <p>
-                                                        <small>
-                                                            <i class="fa fa-calendar"></i> Disponibilidade &nbsp;
-                                                            <i class="fa fa-cube"></i>Mínimo de 1 diária
-                                                            <i class="fa fa-shower"></i> Spa
-                                                        </small>
-                                                    </p>
-                                                </a>
-                                            </article>
-                                            <article class="style3">
-									<span class="image">
-										<img src="images/1b.jpg " alt=""/>
-									</span>
-                                                <a href="package-details3.html">
-                                                    <h2>HomeMoel</h2>
-
-                                                    <p><strong>€300.00 - €400.00</strong></p>
-
-                                                    <p>
-                                                        <small>
-                                                            <i class="fa fa-calendar"></i> Disponibilidade
-                                                            <i class="fa fa-cube"></i> Mínimo de 1 diária
-                                                            <i class="fa fa-coffee"></i> Café da manhã incluído
-                                                        </small>
-                                                    </p>
-                                                </a>
-                                            </article>
-
-                                            <article class="style4">
-									<span class="image">
-										<img src="images/1c.jpg" alt=""/>
-									</span>
-                                                <a href="package-details4.html">
-                                                    <h2>Hotel Verde Pinho</h2>
-
-                                                    <p><strong>€120.00 - €400.00</strong></p>
-
-                                                    <p>
-                                                        <small>
-                                                            <i class="fa fa-calendar"></i> Disponibilidade
-                                                            <i class="fa fa-cube"></i> Mínimo de 1 diária &nbsp;
-                                                            <i class="fa fa-car"></i> Estacionamento
-                                                        </small>
-                                                    </p>
-                                                </a>
-                                            </article>
-
-                                            <article class="style5">
-									<span class="image">
-										<img src="images/1d.jpg" alt=""/>
-									</span>
-                                                <a href="teste%20rating/package-details5.html">
-                                                    <h2>Hotel Miramar - São Pedro de Moel</h2>
-
-                                                    <p><strong>€300.00 - €400.00</strong></p>
-
-                                                    <p>
-                                                        <small>
-                                                            <i class="fa fa-calendar"></i> Disponibilidade
-                                                            <i class="fa fa-cube"></i> Mínimo de 1 diária &nbsp;
-                                                            <i class="fa fa-coffee"></i> Café da manhã incluido
-                                                        </small>
-                                                    </p>
-                                                </a>
-                                            </article>
-
-                                            <article class="style6">
-									<span class="image">
-										<img src="images/1e.jpg" alt=""/>
-									</span>
-                                                <a href="teste%20rating3/Better-Rating-Form/package-details6.html">
-                                                    <h2>Orbitur S Pedro De Moel</h2>
-
-                                                    <p><strong>€300.00 - €400.00</strong></p>
-
-                                                    <p>
-                                                        <small>
-                                                            <i class="fa fa-calendar"></i> Disponibilidade&nbsp;
-                                                            <i class="fa fa-cube"></i> Mínimo de 1 diária
-                                                            <i class="fa fa-life-ring"></i> Piscina
-                                                        </small>
-                                                    </p>
-                                                </a>
-                                            </article>
-
-                                            <article class="style6">
-									<span class="image">
-										<img src="images/1h.jpg" alt=""/>
-									</span>
-                                                <a href="package-details7.html">
-                                                    <h2>Orbitur S Pedro De Moel</h2>
-
-                                                    <p><strong>€300.00 - €400.00</strong></p>
-
-                                                    <p>
-                                                        <small>
-                                                            <i class="fa fa-calendar"></i> Disponibilidade&nbsp;
-                                                            <i class="fa fa-cube"></i> Mínimo de 1 diária
-                                                            <i class="fa fa-life-ring"></i> Piscina
-                                                        </small>
-                                                    </p>
-                                                </a>
-                                            </article>
-
-                                            <article class="style6">
-									<span class="image">
-										<img src="images/1f.jpg" alt=""/>
-									</span>
-                                                <a href="package-details8.html">
-                                                    <h2>Joy Beach House</h2>
-
-                                                    <p><strong>€300.00 - €400.00</strong></p>
-
-                                                    <p>
-                                                        <small>
-                                                            <i class="fa fa-calendar"></i> Disponibilidade&nbsp;
-                                                            <i class="fa fa-cube"></i> Mínimo de 1 diária
-                                                            <i class="fa fa-car"></i> Estacionamento
-                                                        </small>
-                                                    </p>
-                                                </a>
-                                            </article>
-
-                                            <article class="style6">
-									<span class="image">
-										<img src="images/2h.jpg" alt=""/>
-									</span>
-                                                <a href="package-details9.html">
-                                                    <h2>CAMPIGIR</h2>
-
-                                                    <p><strong>€300.00 - €400.00</strong></p>
-
-                                                    <p>
-                                                        <small>
-                                                            <i class="fa fa-calendar"></i> Disponibilidade&nbsp;
-                                                            <i class="fa fa-cube"></i> Mínimo de 1 diária
-                                                            <i class="fa fa-life-ring"></i> Piscina
-                                                        </small>
-                                                    </p>
-                                                </a>
-                                            </article>
-
-                                            <article class="style6">
-									<span class="image">
-										<img src="images/3h.jpg" alt=""/>
-									</span>
-                                                <a href="package-details10.html">
-                                                    <h2>Parque de Campismo INATEL S. Pedro de Moel</h2>
-
-                                                    <p><strong>€300.00 - €400.00</strong></p>
-
-                                                    <p>
-                                                        <small>
-                                                            <i class="fa fa-calendar"></i> Disponibilidade&nbsp;
-                                                            <i class="fa fa-cube"></i> Mínimo de 1 diária
-                                                            <i class="fa fa-car"></i> Estacionamento
-                                                        </small>
-                                                    </p>
-                                                </a>
-                                            </article>
+                                            <?php
+                                            while ($dados = mysqli_fetch_array($resultado)) {
+                                                ?>
 
 
+                                                <article class="style1">
+                                                <span class="image">
+                                                    <img src="<?php echo $dados ['estabelecimentoURL'] ?>" alt=""/>
+                                                </span>
+                                                    <a href="package-details.php?id=<?php echo $dados  ['estabelecimentoId'] ?>">
+                                                        <h2><?php echo $dados  ['estabelecimentoNome'] ?></h2>
+
+                                                        <p><strong>€<?php echo $dados  ['estabelecimentoPrecoMin'] ?> - €<?php echo $dados  ['estabelecimentoPrecoMax'] ?></strong></p>
+
+                                                        <p>
+                                                            <small>
+                                                                <i class="fa fa-calendar"></i> Disponibilidade &nbsp;
+                                                                <i class="fa fa-cube"></i> Mínimo de 2 diárias &nbsp;
+                                                                <i class="fa fa-wifi"></i> Acesso à internet
+                                                            </small>
+                                                        </p>
+                                                    </a>
+                                                </article>
+                                                <?php
+                                            }?>
                                         </section>
-                                    </div>
-                                </div>
+
 
 
                                 <?php
