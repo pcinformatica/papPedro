@@ -3,9 +3,9 @@
 
 $con=mysqli_connect("localhost","root","","pap2021saopedro");
 $id=intval($_GET["id"]);
-$sql="SELECT *
-        from setorcultural  inner join cultural on setorculturalCulturalId = culturalId 
- where setorculturalId=".$id;
+$sql="select * from lendas inner join cultural on lendaCulturalId=culturalId   where lendaCulturalId=".$id;
+
+
 $resultEstabelecimentos=mysqli_query($con,$sql);
 $dadosEstabelecimentos=mysqli_fetch_array($resultEstabelecimentos);
 ?>
@@ -22,7 +22,7 @@ $dadosEstabelecimentos=mysqli_fetch_array($resultEstabelecimentos);
 
 
             <label style="color:white; font-size: 15px" class="badge badge-dark">Nome da Descrição: </label>
-            <input type="text"  name="descricaoNome" value="<?php echo $dadosEstabelecimentos["setorculturalDescricaoTitu"]?>">
+            <input type="text"  name="descricaoNome" value="<?php echo $dadosEstabelecimentos["lendaDescricaoTitu"]?>">
 
 
 
@@ -49,7 +49,7 @@ $dadosEstabelecimentos=mysqli_fetch_array($resultEstabelecimentos);
             </select><hr>
 
             <link href="summernote.css" rel="stylesheet">
-            <script src='js2/tinymce/tinymce.min.js'></script>
+            <script src='../adm/js2/tinymce/tinymce.min.js'></script>
             <label style="color:white; font-size: 15px" class="badge badge-dark">Descrição para a Página: </label>
             <script>
 
@@ -110,7 +110,7 @@ $dadosEstabelecimentos=mysqli_fetch_array($resultEstabelecimentos);
                 });
             </script>
 
-            <textarea name="estabelecimentoDescricao"  id="myTextarea" ><?php echo $dadosEstabelecimentos["setorculturalDescricao"]?></textarea>
+            <textarea name="estabelecimentoDescricao"  id="myTextarea" ><?php echo $dadosEstabelecimentos["lendaDescricao"]?></textarea>
 
             <hr>
 

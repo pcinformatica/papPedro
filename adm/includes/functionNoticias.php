@@ -102,9 +102,9 @@ $result=mysqli_query($con,$sql);
 
            echo "<td class= 'actions' >";
 
-            echo  " <a class='btn btn-success btn-xs  justify-content-md-end'href=\"../editar/editaNoticiaImagem.php?id=".$dados["noticiaId"]."\"><i class='fa fa-pencil'></i>Imagem Fundo</a>";
+            echo  " <a class='btn btn-success btn-xs  justify-content-md-end'href=\"../adm/editaNoticiaImagem.php?id=".$dados["noticiaId"]."\"><i class='fa fa-pencil'></i>Imagem Fundo</a>";
 
-                  echo  " <a class='btn btn-warning btn-xs  justify-content-md-end'href=\"../editar/editaNoticias.php?id=".$dados["noticiaId"]."\"><i class='fa fa-pencil'></i>Editar</a>";
+                  echo  " <a class='btn btn-warning btn-xs  justify-content-md-end'href=\"../adm/editaNoticias.php?id=".$dados["noticiaId"]."\"><i class='fa fa-pencil'></i>Editar</a>";
 
                   echo  "  <a class='btn btn-danger btn-xs'  onclick=\"confirmaElimina(".$dados['noticiaId'].");\"><i class='fa fa-trash'></i>Excluir</a>";
             echo "   </td>";
@@ -116,7 +116,7 @@ $result=mysqli_query($con,$sql);
     <script>
         function confirmaElimina(id) {
             if(confirm('Confirma que deseja eliminar o registo?'))
-                window.location="../eliminar/eliminaNoticia.php?id=" + id;
+                window.location="../adm/eliminaNoticia.php?id=" + id;
         }
 
     </script>
@@ -131,7 +131,7 @@ $result=mysqli_query($con,$sql);
                 </div>
                 <div class="modal-body">
                     <?php
-                    echo "<form action=\"../adicionar/confirmaNovaNoticia.php\" method=\"post\" enctype='multipart/form-data'>";
+                    echo "<form action=\"../adm/confirmaNovaNoticia.php\" method=\"post\" enctype='multipart/form-data'>";
 
 
 

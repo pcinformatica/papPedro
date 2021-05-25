@@ -89,7 +89,7 @@ $result=mysqli_query($con,$sql);
 
             echo "<td>".$dados['setorId']."</td>";
             echo "<td>".$dados['setorNome']."</td>";
-            echo "<td><img src=\"../../".$dados['setorURL']."\"></td>";
+            echo "<td><img src=\"".$dados['setorURL']."\"></td>";
             echo "<td>".$dados['categoriaNome']."</td>";
 
 
@@ -102,7 +102,7 @@ $result=mysqli_query($con,$sql);
            echo "<td class= 'actions' >";
 
 
-            echo  " <a class='btn btn-warning btn-xs  justify-content-md-end'href=\"../editar/editaSetores.php?id=".$dados["setorId"]."\"><i class='fa fa-pencil'></i>Editar</a>";
+            echo  " <a class='btn btn-warning btn-xs  justify-content-md-end'href=\"../adm/editaSetores.php?id=".$dados["setorId"]."\"><i class='fa fa-pencil'></i>Editar</a>";
 
 
                   echo  "  <a class='btn btn-danger btn-xs'  onclick=\"confirmaElimina(".$dados['setorId'].");\"><i class='fa fa-trash'></i>Excluir</a>";
@@ -138,7 +138,7 @@ $result=mysqli_query($con,$sql);
     <script>
         function confirmaElimina(id) {
             if(confirm('Confirma que deseja eliminar o registo?'))
-                window.location="../eliminar/eliminaSetor.php?id=" + id;
+                window.location="../adm/eliminaSetor.php?id=" + id;
         }
 
     </script>
@@ -156,7 +156,7 @@ $result=mysqli_query($con,$sql);
                 ?>
                 <div class="modal-body">
                     <?php
-                    echo "<form action=\"../adicionar/confirmaNovoSetor.php\" method=\"post\" enctype='multipart/form-data'>";
+                    echo "<form action=\"../adm/confirmaNovoSetor.php\" method=\"post\" enctype='multipart/form-data'>";
 
 
 

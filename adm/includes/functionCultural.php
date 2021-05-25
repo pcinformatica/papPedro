@@ -101,8 +101,8 @@ $result=mysqli_query($con,$sql);
            echo "<td class= 'actions' >";
 
             echo "<a class='btn btn-success btn-xs' href='listaDescricao.php'><i class='fa fa-eye'></i> Descrição</a>";
-            echo  " <a class='btn btn-warning btn-xs  justify-content-md-end'href=\"../editar/editaCultural.php?id=".$dados["setorId"]."\"><i class='fa fa-pencil'></i>Editar</a>";
-            echo  " <a class='btn btn-warning btn-xs  justify-content-md-end'href=\"../editar/editacaracteristica.php?id=".$dados["culturalId"]."\"><i class='fa fa-pencil'></i>Caracteristicas</a>";
+            echo  " <a class='btn btn-warning btn-xs  justify-content-md-end'href=\"../adm/editaCultural.php?id=".$dados["setorId"]."\"><i class='fa fa-pencil'></i>Editar</a>";
+            echo  " <a class='btn btn-warning btn-xs  justify-content-md-end'href=\"../adm/editacaracteristica.php?id=".$dados["culturalId"]."\"><i class='fa fa-pencil'></i>Caracteristicas</a>";
 
 
                   echo  "  <a class='btn btn-danger btn-xs'  onclick=\"confirmaElimina(".$dados['culturalId'].");\"><i class='fa fa-trash'></i>Excluir</a>";
@@ -138,7 +138,7 @@ $result=mysqli_query($con,$sql);
     <script>
         function confirmaElimina(id) {
             if(confirm('Confirma que deseja eliminar o registo?'))
-                window.location="../eliminar/eliminaCultural.php?id=" + id;
+                window.location="../adm/eliminaCultural.php?id=" + id;
         }
 
     </script>
@@ -153,7 +153,7 @@ $result=mysqli_query($con,$sql);
                 </div>
                 <div class="modal-body">
                     <?php
-                    echo "<form action=\"../adicionar/confirmaNovaCultural.php\" method=\"post\" enctype='multipart/form-data'>";
+                    echo "<form action=\"../adm/confirmaNovaCultural.php\" method=\"post\" enctype='multipart/form-data'>";
 
 
                     echo" <label>Nome: </label>";

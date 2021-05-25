@@ -753,7 +753,7 @@ inner join categorias on setorCategoriaId = categoriaId
                     <?php
                     $con = mysqli_connect("localhost", "root", "", "pap2021saopedro");
                     $id = intval($_GET["id"]);
-                    $sql = "  SELECT * from  cultural   inner  join setorcultural on setorculturalCulturalId = culturalId where culturalId=".$id;
+                    $sql = "  SELECT * from  cultural   inner  join lendas on lendaCulturalId = culturalId where culturalId=".$id;
 
 
                     $resultCultural = mysqli_query($con, $sql);
@@ -769,7 +769,7 @@ inner join categorias on setorCategoriaId = categoriaId
                             if( $resultCultural = mysqli_query($con, $sql)){
                                 $con = mysqli_connect("localhost", "root", "", "pap2021saopedro");
                                 $id = intval($_GET["id"]);
-                                $sql = "  SELECT * from  cultural   inner  join setorcultural on setorculturalCulturalId = culturalId where culturalId=".$id;
+                                $sql = "  SELECT * from  cultural   inner  join lendas on lendaCulturalId = culturalId where culturalId=".$id;
 
 
                                 $resultCultural1 = mysqli_query($con, $sql);
@@ -779,7 +779,7 @@ inner join categorias on setorCategoriaId = categoriaId
                             <h1><?php echo $dadosCultural1["culturalNome"] ?> </h1>
 
                             <div class="image main">
-                                <img src="<?php echo $dadosCultural1 ['culturalURL'] ?>" class="img-fluid" alt=""/>
+                                <img  src="<?php echo $dadosCultural1 ['culturalURL'] ?>" class="img-fluid" alt=""/>
                             </div>
                             <?php
                             }
@@ -793,8 +793,8 @@ inner join categorias on setorCategoriaId = categoriaId
 
                               ?>
 
-                            <h2 class="m-n"><?php echo $dadosCultural2 ['setorculturalDescricaoTitu'] ?></h2>
-                            <p><?php echo $dadosCultural2 ['setorculturalDescricao'] ?> <br>
+                            <h2 class="m-n"><?php echo $dadosCultural2 ['lendaDescricaoTitu'] ?></h2>
+                            <p><?php echo $dadosCultural2 ['lendaDescricao'] ?> <br>
                             </p>
 
 
@@ -1662,9 +1662,9 @@ inner join categorias on setorCategoriaId = categoriaId
                                         <li><a href="blog.php">Blog</a></li>
 
                                         <li><a href="packagesrestaurant.php">Restauração</a></li>
-                                        <li><a href="#" data-toggle="modal" data-target="#login">Login</a> </li>
+                                     <!--  <li><a href="#" data-toggle="modal" data-target="#login">Login</a> </li>
                                         <li><a href="#" data-toggle="modal" data-target="#login">Loginfff</a> </li>
-
+                                        -->
 
 
 

@@ -8,9 +8,9 @@ $id=intval($_POST['imagemId']);
 $imagem=$_FILES['nomeImagem']['name'];
 $novoNome="../images/".$imagem;
 
-  $sql= " update setores SET setorNome='".$Nome."', setorCategoriaId='".$estabelecimentoId."'";
+ $sql= " update setores SET setorNome='".$Nome."', setorCategoriaId='".$estabelecimentoId."'";
 if($imagem!=''){
-    $sql.=", setorURL='images/".$imagem."'";
+   $sql.=", setorURL='images/".$imagem."'";
     copy($_FILES['imagem']['tmp_name'],$novoNome);
 }
 $sql.=" where setorId=".$id;

@@ -54,7 +54,7 @@ function top(){
         <!-- Main -->
         <div id="main">
             <div class="inner">
-                <h1>Página de Cultural - Descrição</h1>
+                <h1>Página de Cultural - Páginas</h1>
 
 
 
@@ -116,7 +116,7 @@ $result=mysqli_query($con,$sql);
 
         //dados na base de dados
         $con=mysqli_connect("localhost","root","","pap2021saopedro");
-        $sql="select * from setorcultural inner join cultural on setorculturalCulturalId=culturalId  ";
+        $sql="select * from lendas inner join cultural on lendaCulturalId=culturalId  ";
         $result=mysqli_query($con,$sql);
 
 
@@ -125,7 +125,7 @@ $result=mysqli_query($con,$sql);
             echo " <td></td>";
 
             echo "<td>".$dados['culturalId']."</td>";
-            echo "<td>".$dados['setorculturalDescricaoTitu']."</td>";
+            echo "<td>".$dados['lendaDescricaoTitu']."</td>";
             echo "<td>".$dados['culturalNome']."</td>";
 
 
@@ -137,10 +137,10 @@ $result=mysqli_query($con,$sql);
 
            echo "<td class= 'actions' >";
             echo "<a class='btn btn-success btn-xs' href='functionDescricao.php'><i class='fa fa-eye'></i>Adicionar Caracteristicas/Ficheiros</a>";
-            echo  " <a class='btn btn-warning btn-xs  justify-content-md-end'href=\"../editar/editaDescricao.php?id=".$dados["setorculturalId"]."\"><i class='fa fa-pencil'></i>Editar</a>";
+            echo  " <a class='btn btn-warning btn-xs  justify-content-md-end'href=\"editaDescricao.php?id=".$dados["lendaCulturalId"]."\"><i class='fa fa-pencil'></i>Editar</a>";
 
 
-                  echo  "  <a class='btn btn-danger btn-xs'  onclick=\"confirmaElimina(".$dados['setorculturalId'].");\"><i class='fa fa-trash'></i>Excluir</a>";
+                  echo  "  <a class='btn btn-danger btn-xs'  onclick=\"confirmaElimina(".$dados['lendaCulturalId'].");\"><i class='fa fa-trash'></i>Excluir</a>";
             echo "   </td>";
            echo "</tr>";
         }
@@ -173,7 +173,7 @@ $result=mysqli_query($con,$sql);
     <script>
         function confirmaElimina(id) {
             if(confirm('Confirma que deseja eliminar o registo?'))
-                window.location="../eliminar/eliminaDescricao.php?id=" + id;
+                window.location="../adm/eliminaDescricao.php?id=" + id;
         }
 
     </script>
@@ -188,7 +188,7 @@ $result=mysqli_query($con,$sql);
                 </div>
                 <div class="modal-body">
                     <?php
-                    echo "<form action=\"../adicionar/confirmaNovaDescricao.php\" method=\"post\" enctype='multipart/form-data'>";
+                    echo "<form action=\"../adm/confirmaNovaDescricao.php\" method=\"post\" enctype='multipart/form-data'>";
 
 
                     echo" <label>Nome: </label>";

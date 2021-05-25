@@ -142,6 +142,7 @@ $result=mysqli_query($con,$sql);
                     echo"  <input type=\"text\" name=\"telefoneEstabelecimento1\"><br>";
                     echo" <label>Email: </label>";
                     echo"  <input type=\"text\" name=\"emailEstabelecimento1\"><br>";
+                    echo"  <input type=\"text\" name=\"descrEstabelecimento1\"><br>";
 
 
                          ?>
