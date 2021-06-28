@@ -1084,6 +1084,81 @@ inner join categorias on setorCategoriaId = categoriaId
                                                 <h4>Blog Search</h4>
                                             </div>
 
+
+
+                                            <div class="col-12 ">
+                                                <div class="form-group">
+
+                                                    <!-- ********************************************************* -->
+                                                    <label for="nome">Pesquisa:</label>
+                                                    <input type="text" class="form-control" id="searchNome" list="users">
+                                                    <input type="hidden" id="idUser">
+                                                    <datalist id="users">
+                                                        <?php
+                                                        $query = "SELECT * FROM 06hugo_utilizadores";
+                                                        $resultado = mysqli_query($con, $query);
+                                                        while ($users = mysqli_fetch_array($resultado)) {
+                                                            ?>
+                                                            <option value="<?php echo $users["utilizadorId"]; ?>"><?php echo $users["utilizadorId"].' - '.$users['utilizadorNome'] ?></option>
+                                                            <?php
+                                                        }
+                                                        ?>
+                                                    </datalist>
+                                                </div>
+                                                <div class="row ">
+                                                    <div class="col-12" id="resultadosPesquisa" >
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                                             <div class="form-group">
                                                 <div class="input-group">
                                                     <input type="text" class="form-control" placeholder="Search"
@@ -2003,18 +2078,6 @@ where categoriaNome='Restauracao' limit 6" ;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
                             <?php
 
                             function footerind(){
@@ -2223,6 +2286,70 @@ where categoriaNome='Restauracao' limit 6" ;
                                                     </div>
                                                 </div>
                                             </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                                             <div class="row">
                                                 <div class="col-lg-12 col-sm-12 col-xs-12">
                                                     <div class="contact-block">
