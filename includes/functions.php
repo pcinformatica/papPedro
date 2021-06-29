@@ -1856,7 +1856,7 @@ inner join categorias on setorCategoriaId = categoriaId
 
                                         <br>
 
-                                        <h2 class="h2">Alojamento</h2>
+
 
 
                                         <!-- Packages -->
@@ -1865,41 +1865,81 @@ inner join categorias on setorCategoriaId = categoriaId
                                         $con = mysqli_connect("localhost", "root", "", "pap2021saopedro");
                                         $con->set_charset("utf8");
                                        $sql = "SELECT * 
-from  estabelecimentos 
-inner join categorias on estabelecimentoCategoriaId = categoriaId
-where categoriaNome='Alojamento' limit 6" ;
+                                                from categorias
+																								INNER JOIN estabelecimentos on estabelecimentoCategoriaId = categoriaId
+																								where categoriaDestaque='sim' limit 6" ;
 
                                         $resultado = mysqli_query($con, $sql);
 
 
                                         ?>
                                         <section class="tiles">
+
                                             <?php
-                                            while ($dados = mysqli_fetch_array($resultado)) {
+                                            include_once("config.inc.php");
+                                            $con = mysqli_connect("localhost", "root", "", "pap2021saopedro");
+                                            $con->set_charset("utf8");
+                                            $sql = "SELECT * 
+                                                from categorias
+																								where categoriaDestaque='sim' limit 6" ;
+
+                                            $resultado1 = mysqli_query($con, $sql);
+
+
+                                            ?>
+
+
+
+
+
+                                            <?php
+                                            while ($dados = mysqli_fetch_array($resultado1) )  {
+
                                                 ?>
-
-
-                                                <article class="style1">
-                                                <span class="image">
-                                                    <img src="<?php echo $dados ['estabelecimentoURL'] ?>" alt=""/>
-                                                </span>
-                                                    <a href="package-details.php?id=<?php echo $dados  ['estabelecimentoId'] ?>">
-                                                        <h2><?php echo $dados  ['estabelecimentoNome'] ?></h2>
-
-                                                        <p><strong>€<?php echo $dados  ['estabelecimentoPrecoMin'] ?> - €<?php echo $dados  ['estabelecimentoPrecoMax'] ?></strong></p>
-
-                                                        <p>
-                                                            <small>
-                                                                <i class="fa fa-calendar"></i> Disponibilidade &nbsp;
-                                                                <i class="fa fa-cube"></i> Mínimo de 2 diárias &nbsp;
-                                                                <i class="fa fa-wifi"></i> Acesso à internet
-                                                            </small>
-                                                        </p>
-                                                    </a>
-                                                </article>
+                                            <h2><?php echo $dados  ['categoriaNome'] ?></h2>
+                                                <br>
+                                                <br>
+                                                <br>
+                                                <br>
+                                                <br>
                                                 <?php
-                                            }?>
-                                        </section>
+                                                while ($dados = mysqli_fetch_array($resultado) )
+                                                {
+                                                    ?>
+
+
+
+                                                    <article class="style1">
+                                                            <span class="image">
+                                                                <img src="<?php echo $dados ['estabelecimentoURL'] ?>" alt=""/>
+                                                            </span>
+                                                        <a href="package-details.php?id=<?php echo $dados  ['estabelecimentoId'] ?>">
+                                                            <h2><?php echo $dados  ['estabelecimentoNome'] ?></h2>
+
+                                                            <p><strong>€<?php echo $dados  ['estabelecimentoPrecoMin'] ?> - €<?php echo $dados  ['estabelecimentoPrecoMax'] ?></strong></p>
+
+                                                            <p>
+                                                                <small>
+                                                                    <i class="fa fa-calendar"></i> Disponibilidade &nbsp;
+                                                                    <i class="fa fa-cube"></i> Mínimo de 2 diárias &nbsp;
+                                                                    <i class="fa fa-wifi"></i> Acesso à internet
+                                                                </small>
+                                                            </p>
+                                                        </a>
+                                                    </article>
+                                                    <br>
+                                                    <?php
+                                                }?>
+                                                <br>
+                                                <br>
+                                                <br>
+<?php
+}
+       ?>
+
+                                                    </section>
+
+                                        <br>
 
                                         <p class="text-center"><a href="packages.php">Ver Alojamento &nbsp;<i
                                                         class="fa fa-long-arrow-right"></i></a></p>

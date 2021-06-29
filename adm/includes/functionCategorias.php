@@ -50,11 +50,32 @@ $con=mysqli_connect("localhost","root","","pap2021saopedro");
 $sql="select * from categorias";
 $result=mysqli_query($con,$sql);
 
+
 ?>
 
 
+
+    <div class="d-grid gap-2 d-md-flex justify-content-md-end" data-toggle="modal" data-target="">
+        <?php
+        $dados=mysqli_fetch_array($result);
+           echo  "  <a href='#' class='btn btn-danger pull-right '  onclick=\"confirmaEliminaDestaque(".$dados['categoriaId'].");\"><i class='btn btn-danger  pull-right'></i>&nbsp&nbsp&nbsp Destaque &nbsp</a>" ;
+        ?>
+
+
+        <script>
+            function confirmaEliminaDestaque(id) {
+                if(confirm('Confirma que deseja eliminar todo o destaque?'))
+                    window.location="editaEliminaDestaque.php?id=" + id;
+            }
+
+        </script>
+<br>
+    </div>
+
+
    <div class="d-grid gap-2 d-md-flex justify-content-md-end" data-toggle="modal" data-target="#exampleModal">
-    <a href="#" class="btn btn-primary pull-right h2">Nova Categoria</a>
+
+       <a  href="#" class="btn btn-primary pull-right h2">Nova Categoria</a>
     </div>
 
 
@@ -92,6 +113,22 @@ $result=mysqli_query($con,$sql);
             echo  " <a class='btn btn-warning btn-xs  justify-content-md-end'href=\"../adm/editaCategoria.php?id=".$dados["categoriaId"]."\"><i class='fa fa-pencil'></i>Editar</a>";
 
             echo  "  <a class='btn btn-danger btn-xs'  onclick=\"confirmaElimina(".$dados['categoriaId'].");\"><i class='fa fa-trash'></i>Excluir</a>";
+
+            ?>
+
+        <a href="editaDestaque.php?id=<?php echo $dados['categoriaId']?>">
+                <?php  if($dados['categoriaDestaque'] == "sim"){?>
+                <i class=" fa fa-star text-warning"></i>
+                <?php
+                } else {
+                ?>
+                <i class=" fa fa-star-o text-warning"></i>
+                <?php
+                    }
+                    ?>
+
+
+        <?php
 
 
 
@@ -143,48 +180,32 @@ $result=mysqli_query($con,$sql);
             </div>
         </div>
     </div>
-    <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel2" aria-hidden="true">
-        <?php
-        $id=intval($_GET['id']);
-        $con=mysqli_connect("localhost","root","","pap2021saopedro");
-        $sql="select * from categorias where categoriaId=".$id;
-        $result=mysqli_query($con,$sql);
-        $dados=mysqli_fetch_array($result);
-
-        ?>
 
 
 
 
 
 
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Edita Categoria</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <form action="confirmaEditaCategoria.php" method="post" enctype="multipart/form-data">
 
-                        <input type="hidden" name="id" value="<?php echo $id?>">
 
-                        <label>Nome:</label>
-                        <input type="text" name="nomeCategoria" value="<?php echo $dados['categoriaNome']?>">
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <?php
-                    echo "<button type='button' class='btn btn-secondary' data-dismiss='modal'>Close</button>";
-                    echo" <button type=\"submit\" class='btn btn-primary'>Save changes</button> ";
-                    ?>
 
-                </div>
-            </div>
-        </div>
-    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     <?php
