@@ -1046,7 +1046,8 @@ inner join categorias on setorCategoriaId = categoriaId
                                                 while ($dados = mysqli_fetch_array($resultado)) {
                                                     ?>
 
-                                                    <div class="col-sm-6 text-center">
+                                                    <div class="col-sm-5 text-center">
+
                                                         <img src="<?php echo $dados ['noticiaURL'] ?>" class="img-fluid" alt=""/>
 
                                                         <h2 class="m-n"><a href="blog-post.php?id=<?php echo $dados  ['noticiaId'] ?>"><?php echo $dados  ['noticiaTitulo'] ?></a></h2>
@@ -1073,9 +1074,6 @@ inner join categorias on setorCategoriaId = categoriaId
 
 
 
-
-
-
                                             </div>
                                         </div>
 
@@ -1086,75 +1084,25 @@ inner join categorias on setorCategoriaId = categoriaId
 
 
 
-                                            <div class="col-12 ">
-                                                <div class="form-group">
 
-                                                    <!-- ********************************************************* -->
-                                                    <label for="nome">Pesquisa:</label>
-                                                    <input type="text" class="form-control" id="searchNome" list="users">
-                                                    <input type="hidden" id="idUser">
-                                                    <datalist id="users">
-                                                        <?php
-                                                        $query = "SELECT * FROM 06hugo_utilizadores";
-                                                        $resultado = mysqli_query($con, $query);
-                                                        while ($users = mysqli_fetch_array($resultado)) {
-                                                            ?>
-                                                            <option value="<?php echo $users["utilizadorId"]; ?>"><?php echo $users["utilizadorId"].' - '.$users['utilizadorNome'] ?></option>
-                                                            <?php
-                                                        }
-                                                        ?>
-                                                    </datalist>
+
+                                            <script>
+
+
+                                                $('document').ready(function () {
+                                                    $('#search').keyup(function () {
+                                                        fillTableBlog(this.value);
+                                                    });
+                                                    fillTableBlog();
+                                                })
+                                            </script>
+                                            <div class="container" align="center">
+                                                Pesquisar:<br><input type="text" id="search">
+                                                <div id="tableContent">
+
                                                 </div>
-                                                <div class="row ">
-                                                    <div class="col-12" id="resultadosPesquisa" >
-                                                    </div>
-                                                </div>
+
                                             </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
