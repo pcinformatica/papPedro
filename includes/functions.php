@@ -1086,44 +1086,117 @@ inner join categorias on setorCategoriaId = categoriaId
 
 
 
-                                            <script>
-
-
-                                                $('document').ready(function () {
-                                                    $('#search').keyup(function () {
-                                                        fillTableBlog(this.value);
-                                                    });
-                                                    fillTableBlog();
-                                                })
-                                            </script>
-                                            <div class="container" align="center">
-                                                Pesquisar:<br><input type="text" id="search">
-                                                <div id="tableContent">
-
-                                                </div>
-
-                                            </div>
-
 
 
 
                                             <div class="form-group">
-                                                <div class="input-group">
-                                                    <input type="text" class="form-control" placeholder="Search"
-                                                           aria-label="Search" aria-describedby="basic-addon2">
 
-                                                    <span class="input-group-addon"><a href="#"><i
-                                                                    class="fa fa-search"></i></a></span>
-                                                </div>
                                             </div>
 
                                             <br>
 
-                                            <p><a href="#">Famoso fotógrafo chega a São Pedro de Moel</a></p>
 
-                                            <p><a href="#">Projeto "Azul Mar" aprovada pela CMMG</a></p>
 
-                                            <p><a href="#">Restaurante "Madeira Pinho" inaugura no Sábado </a></p>
+
+
+                                            <div  class="form-group">
+                                                <div class="input-group">
+                                                    <form action="blog.php?search=$_POST['search']">
+                                                        <div class="text-right">
+                                                            <input type="text" class="form-control" placeholder="Search"   aria-label="Search" aria-describedby="basic-addon2" id="search" name="search" value=""><button class="" type="submit"><i class="fa fa-search"></i></button>
+
+                                                            <div class="input-group">
+                                                                <input type="text" class="form-control" placeholder="Search"
+                                                                       aria-label="Search" aria-describedby="basic-addon2" id="search" name="search" value="">
+
+                                                                <span class="input-group-addon"type="submit"><a href="#"><i
+                                                                                class="fa fa-search"type="submit"></i></a></span>
+                                                            </div>
+
+                                                        </div>
+                                                    </form>
+                                                </div>
+
+
+                                            </div>
+
+
+
+
+                                            <?php
+
+                                            $sql="Select noticiaTitulo, noticiaId, noticiasH, noticiaData from noticias";
+
+                                            $categ=0;
+                                            $tipo=0;
+                                            $genero="";
+                                            if (isset($_GET['search']) or isset($_GET['cat'])  or isset($_GET['tip']) or isset($_GET['gen'])){
+                                                $sql.=" where ";
+                                                if (isset($_GET['search'])){
+                                                    $filtro = $_GET['search'];
+                                                    $sql.=" noticiaTitulo like \"".$filtro."%\"";
+                                                    $sql .= " and ";
+                                                }
+
+
+                                                if (substr($sql, -5) == " and ") $sql = substr($sql,0, strlen($sql)-5);
+
+                                            }
+
+                                            $result=mysqli_query($con,$sql) or die (mysqli_error($con));
+
+                                            while($dados=mysqli_fetch_array($result)){
+
+                                                /*
+                                                https://phpdelusions.net/mysqli_examples/search_filter
+
+                                                */
+
+                                                ?>
+
+                                                <div class="col-md-4">
+                                                    <div class="product-item">
+                                                        <div class="product-title">
+                                                            <a href="blog-post.php?id=<?php echo $dados['noticiaId']; ?>"> <?php echo "".$dados['noticiaTitulo']."</a>";?> </>
+
+                                                        </div>
+
+
+
+
+
+                                                    </div>
+                                                </div>
+                                                <?php
+                                            }
+
+                                            ?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
                                         </div>
                                     </div>
