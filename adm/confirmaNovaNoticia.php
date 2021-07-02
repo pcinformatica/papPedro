@@ -12,5 +12,5 @@ $HoraId=$_POST['Hora'];
 
 echo $sql="insert into noticias(noticiaTitulo,noticiaData,noticiasH) values('".$nome."','".$DataId."','".$HoraId."');";
 mysqli_query($con,$sql);
- // header("location:listanoticias.php");
+  header("location:listanoticias.php");
 ?>

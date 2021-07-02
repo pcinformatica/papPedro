@@ -55,7 +55,7 @@ $result=mysqli_query($con,$sql);
 
 
    <div class="d-grid gap-2 d-md-flex justify-content-md-end" data-toggle="modal" data-target="#exampleModal">
-    <a href="#" class="btn btn-primary pull-right h2">Novo estabelecimento</a>
+    <a href="#" class="btn btn-primary pull-right h2">Nova notícia</a>
 
    </div>
 
