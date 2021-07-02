@@ -2022,6 +2022,7 @@ where categoriaNome='Restauracao' limit 6" ;
 
 
                                         <br>
+                                        <!--
                                         <h2 class="h2">Avaliações</h2>
 
                                         <div class="row">
@@ -2052,25 +2053,10 @@ where categoriaNome='Restauracao' limit 6" ;
                                         </div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                                         <p class="text-center"><a href="testimonials.php">Consulte mais informação
                                                 &nbsp;<i class="fa fa-long-arrow-right"></i></a></p>
+
+                                                -->
 
                                         <br>
 

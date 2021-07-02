@@ -8,7 +8,7 @@ $cut=$_POST['categoriaEstabelecimento'];
 
 
 
-  $sql="insert into ficheiros(ficheiroNome,ficheiroURL,ficheiroCulturalId) values('".$nome."','".$nome2."','".$cut."');";
+ $sql="insert into ficheiros(ficheiroNome,ficheiroURL,ficheiroCulturalId) values('".$nome."','".$nome2."','".$cut."');";
 mysqli_query($con,$sql);
-header("location:listaficheiros.php");
+header("location:listaFicheiros.php");
 ?>

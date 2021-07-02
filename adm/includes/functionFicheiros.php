@@ -100,7 +100,7 @@ $result=mysqli_query($con,$sql);
            echo "<td class= 'actions' >";
 
 
-            echo  " <a class='btn btn-warning btn-xs  justify-content-md-end'href=\"../editar/editaficheiros.php?id=".$dados["ficheiroId"]."\"><i class='fa fa-pencil'></i>Editar</a>";
+            echo  " <a class='btn btn-warning btn-xs  justify-content-md-end'href=\"../editaficheiros.php?id=".$dados["ficheiroId"]."\"><i class='fa fa-pencil'></i>Editar</a>";
 
 
 
@@ -137,7 +137,7 @@ $result=mysqli_query($con,$sql);
     <script>
         function confirmaElimina(id) {
             if(confirm('Confirma que deseja eliminar o registo?'))
-                window.location="../eliminar/eliminaFicheiros.php?id=" + id;
+                window.location="../eliminaFicheiros.php?id=" + id;
         }
 
     </script>
@@ -146,13 +146,11 @@ $result=mysqli_query($con,$sql);
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">Nova Categoria</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
+
                 </div>
                 <div class="modal-body">
                     <?php
-                    echo "<form action=\"../adicionar/confirmaNovoFicheiro.php\" method=\"post\" enctype='multipart/form-data'>";
+                    echo "<form action=\"confirmaNovoFicheiro.php\" method=\"post\" enctype='multipart/form-data'>";
 
 
                     echo" <label>Nome: </label>";

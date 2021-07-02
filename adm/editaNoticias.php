@@ -18,29 +18,52 @@ $dadosEstabelecimentos=mysqli_fetch_array($resultEstabelecimentos);
         <hr>
         <form action="confirmaEditaNoticias.php?id=<?php echo $id ?>" method="post" enctype="multipart/form-data">
 
-            <label style="color:white; font-size: 15px" class="badge badge-dark">Nome da Notícia: </label>
-            <input type="text"  name="noticiaNome" value="<?php echo $dadosEstabelecimentos["noticiaTitulo"]?>"><hr>
+            <label style="color:black; font-size: 15px" class="badge badge-white">Nome da Notícia: </label>
+            <input type="text"  class="col-2 col-form-label  " name="noticiaNome" value="<?php echo $dadosEstabelecimentos["noticiaTitulo"]?>">
+            <label  style="color:black; font-size: 15px" class="badge badge-white col-2" > </label>
+            <label  style="color:black; font-size: 15px" class="badge badge-white" > Data</label>
+
+            <input class="col-2 col-form-label  " type="date"  name="Data" value="<?php echo $dadosEstabelecimentos["noticiaData"]?>" id="example-date-input">
+
+            <label  style="color:black; font-size: 15px" class="badge badge-white col-2" > </label>
+            <label  style="color:black; font-size: 15px" class="badge badge-white ">Hora</label>
+
+            <input class="col-2 col-form-label" type="time" name="Hora" value="<?php echo $dadosEstabelecimentos["noticiasH"]?>" id="example-time-input">
+
+
+
 
             <div class="form-group row">
-                <label for="example-date-input" class="col-2 col-form-label">Data</label>
-                <div class="col-10">
-                    <input class="form-control" type="date"  name="Data" value="<?php echo $dadosEstabelecimentos["noticiaData"]?>" id="example-date-input">
+                <!--
+                <label  for="example-date-input" class="col-2 col-form-label "> Data</label>
+                -->
+
+
+
+
+
+
+
+
+                <div class="row">
+                    <!--
+                    <label for="example-time-input" class="col-2 col-form-label">Hora</label>
+                    -->
+
                 </div>
+
             </div>
 
-            <div class="form-group row">
-                <label for="example-time-input" class="col-2 col-form-label">Hora</label>
-                <div class="col-10">
-                    <input class="form-control" type="time" name="Hora" value="<?php echo $dadosEstabelecimentos["noticiasH"]?>" id="example-time-input">
-                </div>
-            </div>
-            </div>
+
 
 
 
             <link href="summernote.css" rel="stylesheet">
             <script src='../js2/tinymce/tinymce.min.js'></script>
+            <!--
             <label style="color:white; font-size: 15px" class="badge badge-dark">Descrição da Notícia: </label>
+            -->
+            <label  style="color:black; font-size: 15px" class="badge badge-white">Descrição da Notícia: </label>
             <script>
 
                 tinymce.init({
@@ -130,7 +153,7 @@ $dadosEstabelecimentos=mysqli_fetch_array($resultEstabelecimentos);
                         <input type="hidden" name="imagemId" value="<?php echo $id ?>">
 
                         <label>Imagem Inicial:</label><br>
-                        <img width="400" id="output_image" src="../../<?php echo $dadosEstabelecimentos['noticiaURL']?>"><br>
+                        <img width="400" id="output_image" src="../<?php echo $dadosEstabelecimentos['noticiaURL']?>"><br>
                     <input type="file" name="nomeImagem"><br>
 
 
