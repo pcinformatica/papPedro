@@ -1,0 +1,14 @@
+body{
+    margin: 0;
+}
+
+h1, h2, p{
+    margin-top: 0px;
+    text-align: center;
+}
+
+.container{
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #cccccc;
+}

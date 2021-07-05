@@ -1102,11 +1102,12 @@ inner join categorias on setorCategoriaId = categoriaId
                                             <div  class="form-group">
                                                 <div class="input-group">
                                                     <form action="blog.php?search=$_POST['search']">
-                                                        <div class="text-right">
-                                                            <input type="text" class="form-control" placeholder="Search"   aria-label="Search" aria-describedby="basic-addon2" id="search" name="search" value=""><button class="" type="submit"><i class="fa fa-search"></i></button>
+                                                        <div class="input-group">
+                                                            <input type="text" class="form-control" placeholder="Search"
+                                                                   aria-label="Search" aria-describedby="basic-addon2" id="search" name="search" value="">
 
 
-
+                                                            <button  class="buttonicon" type="submit2"><i  class="fa fa-search"></i></button>
                                                         </div>
                                                     </form>
                                                 </div>
@@ -1122,6 +1123,15 @@ inner join categorias on setorCategoriaId = categoriaId
                                                 <span class="input-group-addon"type="submit"><a href="#"><i
                                                                 class="fa fa-search"type="submit"></i></a></span>
                                             </div>
+
+
+                                                 <div class="text-right">
+                                                            <input type="text" class="form-control" placeholder="Search"   aria-label="Search" aria-describedby="basic-addon2" id="search" name="search" value="">
+                                                            <button class="buttonicon" type="submit2"><i class="fa fa-search"></i></button>
+
+
+
+                                                        </div>
 
 -->
                                             <?php
