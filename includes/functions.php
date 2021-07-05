@@ -1895,19 +1895,17 @@ inner join categorias on setorCategoriaId = categoriaId
 
 
                                         ?>
-                                        <section class="tiles">
+
 
                                             <?php
                                             include_once("config.inc.php");
                                             $con = mysqli_connect("localhost", "root", "", "pap2021saopedro");
                                             $con->set_charset("utf8");
                                             $sql = "SELECT * 
-                                                from categorias
-																								where categoriaDestaque='sim' limit 6" ;
+                                                from categorias inner join estabelecimentos on categoriaId=estabelecimentoCategoriaId 
+                                                    where categoriaDestaque='sim' group by categoriaId limit 6" ;
 
-                                            $resultado1 = mysqli_query($con, $sql);
-
-
+                                            $resultadoCat = mysqli_query($con, $sql);
                                             ?>
 
 
@@ -1915,17 +1913,14 @@ inner join categorias on setorCategoriaId = categoriaId
 
 
                                             <?php
-                                            while ($dados = mysqli_fetch_array($resultado1) )  {
-
+                                            while ($dadosCat = mysqli_fetch_array($resultadoCat) )  {
+                                                $sql="Select * from estabelecimentos where estabelecimentoCategoriaId=".$dadosCat['categoriaId'];
+                                                $resultadoEst=mysqli_query($con,$sql);
                                                 ?>
-                                            <h2><?php echo $dados  ['categoriaNome'] ?></h2>
-                                                <br>
-                                                <br>
-                                                <br>
-                                                <br>
-                                                <br>
+                                            <h2><?php echo $dadosCat['categoriaNome'] ?></h2>
+                                        <section class="tiles">
                                                 <?php
-                                                while ($dados = mysqli_fetch_array($resultado) )
+                                                while ($dadosEst = mysqli_fetch_array($resultadoEst) )
                                                 {
                                                     ?>
 
@@ -1933,12 +1928,12 @@ inner join categorias on setorCategoriaId = categoriaId
 
                                                     <article class="style1">
                                                             <span class="image">
-                                                                <img src="<?php echo $dados ['estabelecimentoURL'] ?>" alt=""/>
+                                                                <img src="<?php echo $dadosEst['estabelecimentoURL'] ?>" alt=""/>
                                                             </span>
-                                                        <a href="package-details.php?id=<?php echo $dados  ['estabelecimentoId'] ?>">
-                                                            <h2><?php echo $dados  ['estabelecimentoNome'] ?></h2>
+                                                        <a href="package-details.php?id=<?php echo $dadosEst['estabelecimentoId'] ?>">
+                                                            <h2><?php echo $dadosEst['estabelecimentoNome'] ?></h2>
 
-                                                            <p><strong>€<?php echo $dados  ['estabelecimentoPrecoMin'] ?> - €<?php echo $dados  ['estabelecimentoPrecoMax'] ?></strong></p>
+                                                            <p><strong>€<?php echo $dadosEst['estabelecimentoPrecoMin'] ?> - €<?php echo $dadosEst['estabelecimentoPrecoMax'] ?></strong></p>
 
                                                             <p>
                                                                 <small>
@@ -1949,12 +1944,10 @@ inner join categorias on setorCategoriaId = categoriaId
                                                             </p>
                                                         </a>
                                                     </article>
-                                                    <br>
+
                                                     <?php
                                                 }?>
-                                                <br>
-                                                <br>
-                                                <br>
+                                        </section>
 <?php
 }
        ?>
