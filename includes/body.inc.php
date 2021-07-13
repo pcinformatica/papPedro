@@ -49,7 +49,7 @@ function drawTop($menu = MENUON, $opt=HOME, $id=-1)
         <div class="col-12 mx-auto bg-dark text-center" style="min-height: 40px;">
 
 
-            <a href="index.php"><button type="button" class="btn btn-outline-warning ">Requisições/Devoluções 111111111</button></a>
+            <a href="index.php"><button type="button" class="btn btn-outline-warning ">Requisições/Devoluções</button></a>
 
             <a href="tipos.php"><button type="button" class="btn btn-outline-warning ">Tipo de utilizadores</button></a>
 
