@@ -78,9 +78,67 @@ function top(){
 
     <?php
 
-    function table(){
-        ?>
+    function table($inicio=false){
+        if($inicio==true){
+
+            $dir = "../slideshowImages";
+            $cdir = scandir($dir);
+            $c=1;
+            ?>
+            <div class="text-right mr-3">
+                <a class="btn btn-success" href="uploadslideshow.php">NOVA</a>
+            </div>
+    <?php
+            foreach ($cdir as $key => $value) {
+                if (!in_array($value, array(".", ".."))) {
+                    ?>
+
+
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th scope="col"></th>
+                    <th scope="col">ID</th>
+                    <th scope="col">Imagem</th>
+                    <th scope="col" class="actions">Ações</th>
+                </tr>
+                </thead>
+
+                <tbody>
+
+                <?php
+
+                //dados na base de dados
+
+
+
+                    echo "<tr>";
+                    echo " <td></td>";
+                    echo "<td>".$c++."</td>";
+                    echo "<td><img width='120' src=\"".$dir . "/" . $value."\"></td>";
+
+
+
+
+
+                    echo "<td class= 'actions' >";
+
+
+
+
+                    echo  "  <a class='btn btn-danger btn-xs'  onclick=\"confirmaElimina('".$value."');\"><i class='fa fa-trash'></i>Excluir</a>";
+                    echo "   </td>";
+                    echo "</tr>";
+
+                ?>
+                </tbody>
+            </table>
+
         <?php
+            }
+            }
+        }else{
+
         $con=mysqli_connect("localhost","root","","pap2021saopedro");
         $sql="select * from imagens inner join estabelecimentos on imagemEstabelecimentoId=estabelecimentoId ";
         $result=mysqli_query($con,$sql);
@@ -95,7 +153,7 @@ function top(){
 
 
 
-        <table class="table table-striped">";
+        <table class="table table-striped">
             <thead>
             <tr>
                 <th scope="col"></th>
@@ -121,7 +179,7 @@ function top(){
                 echo "<tr>";
                 echo " <td></td>";
                 echo "<td>".$dados['imagemId']."</td>";
-                echo "<td><img src=\"../".$dados['imagemNome']."\"></td>";
+                echo "<td><img width='120' src=\"../".$dados['imagemNome']."\"></td>";
                 echo "<td>".$dados['imagemEstabelecimentoId']."</td>";
                 echo "<td>".$dados['imagemOrdem']."</td>";
 
@@ -311,6 +369,7 @@ function top(){
 
 
         <?php
+        }
     }
     ?>
 
@@ -346,6 +405,12 @@ function top(){
 <script src="../assets/js/jquery.scrolly.min.js"></script>
 <script src="../assets/js/jquery.scrollex.min.js"></script>
 <script src="../assets/js/main.js"></script>
+<script>
+    function confirmaElimina(url){
+        if(confirm('Confirma a eliminação do ficheiro "'+url+'"?'))
+            window.location="confirmaEliminaSlideShow.php?url="+url;
+    }
+</script>
 </body>
 </html>
 <?php

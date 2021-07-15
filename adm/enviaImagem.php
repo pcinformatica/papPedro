@@ -4,13 +4,13 @@ print_r($_FILES['arquivo']);
 
 $nomedoArquivo = $_FILES['arquivo']['name'];
 $caminhoAtualArquivo =  $_FILES['arquivo']['tmp_name'];
-$caminhoSalvar = 'arquivos/'.$nomedoArquivo;
+$caminhoSalvar = '../slideshowImages/'.$nomedoArquivo;
 
 ;
 
 if (move_uploaded_file($caminhoAtualArquivo,$caminhoSalvar)) {
 
-    header("location: imagem.php");
+    header("location: listaslideshow.php?inicio=true");
 }else{
     echo "Arquivo não carregado!";
 

@@ -1,5 +1,10 @@
 <?php
+if(isset($_GET['inicio']))
+    $inicio=$_GET['inicio'];
+else
+    $inicio=false;
 include_once("includes/functionSlideshow.php");
 top();
-table();
-footer();?>
+table($inicio);
+footer();
+?>

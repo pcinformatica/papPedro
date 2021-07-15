@@ -19,7 +19,7 @@ function topCategorias(){
         <div class="inner">
 
             <!-- Logo -->
-            <a href="../index.php" class="logo">
+            <a href="index.php" class="logo">
                 <span class="fa fa-anchor"></span> <span class="title">São Pedro de Moel </span>
             </a>
 

@@ -68,10 +68,12 @@ function table(){
         <div class="card">
             <div class="card-body">
 
-                <form action="envia.php" method="post" enctype="multipart/form-data">
+                <form action="enviaImagem.php" method="post" enctype="multipart/form-data">
                     <input type="file" name="arquivo">
-                    <input type="submit" name="Enviar">
-
+                    <p></p>
+                    <p>
+                        <button type="submit" name="Enviar" style="background-color: #1a1a1a">Enviar ficheiro</button>
+                    </p>
 
                 </form>
 
@@ -81,8 +83,7 @@ function table(){
 
 
 
-        <h6 class="mt-3">ARQUIVOS ENVIADOS</h6>
-        <?php  require 'lista.php'?>
+
     </div>
 
 
