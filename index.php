@@ -146,9 +146,11 @@ Menuind();
 
                             <p>
                                 <small>
-                                    <i class="fa fa-calendar"></i> Disponibilidade &nbsp;
-                                    <i class="fa fa-cube"></i> Mínimo de 2 diárias &nbsp;
-                                    <i class="fa fa-wifi"></i> Acesso à internet
+
+                            <?php
+
+                            echo mb_convert_encoding($dadosEst['estabelecimentoInfoCatog'], 'UTF-8', 'UTF-16BE');
+                            ?>
                                 </small>
                             </p>
                         </a>
@@ -218,6 +220,49 @@ Menuind();
 
         <h2 class="h2">Blog</h2>
 
+        <div class="col-9">
+            <div class="row">
+
+                <?php
+                $con = mysqli_connect("localhost", "root", "", "pap2021saopedro");
+                $sql = "SELECT * from noticias limit 3";
+
+                $resultado = mysqli_query($con, $sql);
+
+
+                ?>
+
+                <?php
+                while ($dados = mysqli_fetch_array($resultado)) {
+                    ?>
+
+                    <div class="col-sm-5 text-center" >
+
+                        <img src="<?php echo $dados ['noticiaURL'] ?>" class="img-fluid" alt=""/>
+
+                        <h2 class="m-n"><a href="blog-post.php?id=<?php echo $dados  ['noticiaId'] ?>"><?php echo $dados  ['noticiaTitulo'] ?></a></h2>
+
+                        <p> John Doe &nbsp;|&nbsp; <?php echo $dados  ['noticiaData'] ?> <?php echo $dados  ['noticiasH'] ?> </p>
+                    </div>
+<br>
+
+
+                    <?php
+                }?>
+
+
+
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+<!--
         <div class="row">
             <div class="col-sm-4 text-center">
                 <img src="images/blog-1-720x480.jpg" class="img-fluid" alt=""/>
@@ -246,7 +291,7 @@ Menuind();
                 <p> John Doe &nbsp;|&nbsp; 12/06/2020 10:30</p>
             </div>
         </div>
-
+-->
         <p class="text-center"><a href="blog.php">Consulte mais informação &nbsp;<i
                     class="fa fa-long-arrow-right"></i></a></p>
 
