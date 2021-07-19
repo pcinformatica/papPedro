@@ -28,6 +28,8 @@ Menupackd();
                 <div class="row">
                     <div class="col-lg-12 col-md-12">
                         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+
+                           <!--
                             <ol class="carousel-indicators">
                                 <li data-target="#carouselExampleIndicators" data-slide-to="0"
                                     class="active"></li>
@@ -37,6 +39,7 @@ Menupackd();
                                 <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
                                 <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
                             </ol>
+                            -->
                             <div class="carousel-inner">
                                 <?php
                                 $controle_ativo = 2;
@@ -107,52 +110,9 @@ Menupackd();
 
             <br>
 
-            <h3>Disponibilidade &amp; Preços</h3>
-
-            <div class="table-responsive">
-                <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table">
-                    <thead>
-                    <tr>
-                        <th>Pacote</th>
-                        <th>De</th>
-                        <th>Até</th>
-                        <th>Preço</th>
-                    </tr>
-                    </thead>
-
-                    <tbody>
-                    <tr>
-                        <td>Natal</td>
-                        <td>01-11-2020</td>
-                        <td>27-12-2020</td>
-                        <td>€ 1200 por noite</td>
-                    </tr>
-
-                    <tr>
-                        <td>Ano Novo</td>
-                        <td>28-2020</td>
-                        <td>3-01-2021</td>
-                        <td>€ 1500 por noite</td>
-                    </tr>
-
-                    <tr>
-                        <td>Janeiro</td>
-                        <td>4-01-2021</td>
-                        <td>31-01-2021</td>
-                        <td>€ 1094 por noite</td>
-                    </tr>
-                    <tr>
-                        <td>Romântico</td>
-                        <td>01-02-2020</td>
-                        <td>31-02-2020</td>
-                        <td>€ 1094 por noite</td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
 
             <br>
-
+<!--
             <h3>Info</h3>
 
             <ul class="list-group list-group-no-border">
@@ -204,7 +164,7 @@ Menupackd();
 
 
             </ul>
-
+-->
 
         </div>
     </div>

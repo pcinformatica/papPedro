@@ -12,7 +12,7 @@ Menublog();
     <!-- Main -->
     <div id="main">
         <div class="inner">
-            <h1>Blog</h1>
+            <h1>Notícias</h1>
 
             <div class="image main">
                 <img src="images/banner-image-6-1920x500.jpg" class="img-fluid" alt=""/>
@@ -40,7 +40,7 @@ Menublog();
 
                                     <img src="<?php echo $dados ['noticiaURL'] ?>" class="img-fluid" alt=""/>
 
-                                    <h2 class="m-n"><a href="blog-post.php?id=<?php echo $dados  ['noticiaId'] ?>"><?php echo $dados  ['noticiaTitulo'] ?></a></h2>
+                                    <h2 class="m-n"><a href="noticiaInfo.php?id=<?php echo $dados  ['noticiaId'] ?>"><?php echo $dados  ['noticiaTitulo'] ?></a></h2>
 
                                     <p> John Doe &nbsp;|&nbsp; <?php echo $dados  ['noticiaData'] ?> <?php echo $dados  ['noticiasH'] ?> </p>
                                 </div>
@@ -70,7 +70,7 @@ Menublog();
 
                         <div  class="form-group">
                             <div class="input-group">
-                                <form action="blog.php?search=$_POST['search']">
+                                <form action="noticias.php?search=$_POST['search']">
                                     <div class="input-group">
                                         <input type="text" class="form-control" placeholder="Search"
                                                aria-label="Search" aria-describedby="basic-addon2" id="search" name="search" value="">
@@ -137,7 +137,7 @@ Menublog();
                             <div class="col-md-4">
                                 <div class="product-item">
                                     <div class="product-title">
-                                        <a href="blog-post.php?id=<?php echo $dados['noticiaId']; ?>"> <?php echo "".$dados['noticiaTitulo']."</a>";?> </>
+                                        <a href="noticiaInfo.php?id=<?php echo $dados['noticiaId']; ?>"> <?php echo "".$dados['noticiaTitulo']."</a>";?> </>
 
                                     </div>
 

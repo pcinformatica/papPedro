@@ -11,7 +11,7 @@ Menutest();
     <!-- Main -->
     <div id="main">
         <div class="inner">
-            <h1>Lendas</h1>
+            <h1><?php echo $dados  ['saopedroTitulo'] ?></h1>
 
             <div class="image main">
                 <img src="images/banner-image-3-1920x500.jpg" class="img-fluid" alt=""/>

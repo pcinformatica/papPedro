@@ -77,7 +77,7 @@ function topback(){
 									<span class="image">
 										<img src="../../images/1d.jpg" alt="" />
 									</span>
-                        <a href="../../adm/listaestabelecimentos.php">
+                        <a href="../../adm/listaEstabelecimentos.php">
 
 
                             <p>

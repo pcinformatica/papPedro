@@ -2,7 +2,7 @@
 
 ini_set("display_errors",true);
 
-include_once ("blog.php");
+include_once("noticias.php");
 include_once ("assets/js/common.js");
 
 $nBlog=intval($_POST['nLivros']);

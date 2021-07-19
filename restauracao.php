@@ -36,7 +36,7 @@ where categoriaNome='Restauracao' " ;
                                                 <span class="image">
                                                     <img src="<?php echo $dados ['estabelecimentoURL'] ?>" alt=""/>
                                                 </span>
-                    <a href="package-details.php?id=<?php echo $dados  ['estabelecimentoId'] ?>">
+                    <a href="alojamentoInfo.php?id=<?php echo $dados  ['estabelecimentoId'] ?>">
                         <h2><?php echo $dados  ['estabelecimentoNome'] ?></h2>
 
                         <p><strong>€<?php echo $dados  ['estabelecimentoPrecoMin'] ?> - €<?php echo $dados  ['estabelecimentoPrecoMax'] ?></strong></p>

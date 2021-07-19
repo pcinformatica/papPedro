@@ -20,7 +20,7 @@ if($con ){
   $sql= " update noticias SET noticiaTitulo='".$Nome."', noticiaDescricao='".$Descricao1."',noticiaData='".$Data."', noticiasH='".$Hora."'";
 if($imagem!=''){
     $sql.=", noticiaURL='images/".$imagem."'";
-    copy($_FILES['imagem']['tmp_name'],$novoNome);
+    copy($_FILES['nomeImagem']['tmp_name'],$novoNome);
 }
 $sql.=" where noticiaId=".$id;
 

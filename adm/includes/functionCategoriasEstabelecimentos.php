@@ -167,7 +167,7 @@ inner join categorias on estabelecimentoCategoriaCategoriaId = categoriaId";
 
            echo "<td class= 'actions' >";
 
-            echo  "<a class='btn btn-success btn-xs' href='listaestabelecimentos.php'><i class='fa fa-eye'></i> Estabelecimentos</a>";
+            echo  "<a class='btn btn-success btn-xs' href='listaEstabelecimentos.php'><i class='fa fa-eye'></i> Estabelecimentos</a>";
 
                   echo  " <a class='btn btn-warning btn-xs  justify-content-md-end'href=\"../editar/editaEstabelecimentoCategoria.php?id=".$dados["estabelecimentoId"]."\"><i class='fa fa-pencil'></i>Editar</a>";
 

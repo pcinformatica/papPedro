@@ -54,11 +54,7 @@ function top(){
     <!-- Main -->
     <div id="main">
         <div class="inner">
-            <h1>Página de Estabelecimentos - Administração</h1>
-
-
-
-
+            <h1>Página Slideshow - Administração</h1>
 
 
 
@@ -179,7 +175,7 @@ function top(){
                 echo "<tr>";
                 echo " <td></td>";
                 echo "<td>".$dados['imagemId']."</td>";
-                echo "<td><img width='120' src=\"../".$dados['imagemNome']."\"></td>";
+                echo "<td><img width='120' src=\"".$dados['imagemNome']."\"></td>";
                 echo "<td>".$dados['imagemEstabelecimentoId']."</td>";
                 echo "<td>".$dados['imagemOrdem']."</td>";
 
@@ -192,7 +188,7 @@ function top(){
 
 
 
-                echo  "  <a class='btn btn-danger btn-xs'  onclick=\"confirmaElimina(".$dados['imagemId'].");\"><i class='fa fa-trash'></i>Excluir</a>";
+                echo  "  <a class='btn btn-danger btn-xs'  onclick=\"confirmaElimina2(".$dados['imagemId'].");\"><i class='fa fa-trash'></i>Excluir</a>";
                 echo "   </td>";
                 echo "</tr>";
             }
@@ -235,7 +231,7 @@ function top(){
 
 
         <script>
-            function confirmaElimina(id) {
+            function confirmaElimina2(id) {
                 if(confirm('Confirma que deseja eliminar o registo?'))
                     window.location="eliminaImagem.php?id=" + id;
             }
@@ -266,7 +262,9 @@ function top(){
                         ?>
                         <label>Imagem:</label>
                         <input type="file" name="nomeImagem"><br>
-                        ****************************************************************************************************************************
+                    <div>
+
+                    </div>
                         <?php
                         if(isset($_FILES['nomeImagem']))
                         {

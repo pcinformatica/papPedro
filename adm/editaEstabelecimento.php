@@ -13,25 +13,52 @@ $dadosEstabelecimentos=mysqli_fetch_array($resultEstabelecimentos);
 
 
 
-        <a href="listaestabelecimentos.php"><button type="button" class="btn btn-danger">Voltar</button></a>
+        <a href="listaEstabelecimentos.php"><button type="button" class="btn btn-danger">Voltar</button></a>
         <hr>
         <form action="confirmaEditaEstabelecimento.php?id=<?php echo $id ?>" method="post" enctype="multipart/form-data">
 
-            <label style="color:white; font-size: 15px" class="badge badge-dark">Nome de Estabelecimento: </label>
-            <input type="text"  name="estabelecimentoNome" value="<?php echo $dadosEstabelecimentos["estabelecimentoNome"]?>"><hr>
 
-            <label style="color:white; font-size: 15px" class="badge badge-dark">Morada do Estabelecimento: </label>
-            <input type="text"  name="estabelecimentoMorada" value="<?php echo $dadosEstabelecimentos["estabelecimentoMorada"]?>"><hr>
 
-            <label style="color:white; font-size: 15px" class="badge badge-dark">Telefone do Estabelecimento: </label>
-            <input type="text"  name="estabelecimentoTelefone" value="<?php echo $dadosEstabelecimentos["estabelecimentoTelefone"]?>"><hr>
+            <label style="color:black; font-size: 15px" class="badge badge-white">Nome de Estabelecimento: </label>
+            <input type="text"  class="col-2 col-form-label  " name="estabelecimentoNome"  value="<?php echo $dadosEstabelecimentos["estabelecimentoNome"]?>">
 
-            <label style="color:white; font-size: 15px" class="badge badge-dark">Email do Estabelecimento: </label>
-            <input type="text"  name="estabelecimentoEmail" value="<?php echo $dadosEstabelecimentos["estabelecimentoEmail"]?>"><hr>
+            <label style="color:black; font-size: 15px" class="badge badge-white">Morada de Estabelecimento: </label>
+            <input type="text"  class="col-2 col-form-label  " name="estabelecimentoMorada"   value="<?php echo $dadosEstabelecimentos["estabelecimentoMorada"]?>">
+
+
+
+
+            <label style="color:black; font-size: 15px" class="badge badge-white">Telefone de Estabelecimento: </label>
+            <input type="text"  class="col-2 col-form-label  " name="estabelecimentoTelefone"   value="<?php echo $dadosEstabelecimentos["estabelecimentoTelefone"]?>">
+
+
+            <label style="color:black; font-size: 15px" class="badge badge-white">Email do Estabelecimento:: </label>
+            <input type="text"  class="col-2 col-form-label  " name="estabelecimentoEmail"   value="<?php echo $dadosEstabelecimentos["estabelecimentoEmail"]?>">
+
+
+            <div class="form-group row">
+                <!--
+                <label  for="example-date-input" class="col-2 col-form-label "> Data</label>
+                -->
+
+
+
+                <div class="row">
+                    <!--
+                    <label for="example-time-input" class="col-2 col-form-label">Hora</label>
+                    -->
+
+                </div>
+
+            </div>
+
+
+
+
 
             <link href="summernote.css" rel="stylesheet">
             <script src='../js2/tinymce/tinymce.min.js'></script>
-            <label style="color:white; font-size: 15px" class="badge badge-dark">Descrição do Estabelecimento: </label>
+            <label  style="color:black; font-size: 15px" class="badge badge-white">Descrição do Estabelecimento: </label>
             <script>
 
                 tinymce.init({
@@ -99,7 +126,8 @@ $dadosEstabelecimentos=mysqli_fetch_array($resultEstabelecimentos);
 
           <link href="summernote.css" rel="stylesheet">
           <script src='../js2/tinymce2/tinymce.min.js'></script>
-          <label style="color:white; font-size: 15px" class="badge badge-dark">Info. Destaque do Estabelecimento: </label>
+          <label  style="color:black; font-size: 15px" class="badge badge-white">Info. Destaque do Estabelecimento: </label>
+
           <script>
 
               tinymce.init({
@@ -165,57 +193,23 @@ $dadosEstabelecimentos=mysqli_fetch_array($resultEstabelecimentos);
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
       </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-            <label style="color:white; font-size: 15px" class="badge badge-dark">Latitude do Estabelecimento: </label>
+            <label style="color:black; font-size: 15px" class="badge badge-white">Latitude do Estabelecimento: </label>
             <input type="text"  name="estabelecimentoLatitude" value="<?php echo $dadosEstabelecimentos["estabelecimentoLatitude"]?>">
 
-            <label style="color:white; font-size: 15px" class="badge badge-dark">Longitude do Estabelecimento: </label>
+            <label style="color:black; font-size: 15px" class="badge badge-white">Longitude do Estabelecimento: </label>
             <input type="text"  name="estabelecimentoLongitude" value="<?php echo $dadosEstabelecimentos["estabelecimentoLongitude"]?>">
 
-            <label style="color:white; font-size: 15px" class="badge badge-dark">Preço Min do Estabelecimento: </label>
+            <label style="color:black; font-size: 15px" class="badge badge-white">Preço Min do Estabelecimento:</label>
             <input type="text"  name="estabelecimentoPrecoMin" value="<?php echo $dadosEstabelecimentos["estabelecimentoPrecoMin"]?>">
 
-            <label style="color:white; font-size: 15px" class="badge badge-dark">Preço Max do Estabelecimento: </label>
+
+            <label style="color:black; font-size: 15px" class="badge badge-white">Preço Max do Estabelecimento: </label>
             <input type="text"  name="estabelecimentoPrecoMax" value="<?php echo $dadosEstabelecimentos["estabelecimentoPrecoMax"]?>">
 
 
 
             <hr>
-
-
-
-
-
-
-
-
-
-
 
 
             <hr>
@@ -241,18 +235,7 @@ $dadosEstabelecimentos=mysqli_fetch_array($resultEstabelecimentos);
 
             </div>
 
-
-
             <input type="Submit"  aria-describedby="inputGroup-sizing-sm" class="btn btn-success" value="Edita" ><br>
-
-
-
-
-
-
-
-
-
 
 
         </form>

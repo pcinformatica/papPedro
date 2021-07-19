@@ -6,14 +6,14 @@ top();
 
     <?php
     $con=mysqli_connect("localhost","root","","pap2021saopedro");
-    $sql="select * from noticias";
+    $sql="select * from saopedro";
     $result=mysqli_query($con,$sql);
-
+$con->set_charset("utf-8");
     ?>
 
 
     <div class="d-grid gap-2 d-md-flex justify-content-md-end" data-toggle="modal" data-target="#exampleModal">
-        <a href="#" class="btn btn-primary pull-right h2">Nova notícia</a>
+        <a href="#" class="btn btn-primary pull-right h2">Nova página</a>
 
     </div>
 
@@ -27,9 +27,8 @@ top();
         <tr>
             <th scope="col"></th>
             <th scope="col">ID</th>
-            <th scope="col">Nome da Notícias</th>
-            <th scope="col">Data</th>
-            <th scope="col">Hora</th>
+            <th scope="col">Nome do titulo</th>
+            <th scope="col">Imagem</th>
 
 
 
@@ -42,16 +41,19 @@ top();
         <?php
 
         //dados na base de dados
-        $sql="select * from noticias";
+        $con=mysqli_connect("localhost","root","","pap2021saopedro");
+        $con->set_charset("utf-8");
+        $sql="select * from saopedro";
         $result=mysqli_query($con,$sql);
 
         while ($dados=mysqli_fetch_array($result)) {
+
             echo "<tr>";
             echo " <td></td>";
-            echo "<td>".$dados['noticiaId']."</td>";
-            echo "<td>".$dados['noticiaTitulo']."</td>";
-            echo "<td>".$dados['noticiaData']."</td>";
-            echo "<td>".$dados['noticiasH']."</td>";
+            echo "<td>".$dados['saopedroId']."</td>";
+            echo "<td>".$dados['saopedroTitulo']."</td>";?>
+            <td>       <img width="400" id="output_image" src="../<?php echo $dados['saopedroURL']?>"><br></td>";
+       <?php
 
 
 
@@ -60,11 +62,11 @@ top();
 
             echo "<td class= 'actions' >";
 
-            echo  " <a class='btn btn-success btn-xs  justify-content-md-end'href=\"../adm/editaNoticiaImagem.php?id=".$dados["noticiaId"]."\"><i class='fa fa-pencil'></i>Imagem Fundo</a>";
 
-            echo  " <a class='btn btn-warning btn-xs  justify-content-md-end'href=\"../adm/editaNoticias.php?id=".$dados["noticiaId"]."\"><i class='fa fa-pencil'></i>Editar</a>";
 
-            echo  "  <a class='btn btn-danger btn-xs'  onclick=\"confirmaElimina(".$dados['noticiaId'].");\"><i class='fa fa-trash'></i>Excluir</a>";
+            echo  " <a class='btn btn-warning btn-xs  justify-content-md-end'href=\"../adm/editaSPM.php?id=".$dados["saopedroId"]."\"><i class='fa fa-pencil'></i>Editar</a>";
+
+            echo  "  <a class='btn btn-danger btn-xs'  onclick=\"confirmaElimina(".$dados['saopedroId'].");\"><i class='fa fa-trash'></i>Excluir</a>";
             echo "   </td>";
             echo "</tr>";
         }
@@ -74,7 +76,7 @@ top();
     <script>
         function confirmaElimina(id) {
             if(confirm('Confirma que deseja eliminar o registo?'))
-                window.location="../adm/eliminaNoticia.php?id=" + id;
+                window.location="../adm/eliminaSPM.php?id=" + id;
         }
 
     </script>

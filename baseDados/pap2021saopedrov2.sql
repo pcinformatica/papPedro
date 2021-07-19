@@ -59,7 +59,7 @@ CREATE TABLE `categorias`  (
 -- ----------------------------
 -- Records of categorias
 -- ----------------------------
-INSERT INTO `categorias` VALUES (1, 'Alojamento', 'sim', 'packages.php');
+INSERT INTO `categorias` VALUES (1, 'Alojamento', 'sim', 'alojamentos.php');
 INSERT INTO `categorias` VALUES (2, 'Restauracao', 'sim', 'ola.php');
 INSERT INTO `categorias` VALUES (3, 'Cultural', 'sim', NULL);
 INSERT INTO `categorias` VALUES (4, 'IPSDIS', 'nao', NULL);

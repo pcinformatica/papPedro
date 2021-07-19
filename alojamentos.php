@@ -36,16 +36,17 @@ where categoriaNome='Alojamento' " ;
                                                 <span class="image">
                                                     <img src="<?php echo $dados ['estabelecimentoURL'] ?>" alt=""/>
                                                 </span>
-                <a href="package-details.php?id=<?php echo $dados  ['estabelecimentoId'] ?>">
+                <a href="alojamentoInfo.php?id=<?php echo $dados  ['estabelecimentoId'] ?>">
                     <h2><?php echo $dados  ['estabelecimentoNome'] ?></h2>
 
                     <p><strong>€<?php echo $dados  ['estabelecimentoPrecoMin'] ?> - €<?php echo $dados  ['estabelecimentoPrecoMax'] ?></strong></p>
 
                     <p>
                         <small>
-                            <i class="fa fa-calendar"></i> Disponibilidade &nbsp;
-                            <i class="fa fa-cube"></i> Mínimo de 2 diárias &nbsp;
-                            <i class="fa fa-wifi"></i> Acesso à internet
+                            <?php
+
+                            echo $dados['estabelecimentoInfoCatog'];
+                            ?>
                         </small>
                     </p>
                 </a>

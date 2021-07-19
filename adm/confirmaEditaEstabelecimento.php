@@ -16,7 +16,7 @@ $id=intval($_POST['imagemId']);
 $imagem=$_FILES['nomeImagem']['name'];
 $novoNome="../images/".$imagem;
 
-  $sql= " update estabelecimentos SET estabelecimentoNome='".$Nome."', estabelecimentoMorada='".$Morada."',estabelecimentoTelefone='".$Telefone."',estabelecimentoEmail='".$Email."', estabelecimentoInfoCatog='".$Descricao2."',estabelecimentoDescricao='".$Descricao1."',estabelecimentoLatitude='".$Latitude."',estabelecimentoLongitude='".$Longitude."',estabelecimentoPrecoMin='".$PrecMin."',estabelecimentoPrecoMax='".$PrecMax."'";
+ $sql= " update estabelecimentos SET estabelecimentoNome='".$Nome."', estabelecimentoMorada='".$Morada."',estabelecimentoTelefone='".$Telefone."',estabelecimentoEmail='".$Email."', estabelecimentoInfoCatog='".$Descricao2."',estabelecimentoDescricao='".$Descricao1."',estabelecimentoLatitude='".$Latitude."',estabelecimentoLongitude='".$Longitude."',estabelecimentoPrecoMin='".$PrecMin."',estabelecimentoPrecoMax='".$PrecMax."'";
 if($imagem!=''){
     $sql.=", estabelecimentoURL='images/".$imagem."'";
     copy($_FILES['nomeImagem']['tmp_name'],$novoNome);
@@ -28,5 +28,5 @@ $sql.=" where estabelecimentoId=".$id;
 
 
 mysqli_query($con,$sql);
-header("location:listaestabelecimentos.php");
+header("location:listaEstabelecimentos.php");
 ?>

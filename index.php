@@ -127,9 +127,9 @@ Menuind();
 
                     <article class="style1">
                                                             <span class="image">
-                                                                <img src="<?php echo $dadosEst['estabelecimentoURL'] ?>" alt=""/>
+                                                                <img style="width: 420px" src="<?php echo $dadosEst['estabelecimentoURL'] ?>" alt=""/>
                                                             </span>
-                        <a href="package-details.php?id=<?php echo $dadosEst['estabelecimentoId'] ?>">
+                        <a href="alojamentoInfo.php?id=<?php echo $dadosEst['estabelecimentoId'] ?>">
                             <h2><?php echo $dadosEst['estabelecimentoNome'] ?></h2>
 
                             <p><strong>€<?php echo $dadosEst['estabelecimentoPrecoMin'] ?> - €<?php echo $dadosEst['estabelecimentoPrecoMax'] ?></strong></p>
@@ -230,7 +230,7 @@ Menuind();
 
                         <img src="<?php echo $dados ['noticiaURL'] ?>" class="img-fluid" alt=""/>
 
-                        <h2 class="m-n"><a href="blog-post.php?id=<?php echo $dados  ['noticiaId'] ?>"><?php echo $dados  ['noticiaTitulo'] ?></a></h2>
+                        <h2 class="m-n"><a href="noticiaInfo.php?id=<?php echo $dados  ['noticiaId'] ?>"><?php echo $dados  ['noticiaTitulo'] ?></a></h2>
 
                         <p> John Doe &nbsp;|&nbsp; <?php echo $dados  ['noticiaData'] ?> <?php echo $dados  ['noticiasH'] ?> </p>
                     </div>
@@ -282,7 +282,7 @@ Menuind();
             </div>
         </div>
 -->
-        <p class="text-center"><a href="blog.php">Consulte mais informação &nbsp;<i
+        <p class="text-center"><a href="noticias.php">Consulte mais informação &nbsp;<i
                     class="fa fa-long-arrow-right"></i></a></p>
 
 
