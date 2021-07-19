@@ -106,22 +106,6 @@ Menupackd();
 
 
             <br>
-            <div class="col-lg-4 col-md-5">
-                <h3>Informações //teste</h3>
-
-                <p>
-                    - Acessível: Disponiblidade <br>
-                    - Mínimo de 2 diárias <br>
-                    - Hidromassagem <br>
-                    - Acesso à internet <br>
-                    - T6 <br>
-                    -Estacionamento
-                </p>
-
-                <span class="image main"><img src="images/map.jpg" alt=""/></span>
-
-                <a href="#footer" class="button primary scrolly">Enquiry</a>
-            </div>
 
             <h3>Disponibilidade &amp; Preços</h3>
 
