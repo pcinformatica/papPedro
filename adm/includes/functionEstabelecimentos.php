@@ -14,7 +14,19 @@ function top(){
     <body class="is-preload">
     <!-- Wrapper -->
     <div id="wrapper">
+        <header id="header">
+            <div class="inner">
 
+                <!-- Logo -->
+                <a href="index.php" class="logo">
+                    <span class="fa fa-anchor"></span> <span class="title">São Pedro de Moel </span>
+                </a>
+
+                <!-- Nav -->
+
+
+            </div>
+        </header>
 
         <!-- Main -->
         <div id="main">
@@ -40,15 +52,12 @@ function top(){
 
 <?php
 }
-?>
-
-<?php
 
 function table(){
 ?>
 <?php
 $con=mysqli_connect("localhost","root","","pap2021saopedro");
-$sql="select * from estabelecimentos";
+$sql="select * from estabelecimentos inner join categorias on estabelecimentoCategoriaId=categoriaId";
 $result=mysqli_query($con,$sql);
 
 ?>
@@ -64,12 +73,13 @@ $result=mysqli_query($con,$sql);
 
 
 
-   <table class="table table-striped">";
+   <table class="table table-striped">
       <thead>
         <tr>
             <th scope="col"></th>
           <th scope="col">ID</th>
           <th scope="col">Nome da Estabelecimento</th>
+          <th scope="col">Categoria</th>
           <th scope="col">Morada</th>
           <th scope="col">Telefone</th>
           <th scope="col">Email</th>
@@ -83,15 +93,13 @@ $result=mysqli_query($con,$sql);
 
         <?php
 
-        //dados na base de dados
-        $sql="select * from estabelecimentos";
-        $result=mysqli_query($con,$sql);
 
         while ($dados=mysqli_fetch_array($result)) {
             echo "<tr>";
             echo " <td></td>";
             echo "<td>".$dados['estabelecimentoId']."</td>";
             echo "<td>".$dados['estabelecimentoNome']."</td>";
+            echo "<td>".$dados['categoriaNome']."</td>";
             echo "<td>".$dados['estabelecimentoMorada']."</td>";
             echo "<td>".$dados['estabelecimentoTelefone']."</td>";
             echo "<td>".$dados['estabelecimentoEmail']."</td>";

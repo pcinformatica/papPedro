@@ -16,18 +16,20 @@ MenuLen();
             </div>
 
             <div class="row">
+                <?php
+                $sql="select comentarioTexto, perfilNome from comentarios inner join perfis on perfilId=comentarioPerfilId";
+                $result=mysqli_query($con,$sql);
+                while($dados=mysqli_fetch_array($result)){
+                ?>
                 <div class="col-sm-6 text-center">
-                    <p class="m-n"><em>"Muito bonita e acolhedora. E numa manhã de Setembro, cheia de nevoeiro,
-                            fica ainda mais bonita, e misteriosa."</em></p>
+                    <p class="m-n"><em><?php echo $dados['comentarioTexto']?></em></p>
 
-                    <p><strong> - John Doe</strong></p>
+                    <p><strong> - <?php echo $dados['perfilNome']?></strong></p>
                 </div>
+                    <?php
+                }
+                    ?>
 
-                <div class="col-sm-6 text-center">
-                    <p class="m-n"><em>"E um lugar onde se admira a natureza e lugar pra refletir."</em></p>
-
-                    <p><strong>- Ana Luíza</strong></p>
-                </div>
             </div>
 
 

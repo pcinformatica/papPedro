@@ -235,7 +235,7 @@ $dadosEstabelecimentos=mysqli_fetch_array($resultEstabelecimentos);
                         <input type="hidden" name="imagemId" value="<?php echo $id ?>">
 
                         <label>Imagem:</label><br>
-                        <img width="400" id="output_image" src="../../<?php echo $dadosEstabelecimentos['estabelecimentoURL']?>"><br>
+                        <img width="400" id="output_image" src="../<?php echo $dadosEstabelecimentos['estabelecimentoURL']?>"><br>
                     <input type="file" name="nomeImagem"><br>
 
 

@@ -84,7 +84,7 @@ Menuind();
         <?php
         include_once("config.inc.php");
         $con = mysqli_connect("localhost", "root", "", "pap2021saopedro");
-        $con->set_charset("utf8");
+        $con->set_charset("utf-8");
         $sql = "SELECT * 
                                                 from categorias
 																								INNER JOIN estabelecimentos on estabelecimentoCategoriaId = categoriaId
@@ -99,7 +99,7 @@ Menuind();
         <?php
         include_once("config.inc.php");
         $con = mysqli_connect("localhost", "root", "", "pap2021saopedro");
-        $con->set_charset("utf8");
+        $con->set_charset("utf-8");
         $sql = "SELECT * 
                                                 from categorias inner join estabelecimentos on categoriaId=estabelecimentoCategoriaId 
                                                     where categoriaDestaque='sim' group by categoriaId limit 6" ;
@@ -293,6 +293,5 @@ Menuind();
 
 
 <?php
-include_once('includes\functions.php');
 footerind();
 ?>

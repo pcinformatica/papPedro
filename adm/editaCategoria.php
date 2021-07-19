@@ -2,6 +2,7 @@
 
 
 $con=mysqli_connect("localhost","root","","pap2021saopedro");
+$con->set_charset("utf-8");
 $id=intval($_GET["id"]);
 $sql="select * from categorias where categoriaId=".$id;
 $resultCategorias=mysqli_query($con,$sql);

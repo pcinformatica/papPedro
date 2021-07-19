@@ -140,11 +140,11 @@ function topback(){
 									<span class="image">
 										<img src="../images/2h.jpg" alt="" />
 									</span>
-                        <a href="">
+                        <a href="listacultural.php">
 
                             <p>
                                 <small>
-                            <h2>administração cultural</h2>
+                            <h2>administração cultural....</h2>
                             </small>
                             </p>
                         </a>
