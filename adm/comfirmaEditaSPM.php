@@ -9,22 +9,22 @@ $id=intval($_POST['imagemId']);
 $imagem=$_FILES['nomeImagem']['name'];
 
 $novoNome="../images/".$imagem;
-$novoNome2="../images/".$imagem;
 
 
 
 
-if($con ){
 
- echo  $sql= " update saopedro SET saopedroTitulo='".$Nome."', noticiaDescricao='".$Descricao1."'";
+if($Descricao1 ){
+
+ $sql= " update saopedro SET saopedroTitulo='".$Nome."', noticiaDescricao='".$Descricao1."'";
     if($imagem!=''){
-     echo   $sql.=", saopedroURL='images/".$imagem."'";
+      $sql.=", saopedroURL='images/".$imagem."'";
         copy($_FILES['nomeImagem']['tmp_name'],$novoNome);
     }
-   echo $sql.=" where saopedroId=".$id;
+    $sql.=" where saopedroId=".$id;
 
     mysqli_query($con,$sql);
 
 }
 
- //header("location:sobreSPM.php");
+header("location:sobreSPM.php");

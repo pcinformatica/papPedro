@@ -168,10 +168,5 @@ $dadosEstabelecimentos=mysqli_fetch_array($resultEstabelecimentos);
 
 
 
-
-
-
-
-
         </form>
     </section>

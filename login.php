@@ -12,6 +12,7 @@ function alert($msg) {
 }
 
 topind();
+Menuind();
 
 ?>
 
@@ -20,7 +21,7 @@ topind();
         <a href="index.php"> <h8>Voltar</h8></a>
         <div class="text-center">
             <h1>Login</h1>
-            <p class="lead">Entre na sua conta e continue a fazer suas compras!</p>
+            <p class="lead">Entre na sua conta e continue a fazer suas reservas!</p>
         </div>
     </div>
 </section>

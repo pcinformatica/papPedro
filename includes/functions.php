@@ -59,7 +59,7 @@ function topab(){
 
                 <li><a href="packages.php">Alojamento</a></li>
 
-                <li><a href="blog.php">Blog</a></li>
+                <li><a href="blog.php">Notícias</a></li>
 
                 <li><a href="packagesrestaurant.php">Restauração</a></li>
 
@@ -71,7 +71,6 @@ function topab(){
                         <li><a href="about.php" class="active">Sobre S. Pedro</a></li>
                         <li><a href="testimonials.php">Avaliações</a></li>
                         <li><a href="terms.php">Termos</a></li>
-                        <li><a href="pontosdeinteresse.php">Pontos de Interesse</a></li>
                     </ul>
                 </li>
                 <li><a href="contact.php">Contatos</a></li>
