@@ -6,16 +6,6 @@ Menuind();
 ?>
 <!-- Main -->
 <div id="main">
-
-
-
-
-
-
-
-
-
-
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
             <?php
@@ -149,7 +139,7 @@ Menuind();
 
                             <?php
 
-                            echo mb_convert_encoding($dadosEst['estabelecimentoInfoCatog'], 'UTF-8', 'UTF-16BE');
+                          echo $dadosEst['estabelecimentoInfoCatog'];
                             ?>
                                 </small>
                             </p>
