@@ -11,16 +11,16 @@ $id2=intval($_POST['imagemId2']);
 $imagem=$_FILES['nomeImagem']['name'];
 
 $novoNome="../images/".$imagem;
-$novoNome2="../images/".$imagem;
+
 if($con ){
 
 
-    $sql= " update pagtermos SET pagtermoTitulo='".$Nome."'";
+  echo  $sql= " update pagtermos SET pagtermoTitulo='".$Nome."'";
     if($imagem!=''){
         $sql.=", pagtermoURL='images/".$imagem."'";
         copy($_FILES['nomeImagem']['tmp_name'],$novoNome);
     }
-    $sql.=" where pagtermoId=".$id;
+   echo  $sql.=" where pagtermoId=".$id;
 
     mysqli_query($con,$sql);
 }

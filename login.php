@@ -20,7 +20,7 @@ Menuind();
     <div class="container">
         <a href="index.php"> <h8>Voltar</h8></a>
         <div class="text-center">
-            <h1>Login</h1>
+            <h1>Log<span class="fa fa-anchor"></span>n</h1>
             <p class="lead">Entre na sua conta e continue a fazer suas reservas!</p>
         </div>
     </div>
@@ -40,7 +40,7 @@ Menuind();
                 </div>
             </div>
             <div class="modal-footer">
-                <input type="submit" class="w-25" value="Entrar">
+                <input type="submit" style="background-color: #f5c9e0" class="w-25" value="Entrar">
             </div>
         </div>
         <a href="registar.php"> <h8>Ainda não tem registo feito? Faça já.</h8></a>

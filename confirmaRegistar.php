@@ -11,10 +11,12 @@ $login=addslashes($_POST['login']);
  $sql="insert into users(userName,userPassword) values('".$nome."','".$password."')";
 mysqli_query($con,$sql);
 $lastId=mysqli_insert_id($con);
-$sql="insert into perfis(perfilId,perfilNome,perfilMorada,perfilEmail,perfilTelefone) ";
+$sql="insert into perfis(perfilUserId,perfilNome,perfilMorada,perfilEmail,perfilTelefone) ";
  $sql.=" values(".$lastId.",'".$nome."','".$morada."','".$email."','".$telefone."')";
-echo $sql;
+$sql;
 mysqli_query($con,$sql);
-//header("location:index.php");
+header("location:login.php");
 
 ?>
+
+

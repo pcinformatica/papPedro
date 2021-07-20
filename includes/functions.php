@@ -909,14 +909,14 @@ function topLen(){
                                     <ul>
                                         <li><a href="index.php" class="active">Home</a></li>
 
-                                        <li><a href="Backoffice/login/colorlib-regform-7/singin.html">Login</a></li>
+                                        <li><a href="login.php">Login</a></li>
 
 
-                                        <li><a href="packages.php">Alojamento</a></li>
+                                        <li><a href="alojamentos.php">Alojamento</a></li>
 
-                                        <li><a href="blog.php">Blog</a></li>
+                                        <li><a href="noticias.php">Notícias</a></li>
 
-                                        <li><a href="packagesrestaurant.php">Restauração</a></li>
+                                        <li><a href="restauracao.php">Restauração</a></li>
                                      <!--  <li><a href="#" data-toggle="modal" data-target="#login">Login</a> </li>
                                         <li><a href="#" data-toggle="modal" data-target="#login">Loginfff</a> </li>
                                         -->
@@ -931,10 +931,9 @@ function topLen(){
                                             <a href="#" class="dropdown-toggle">Descobrir</a>
 
                                             <ul>
-                                                <li><a href="about.php">Sobre S. Pedro</a></li>
+                                                <li><a href="sobre.php">Sobre S. Pedro</a></li>
                                                 <li><a href="testimonials.php">Avaliações</a></li>
-                                                <li><a href="terms.php">Termos</a></li>
-                                                <li><a href="pontosdeinteresse.php">Pontos de Interesse</a></li>
+                                                <li><a href="termos.php">Termos</a></li>
 
                                             </ul>
                                         </li>

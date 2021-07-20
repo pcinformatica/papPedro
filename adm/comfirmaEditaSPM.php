@@ -11,20 +11,23 @@ $imagem=$_FILES['nomeImagem']['name'];
 $novoNome="../images/".$imagem;
 
 
+if($con ){
 
 
-
-if($Descricao1 ){
-
- $sql= " update saopedro SET saopedroTitulo='".$Nome."', noticiaDescricao='".$Descricao1."'";
+      $sql= " update saopedro SET saopedroTitulo='".$Nome."', noticiaDescricao='".$Descricao1."'";
     if($imagem!=''){
-      $sql.=", saopedroURL='images/".$imagem."'";
+        $sql.=", saopedroURL='images/".$imagem."'";
         copy($_FILES['nomeImagem']['tmp_name'],$novoNome);
     }
-    $sql.=" where saopedroId=".$id;
+      $sql.=" where saopedroId=".$id;
 
     mysqli_query($con,$sql);
-
 }
 
+
+
+
 header("location:sobreSPM.php");
+
+
+
