@@ -6,7 +6,7 @@ $nome=$_POST['nomeCategoria1'];
 
 copy($_FILES['tmp_name']);
 
-$sql="insert into quartotipo(quartoTipo) values('".$nome."');";
+$sql="insert into quartotipo(quartoTipoTipo) values('".$nome."');";
 mysqli_query($con,$sql);
 header("location:listaQuartosTipos.php");
 ?>

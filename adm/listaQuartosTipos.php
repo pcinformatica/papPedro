@@ -49,7 +49,7 @@ top();
         echo "<tr>";
         echo " <td></td>";
         echo "<td>".$dados['quartoTipoId']."</td>";
-        echo "<td>".$dados['quartoTipo']."</td>";
+        echo "<td>".$dados['quartoTipoTipo']."</td>";
 
 
 

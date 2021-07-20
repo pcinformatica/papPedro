@@ -19,7 +19,7 @@ $dadosCategorias=mysqli_fetch_array($resultCategorias);
         <hr>
         <form action="comfirmaEditaQuartoTipo.php?id=<?php echo $id ?>" method="post" enctype="multipart/form-data">
             <label style="color:black; font-size: 15px" class="badge badge-white">Nome: </label>
-            <input type="text"  class="col-2 col-form-label  " name="categoriaNome" value="<?php echo $dadosCategorias["quartoTipo"]?>">
+            <input type="text"  class="col-2 col-form-label  " name="categoriaNome" value="<?php echo $dadosCategorias["quartoTipoTipo"]?>">
 
 
 

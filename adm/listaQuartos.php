@@ -54,7 +54,7 @@ inner join quartotipo on quartoTipoId = quartoQuartoTipoId
             echo "<td>".$dados['quartoId']."</td>";
             echo "<td>".$dados['quartoNumero']."</td>";
             echo "<td>".$dados['estabelecimentoNome']."</td>";
-            echo "<td>".$dados['quartoTipo']."</td>";
+            echo "<td>".$dados['quartoTipoTipo']."</td>";
             echo "<td>".$dados['quartoDisponiblidade']."</td>";
 
 
@@ -129,11 +129,11 @@ inner join quartotipo on quartoTipoId = quartoQuartoTipoId
                         <option value="-1">Escolha o tipo de quarto...</option>
                         <?php
                         $sql="SELECT *
-        from  quartotipo  order by quartoTipo";
+        from  quartotipo  order by quartoTipoTipo";
                         $result=mysqli_query($con,$sql);
                         while ($dados=mysqli_fetch_array($result)){
                             ?>
-                            <option value="<?php echo $dados['quartoTipoId']?>"><?php echo $dados['quartoTipo']?></option>
+                            <option value="<?php echo $dados['quartoTipoId']?>"><?php echo $dados['quartoTipoTipo']?></option>
 
 
                             <?php
