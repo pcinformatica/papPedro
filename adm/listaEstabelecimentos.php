@@ -57,7 +57,7 @@ $result=mysqli_query($con,$sql);
 
             echo "<td class= 'actions' >";
 
-            echo  "<a class='btn btn-success btn-xs' href='listaslideshow.php'><i class='fa fa-eye'></i> Slideshow </a>";
+            echo  "<a class='btn btn-success btn-xs' href='listaslideshow.php?id=".$dados['estabelecimentoId']."'><i class='fa fa-eye'></i> Slideshow </a>";
 
             echo  " <a class='btn btn-warning btn-xs  justify-content-md-end'href=\"../adm/editaEstabelecimento.php?id=".$dados["estabelecimentoId"]."\"><i class='fa fa-pencil'></i>Editar</a>";
 

@@ -74,7 +74,7 @@ function top(){
 
     <?php
 
-    function table($inicio=false){
+    function table($inicio=false, $id=-1){
         if($inicio==true){
 
             $dir = "../slideshowImages";
@@ -137,6 +137,7 @@ function top(){
 
         $con=mysqli_connect("localhost","root","","pap2021saopedro");
         $sql="select * from imagens inner join estabelecimentos on imagemEstabelecimentoId=estabelecimentoId ";
+        $sql.="where estabelecimentoId=".$id;
         $result=mysqli_query($con,$sql);
 
         ?>
@@ -188,7 +189,7 @@ function top(){
 
 
 
-                echo  "  <a class='btn btn-danger btn-xs'  onclick=\"confirmaElimina2(".$dados['imagemId'].");\"><i class='fa fa-trash'></i>Excluir</a>";
+                echo  "  <a class='btn btn-danger btn-xs'  onclick=\"confirmaElimina2(".$dados['imagemId'].",".$dados['imagemEstabelecimentoId'].");\"><i class='fa fa-trash'></i>Excluir</a>";
                 echo "   </td>";
                 echo "</tr>";
             }
@@ -231,9 +232,9 @@ function top(){
 
 
         <script>
-            function confirmaElimina2(id) {
+            function confirmaElimina2(id,estId) {
                 if(confirm('Confirma que deseja eliminar o registo?'))
-                    window.location="eliminaImagem.php?id=" + id;
+                    window.location="eliminaImagem.php?id=" + id+"&estId="+estId;
             }
 
         </script>
@@ -241,7 +242,7 @@ function top(){
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Nova Categoria</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">Nova imagem</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -292,22 +293,7 @@ function top(){
 
 
 
-                        <select name="imagemEstabelecimento">
-                            <option value="-1">Escolha o estabelecimento...</option>
-                            <?php
-                            $sql="select * from estabelecimentos order by estabelecimentoNome";
-                            $result=mysqli_query($con,$sql);
-                            while ($dados=mysqli_fetch_array($result)){
-                                ?>
-                                <option value="<?php echo $dados['estabelecimentoId']?>"><?php echo $dados['estabelecimentoNome']?></option>
-
-
-                                <?php
-                            }
-
-
-                            ?>
-                        </select>
+                        <input type="hidden" name="imagemEstabelecimento" value="<?php echo $id?>">
 
 
                     </div>
