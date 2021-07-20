@@ -235,6 +235,7 @@ $dadosEstabelecimentos=mysqli_fetch_array($resultEstabelecimentos);
 
             </div>
 
+
             <input type="Submit"  aria-describedby="inputGroup-sizing-sm" class="btn btn-success" value="Edita" ><br>
 
 

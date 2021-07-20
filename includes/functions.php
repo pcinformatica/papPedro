@@ -2,6 +2,7 @@
 include_once("config.inc.php");
 $con = mysqli_connect("localhost", "root", "", "pap2021saopedro");
 $con->set_charset("utf-8");
+
 function topab(){
 ?>
     <!DOCTYPE HTML>
@@ -903,14 +904,31 @@ function topLen(){
                             function Menuind()
                             {
                                 ?>
+
                                 <!-- Menu -->
                                 <nav id="menu">
+                                    <?php
+                                    include_once("config.inc.php");
+                                    $con = mysqli_connect("localhost", "root", "", "pap2021saopedro");
+                                    $con->set_charset("utf-8");
+                                    session_start();
+                                    ?>
                                     <h2>Menu</h2>
                                     <ul>
                                         <li><a href="index.php" class="active">Home</a></li>
-
+     <?php
+                                if(!isset($_SESSION['id'])){
+                                ?>
                                         <li><a href="login.php">Login</a></li>
-
+<?php
+                                }else{
+                                ?>
+                                        <?php if(isset($_SESSION['id'])){ ?>
+                                            <li><a href="logout.php">logout</a></li>
+                                        <?php }?>
+                                    <?php
+                                }
+     ?>
 
                                         <li><a href="alojamentos.php">Alojamento</a></li>
 
@@ -937,7 +955,7 @@ function topLen(){
 
                                             </ul>
                                         </li>
-                                        <li><a href="contact.php">Contactos</a></li>
+                                        <li><a href="contactos.php">Contactos</a></li>
                                     </ul>
                                 </nav>
 
@@ -952,75 +970,11 @@ function topLen(){
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                             <?php
 
                             function wys()
                             {
                                 ?>
-
-
-
-
-
-
-
 
 
 
@@ -1635,7 +1589,37 @@ function topLen(){
 
                                         <li><a href="packages.php" class="active">Alojamento</a></li>
 
-                                        <li><a href="alojamento_reserva.php" class="active">Reserva</a></li>
+                                        <?php
+                                        include_once("config.inc.php");
+                                        $con = mysqli_connect("localhost", "root", "", "pap2021saopedro");
+                                        $con->set_charset("utf-8");
+                                        session_start();
+                                        ?>
+
+                                            <?php
+                                            if(!isset($_SESSION['id'])){
+                                                ?>
+                                                <?php
+                                            }else{
+                                                ?>
+                                                <?php if(isset($_SESSION['id'])){ ?>
+                                                    <li><a href="reservalocal.php">Reserva</a></li>
+                                                <?php }?>
+                                                <?php
+                                            }
+                                            ?>
+
+
+
+
+
+
+
+
+
+
+
+
                                         <li><a href="blog.php">Blog</a></li>
 
                                         <li><a href="packagesrestaurant.php">Restauração</a></li>

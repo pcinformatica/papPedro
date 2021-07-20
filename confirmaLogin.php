@@ -18,7 +18,7 @@ else{
     $sistemaPass=$dados['userPassword'];
 
     if($dados['userPassword']==$sistemaPass && $dados['userName']==$sistemaLogin){
-        $sql="select perfilNome from perfis where perfilId =".$dados['userId'];
+        $sql="select perfilNome from perfis where perfilUserId =".$dados['userId'];
         $result=mysqli_query($con,$sql);
         $dadosP=mysqli_fetch_array($result);
         session_start();

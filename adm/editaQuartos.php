@@ -4,7 +4,7 @@
 $con=mysqli_connect("localhost","root","","pap2021saopedro");
 $id=intval($_GET["id"]);
 
-$sql="select * from quartos where quartoId=".$id;
+$sql="select * from quartos inner join estabelecimentos on estabelecimentoId = quartoEstabelecimentoId inner join quartoTipo on quartoTipoId = quartoQuartoTipoId inner join precos  on precoId =   quartoPrecoId   where quartoId=".$id;
 $resultQuartos=mysqli_query($con,$sql);
 $dadosQuartos=mysqli_fetch_array($resultQuartos);
 ?>
@@ -189,18 +189,34 @@ $dadosQuartos=mysqli_fetch_array($resultQuartos);
 
 
             <hr>
+
+            </select>
             <label style="color:black; font-size: 15px" class="badge badge-white">Disponiblidade: </label>
-            <select name="quartoPreco">
+            <select name="Disponiblidade">
+                <option ><?php echo  $dadosQuartos["quartoDisponiblidade"]?></option>
+                <?php
 
 
-                <option value="-1">Escolha o preco..</option>
+                echo  " <option value='Disponivel'>Disponivel</option>";
+                echo  " <option value='Indesponivel'>Indesponivel</option>";
+
+
+
+                ?>
+            </select><hr>
+
+
+            <hr>
+            <label style="color:black; font-size: 15px" class="badge badge-white">Estabelecimento: </label>
+            <select name="quartoEstabelecimento">
+                <option value="<?php echo $dadosQuartos['quartoEstabelecimentoId']?>"><?php echo $dadosQuartos['estabelecimentoNome']?></option>
                 <?php
                 $sql="SELECT *
-        from  quartos ";
-                $result=mysqli_query($con,$sql);
-                while ($dados=mysqli_fetch_array($result)){
+        from  estabelecimentos  order by estabelecimentoNome";
+                $result1=mysqli_query($con,$sql);
+                while ($dados=mysqli_fetch_array($result1)){
                     ?>
-                    <option value="<?php echo $dados['quartoDisponiblidade']?>"></option>
+                    <option value="<?php echo $dados['estabelecimentoId']?>"><?php echo $dados['estabelecimentoNome']?></option>
 
 
                     <?php
@@ -209,11 +225,46 @@ $dadosQuartos=mysqli_fetch_array($resultQuartos);
 
                 ?>
             </select>
-
-
             <hr>
+            <label style="color:black; font-size: 15px" class="badge badge-white">Tipo de Quarto: </label>
+            <select name="quartoTipos">
+                <option value="<?php echo $dadosQuartos['quartoQuartoTipoId']?>"><?php echo $dadosQuartos['quartoTipoTipo']?></option>
+                <?php
+                $sql="SELECT *
+        from  quartotipo  order by quartoTipoTipo";
+                $result1=mysqli_query($con,$sql);
+                while ($dados=mysqli_fetch_array($result1)){
+                    ?>
+                    <option value="<?php echo $dados['quartoTipoId']?>"><?php echo $dados['quartoTipoTipo']?></option>
 
 
+                    <?php
+                }
+
+
+                ?>
+            </select>
+            <hr>
+            </select>
+            <hr>
+            <label style="color:black; font-size: 15px" class="badge badge-white">Preco Normal: </label>
+            <select name="quartoPreco">
+                <option value="<?php echo $dadosQuartos['quartoPrecoId']?>"</option>
+                <?php
+                $sql="SELECT *
+        from  precos ";
+                $result1=mysqli_query($con,$sql);
+                while ($dados=mysqli_fetch_array($result1)){
+                    ?>
+                    <option value="<?php echo $dados['precoId']?>"><?php echo $dados['precoNormal']?></option>
+
+
+                    <?php
+                }
+
+
+                ?>
+            </select>
 
             <input type="Submit"  aria-describedby="inputGroup-sizing-sm" class="btn btn-success" value="Edita" ><br>
 
