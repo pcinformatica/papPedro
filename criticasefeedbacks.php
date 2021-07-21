@@ -3,14 +3,16 @@
 include_once('includes\functions.php');
 topLen();
 MenuLen();
+/*
 session_start();
+*/
 ?>
 
 
     <!-- Main -->
     <div id="main">
         <div class="inner">
-            <h1>Testemunhos</h1>
+            <h1>Avaliações</h1>
 
             <div class="image main">
                 <img src="images/banner-image-3-1920x500.jpg" class="img-fluid" alt=""/>
