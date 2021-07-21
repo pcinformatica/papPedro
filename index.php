@@ -221,26 +221,37 @@ Menuind();
 
 
                 ?>
-
+                <section class="tiles">
                 <?php
                 while ($dados = mysqli_fetch_array($resultado)) {
                     ?>
 
-                    <div class="col-sm-5 text-center" >
 
-                        <img src="<?php echo $dados ['noticiaURL'] ?>" class="img-fluid" alt=""/>
 
-                        <h2 class="m-n"><a href="noticiaInfo.php?id=<?php echo $dados  ['noticiaId'] ?>"><?php echo $dados  ['noticiaTitulo'] ?></a></h2>
+                    <article class="">
+                                                            <span class="image">
+                                                                <img style="width: 420px" src="<?php echo $dados ['noticiaURL'] ?>" alt=""/>
+                                                            </span>
+                        <a href="noticiaInfo.php?id=<?php echo $dados  ['noticiaId'] ?>">
+                            <h2><?php echo $dados  ['noticiaTitulo'] ?></h2>
 
-                        <p> John Doe &nbsp;|&nbsp; <?php echo $dados  ['noticiaData'] ?> <?php echo $dados  ['noticiasH'] ?> </p>
-                    </div>
-<br>
+                            <p><strong>  Redação &nbsp;|&nbsp; <?php echo $dados  ['noticiaData'] ?> <?php echo $dados  ['noticiasH'] ?> </strong></p>
+
+
+                        </a>
+                    </article>
+
+
+
+
+
+
 
 
                     <?php
                 }?>
 
-
+                </section>
 
             </div>
         </div>

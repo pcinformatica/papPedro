@@ -43,8 +43,10 @@ where categoriaNome='Restauracao' " ;
 
                         <p>
                             <small>
-                                <i class="fa fa-calendar"></i> Disponibilidade &nbsp;&nbsp;
-                                <i class="fa fa-wifi"></i> Acesso à internet
+                                <?php
+
+                                echo $dados['estabelecimentoInfoCatog'];
+                                ?>
                             </small>
                         </p>
                     </a>

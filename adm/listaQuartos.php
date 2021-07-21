@@ -1,10 +1,31 @@
 <?php
 include_once("includes/functionNoticias.php");
-top();
+include_once("includes/functionMenuGeral.php");
+
+topQua();
+
 ?>
 
+    <div id="main">
+        <div class="inner">
+            <h1>Página de Quartos - Administração</h1>
 
-    <?php
+
+
+
+
+
+
+
+            <br>
+
+
+
+        </div>
+
+    </div>
+
+<?php
     $con=mysqli_connect("localhost","root","","pap2021saopedro");
     $sql="select * from quartos";
     $result=mysqli_query($con,$sql);
@@ -170,8 +191,8 @@ inner join quartotipo on quartoTipoId = quartoQuartoTipoId
                 <div class="modal-footer">
 
                     <?php
-                    echo "<button type='button' class='btn btn-secondary' data-dismiss='modal'>Close</button>";
-                    echo" <button type=\"Submit\" class='btn btn-primary'>Save changes</button> ";
+                    echo "<button type='button' class='btn btn-secondary' data-dismiss='modal'>Fechar</button>";
+                    echo" <button type=\"Submit\" class='btn btn-primary'>Salvar</button> ";
                     ?>
 
                 </div>

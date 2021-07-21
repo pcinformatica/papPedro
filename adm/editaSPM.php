@@ -129,28 +129,6 @@ $dadosEstabelecimentos=mysqli_fetch_array($resultEstabelecimentos);
 
 
             <hr>
-            <script>
-                function preview_image(event) {
-                    var reader = new FileReader();
-                    reader.onload = function () {
-                        var output = document.getElementById('output_image');
-                        output.src = reader.result;
-                    }
-                    reader.readAsDataURL(event.target.files[0]);
-                }
-            </script>
-            <div class="container">
-                <h2 align="center" style="margin-top: 10%">
-
-                    <input type="hidden" name="imagemId" value="<?php echo $id ?>">
-
-                    <label>Imagem Inicial:</label><br>
-                    <img width="400" id="output_image" src="../<?php echo $dadosEstabelecimentos['saopedroURL']?>"><br>
-                    <input type="file" name="nomeImagem"><br>
-
-
-            </div>
-
 
             <hr>
 

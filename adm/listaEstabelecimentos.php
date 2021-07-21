@@ -1,6 +1,7 @@
 <?php
 include_once("includes/functionEstabelecimentos.php");
-top();
+include_once("includes/functionMenuGeral.php");
+topEst();
 ?>
 <?php
 $con=mysqli_connect("localhost","root","","pap2021saopedro");
@@ -8,7 +9,18 @@ $sql="select * from estabelecimentos inner join categorias on estabelecimentoCat
 $result=mysqli_query($con,$sql);
 
 ?>
+    <div id="main">
+        <div class="inner">
+            <h1>Página Estabelecimentos - Administração</h1>
 
+
+            <br>
+
+
+
+        </div>
+
+    </div>
 
     <div class="d-grid gap-2 d-md-flex justify-content-md-end" data-toggle="modal" data-target="#exampleModal">
         <a href="#" class="btn btn-primary pull-right h2">Novo estabelecimento</a>
@@ -123,8 +135,8 @@ $result=mysqli_query($con,$sql);
                 <div class="modal-footer">
 
                     <?php
-                    echo "<button type='button' class='btn btn-secondary' data-dismiss='modal'>Close</button>";
-                    echo" <button type=\"Submit\" class='btn btn-primary'>Save changes</button> ";
+                    echo "<button type='button' class='btn btn-secondary' data-dismiss='modal'>Fechar</button>";
+                    echo" <button type=\"Submit\" class='btn btn-primary'>Salvar</button> ";
                     ?>
 
                 </div>

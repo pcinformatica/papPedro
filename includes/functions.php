@@ -47,42 +47,71 @@ function topab(){
     ?>
 
 
-    <?php
+<?php
 
-    function Menuab()
-    {
-        ?>
-        <!-- Menu -->
-        <nav id="menu">
-            <h2>Menu</h2>
-            <ul>
-                <li><a href="index.php">Home</a></li>
-
-                <li><a href="packages.php">Alojamento</a></li>
-
-                <li><a href="blog.php">Notícias</a></li>
-
-                <li><a href="packagesrestaurant.php">Restauração</a></li>
-
-
-                <li>
-                    <a href="#" class="dropdown-toggle">Descobrir</a>
-
-                    <ul>
-                        <li><a href="about.php" class="active">Sobre S. Pedro</a></li>
-                        <li><a href="testimonials.php">Avaliações</a></li>
-                        <li><a href="terms.php">Termos</a></li>
-                    </ul>
-                </li>
-                <li><a href="contact.php">Contatos</a></li>
-            </ul>
-        </nav>
-
-        <?php
-    }
-
+function Menuab()
+{
     ?>
 
+    <!-- Menu -->
+    <nav id="menu">
+        <?php
+        include_once("config.inc.php");
+        $con = mysqli_connect("localhost", "root", "", "pap2021saopedro");
+        $con->set_charset("utf-8");
+        session_start();
+        ?>
+        <h2>Menu</h2>
+        <ul>
+            <li><a href="index.php" >Home</a></li>
+            <?php
+            if(!isset($_SESSION['id'])){
+                ?>
+                <li><a href="login.php">Login</a></li>
+                <?php
+            }else{
+                ?>
+                <?php if(isset($_SESSION['id'])){ ?>
+                    <li><a href="logout.php">logout</a></li>
+                <?php }?>
+                <?php
+            }
+            ?>
+
+            <li><a href="alojamentos.php">Alojamento</a></li>
+
+            <li><a href="noticias.php">Notícias</a></li>
+
+            <li><a href="restauracao.php">Restauração</a></li>
+            <!--  <li><a href="#" data-toggle="modal" data-target="#login">Login</a> </li>
+               <li><a href="#" data-toggle="modal" data-target="#login">Loginfff</a> </li>
+               -->
+
+
+
+
+
+
+
+            <li>
+                <a href="#" class="dropdown-toggle">Descobrir</a>
+
+                <ul>
+                    <li><a href="sobre.php" class="active">Sobre S. Pedro</a></li>
+                    <li><a href="criticasefeedbacks.php">Avaliações</a></li>
+                    <li><a href="termos.php">Termos</a></li>
+
+                </ul>
+            </li>
+            <li><a href="contactos.php">Contactos</a></li>
+        </ul>
+    </nav>
+
+
+    <?php
+}
+
+?>
 
 
     <?php
@@ -176,43 +205,71 @@ function topLen(){
     }
     ?>
 
-    <?php
-    function MenuLen()
-    {
-        ?>
-        <!-- Menu -->
-        <nav id="menu">
-            <h2>Menu</h2>
+<?php
 
-            <ul>
-                <li><a href="index.php">Home</a></li>
-
-                <li><a href="packages.php">Alojamento</a></li>
-
-                <li><a href="blog.php">Blog</a></li>
-
-                <li><a href="packagesrestaurant.php">Restauração</a></li>
-
-
-                <li>
-                    <a href="#" class="dropdown-toggle">Descobrir</a>
-
-                    <ul>
-                        <li><a href="about.php">Sobre S. Pedro</a></li>
-                        <li><a href="testimonials.php" class="active">Avaliações</a></li>
-                        <li><a href="terms.php">Termos</a></li>
-                        <li><a href="pontosdeinteresse.php">Pontos de Interesse</a></li>
-                    </ul>
-                </li>
-                <li><a href="contact.php">Contatos</a></li>
-            </ul>
-        </nav>
-
-
-        <?php
-    }
-
+function MenuLen()
+{
     ?>
+
+    <!-- Menu -->
+    <nav id="menu">
+        <?php
+        include_once("config.inc.php");
+        $con = mysqli_connect("localhost", "root", "", "pap2021saopedro");
+        $con->set_charset("utf-8");
+        session_start();
+        ?>
+        <h2>Menu</h2>
+        <ul>
+            <li><a href="index.php" >Home</a></li>
+            <?php
+            if(!isset($_SESSION['id'])){
+                ?>
+                <li><a href="login.php">Login</a></li>
+                <?php
+            }else{
+                ?>
+                <?php if(isset($_SESSION['id'])){ ?>
+                    <li><a href="logout.php">logout</a></li>
+                <?php }?>
+                <?php
+            }
+            ?>
+
+            <li><a href="alojamentos.php">Alojamento</a></li>
+
+            <li><a href="noticias.php">Notícias</a></li>
+
+            <li><a href="restauracao.php">Restauração</a></li>
+            <!--  <li><a href="#" data-toggle="modal" data-target="#login">Login</a> </li>
+               <li><a href="#" data-toggle="modal" data-target="#login">Loginfff</a> </li>
+               -->
+
+
+
+
+
+
+
+            <li>
+                <a href="#" class="dropdown-toggle">Descobrir</a>
+
+                <ul>
+                    <li><a href="sobre.php">Sobre S. Pedro</a></li>
+                    <li><a href="criticasefeedbacks.php" class="active">Avaliações</a></li>
+                    <li><a href="termos.php">Termos</a></li>
+
+                </ul>
+            </li>
+            <li><a href="contactos.php">Contactos</a></li>
+        </ul>
+    </nav>
+
+
+    <?php
+}
+
+?>
 
     <?php
 
@@ -257,43 +314,71 @@ function topLen(){
         }
         ?>
 
-        <?php
+    <?php
 
-        function Menutest()
-        {
+    function Menutest()
+    {
+        ?>
+
+    <!-- Menu -->
+    <nav id="menu">
+        <?php
+        include_once("config.inc.php");
+        $con = mysqli_connect("localhost", "root", "", "pap2021saopedro");
+        $con->set_charset("utf-8");
+        session_start();
+        ?>
+        <h2>Menu</h2>
+        <ul>
+            <li><a href="index.php" >Home</a></li>
+            <?php
+            if(!isset($_SESSION['id'])){
+                ?>
+                <li><a href="login.php">Login</a></li>
+                <?php
+            }else{
+                ?>
+                <?php if(isset($_SESSION['id'])){ ?>
+                    <li><a href="logout.php">logout</a></li>
+                <?php }?>
+                <?php
+            }
             ?>
-            <!-- Menu -->
-            <nav id="menu">
-                <h2>Menu</h2>
+
+            <li><a href="alojamentos.php">Alojamento</a></li>
+
+            <li><a href="noticias.php">Notícias</a></li>
+
+            <li><a href="restauracao.php">Restauração</a></li>
+            <!--  <li><a href="#" data-toggle="modal" data-target="#login">Login</a> </li>
+               <li><a href="#" data-toggle="modal" data-target="#login">Loginfff</a> </li>
+               -->
+
+
+
+
+
+
+
+            <li>
+                <a href="#" class="dropdown-toggle">Descobrir</a>
 
                 <ul>
-                    <li><a href="index.php">Home</a></li>
+                    <li><a href="sobre.php">Sobre S. Pedro</a></li>
+                    <li><a href="criticasefeedbacks.php">Avaliações</a></li>
+                    <li><a href="termos.php" class="active">Termos</a></li>
 
-                    <li><a href="packages.php">Alojamento</a></li>
-
-                    <li><a href="blog.php">Blog</a></li>
-
-                    <li><a href="packagesrestaurant.php">Restauração</a></li>
-
-
-                    <li>
-                        <a href="#" class="dropdown-toggle">Descobrir</a>
-
-                        <ul>
-                            <li><a href="about.php">Sobre S. Pedro</a></li>
-                            <li><a href="testimonials.php">Avaliações</a></li>
-                            <li><a href="terms.php">Termos</a></li>
-                            <li><a href="pontosdeinteresse.php" class="active">Pontos de Interesse</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="contact.php">Contatos</a></li>
                 </ul>
-            </nav>
+            </li>
+            <li><a href="contactos.php">Contactos</a></li>
+        </ul>
+    </nav>
 
-            <?php
-        }
 
-        ?>
+    <?php
+}
+
+?>
 
         <?php
 
@@ -497,40 +582,71 @@ function topLen(){
                         <?php
                         }
                         ?>
-                        <?php
+<?php
 
-                        function Menublog(){
-                        ?>
-                        <!-- Menu -->
-                        <nav id="menu">
-                            <h2>Menu</h2>
-                            <ul>
-                                <li><a href="index.php">Home</a></li>
+function Menublog()
+{
+    ?>
 
-                                <li><a href="packages.php">Alojamento</a></li>
+    <!-- Menu -->
+    <nav id="menu">
+        <?php
+        include_once("config.inc.php");
+        $con = mysqli_connect("localhost", "root", "", "pap2021saopedro");
+        $con->set_charset("utf-8");
+        session_start();
+        ?>
+        <h2>Menu</h2>
+        <ul>
+            <li><a href="index.php" >Home</a></li>
+            <?php
+            if(!isset($_SESSION['id'])){
+                ?>
+                <li><a href="login.php">Login</a></li>
+                <?php
+            }else{
+                ?>
+                <?php if(isset($_SESSION['id'])){ ?>
+                    <li><a href="logout.php">logout</a></li>
+                <?php }?>
+                <?php
+            }
+            ?>
 
-                                <li><a href="blog.php" class="active">Blog</a></li>
+            <li><a href="alojamentos.php">Alojamento</a></li>
 
-                                <li><a href="packagesrestaurant.php">Restauração</a></li>
+            <li><a href="noticias.php" class="active">Notícias</a></li>
 
-                                <li>
-                                    <a href="#" class="dropdown-toggle">Descobrir</a>
-
-                                    <ul>
-                                        <li><a href="about.php">Sobre S. Pedro</a></li>
-                                        <li><a href="testimonials.php">Avaliações</a></li>
-                                        <li><a href="terms.php">Termos</a></li>
-                                        <li><a href="pontosdeinteresse.php">Pontos de Interesse</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="contact.php">Contatos</a></li>
-                            </ul>
-                        </nav>
+            <li><a href="restauracao.php">Restauração</a></li>
+            <!--  <li><a href="#" data-toggle="modal" data-target="#login">Login</a> </li>
+               <li><a href="#" data-toggle="modal" data-target="#login">Loginfff</a> </li>
+               -->
 
 
-                        <?php
-                        }
-                        ?>
+
+
+
+
+
+            <li>
+                <a href="#" class="dropdown-toggle">Descobrir</a>
+
+                <ul>
+                    <li><a href="sobre.php">Sobre S. Pedro</a></li>
+                    <li><a href="criticasefeedbacks.php">Avaliações</a></li>
+                    <li><a href="termos.php">Termos</a></li>
+
+                </ul>
+            </li>
+            <li><a href="contactos.php">Contactos</a></li>
+        </ul>
+    </nav>
+
+
+    <?php
+}
+
+?>
 
                         <?php
 
@@ -574,42 +690,71 @@ function topLen(){
                             <?php
                             }
                             ?>
-                            <?php
+<?php
 
-                            function Menupost()
-                            {
-                                ?>
-                                <!-- Menu -->
-                                <nav id="menu">
-                                    <h2>Menu</h2>
-                                    <ul>
-                                        <li><a href="index.php">Home</a></li>
+function Menupost()
+{
+    ?>
 
-                                        <li><a href="packages.php">Alojamento</a></li>
+    <!-- Menu -->
+    <nav id="menu">
+        <?php
+        include_once("config.inc.php");
+        $con = mysqli_connect("localhost", "root", "", "pap2021saopedro");
+        $con->set_charset("utf-8");
+        session_start();
+        ?>
+        <h2>Menu</h2>
+        <ul>
+            <li><a href="index.php" >Home</a></li>
+            <?php
+            if(!isset($_SESSION['id'])){
+                ?>
+                <li><a href="login.php">Login</a></li>
+                <?php
+            }else{
+                ?>
+                <?php if(isset($_SESSION['id'])){ ?>
+                    <li><a href="logout.php">logout</a></li>
+                <?php }?>
+                <?php
+            }
+            ?>
 
-                                        <li><a href="blog.php" class="active">Blog</a></li>
+            <li><a href="alojamentos.php">Alojamento</a></li>
 
-                                        <li><a href="packagesrestaurant.php">Restauração</a></li>
+            <li><a href="noticias.php" class="active">Notícias</a></li>
 
-                                        <li>
-                                            <a href="#" class="dropdown-toggle">Descobrir</a>
-
-                                            <ul>
-                                                <li><a href="about.php">Sobre S. Pedro</a></li>
-                                                <li><a href="testimonials.php">Avaliações</a></li>
-                                                <li><a href="terms.php">Termos</a></li>
-                                                <li><a href="pontosdeinteresse.php">Pontos de Interesse</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="contact.php">Contatos</a></li>
-                                    </ul>
-                                </nav>
+            <li><a href="restauracao.php">Restauração</a></li>
+            <!--  <li><a href="#" data-toggle="modal" data-target="#login">Login</a> </li>
+               <li><a href="#" data-toggle="modal" data-target="#login">Loginfff</a> </li>
+               -->
 
 
-                                <?php
-                            }
 
-                            ?>
+
+
+
+
+            <li>
+                <a href="#" class="dropdown-toggle">Descobrir</a>
+
+                <ul>
+                    <li><a href="sobre.php">Sobre S. Pedro</a></li>
+                    <li><a href="criticasefeedbacks.php">Avaliações</a></li>
+                    <li><a href="termos.php">Termos</a></li>
+
+                </ul>
+            </li>
+            <li><a href="contactos.php">Contactos</a></li>
+        </ul>
+    </nav>
+
+
+    <?php
+}
+
+?>
 
                             <?php
 
@@ -727,43 +872,71 @@ function topLen(){
                             <?php
                             }
                             ?>
-                            <?php
+<?php
 
-                            function Menucont()
-                            {
-                                ?>
-                                <!-- Menu -->
-                                <nav id="menu">
-                                    <h2>Menu</h2>
-                                    <ul>
-                                        <li><a href="index.php">Home</a></li>
+function Menucont()
+{
+    ?>
 
-                                        <li><a href="packages.php">Alojamento</a></li>
+    <!-- Menu -->
+    <nav id="menu">
+        <?php
+        include_once("config.inc.php");
+        $con = mysqli_connect("localhost", "root", "", "pap2021saopedro");
+        $con->set_charset("utf-8");
+        session_start();
+        ?>
+        <h2>Menu</h2>
+        <ul>
+            <li><a href="index.php" >Home</a></li>
+            <?php
+            if(!isset($_SESSION['id'])){
+                ?>
+                <li><a href="login.php">Login</a></li>
+                <?php
+            }else{
+                ?>
+                <?php if(isset($_SESSION['id'])){ ?>
+                    <li><a href="logout.php">logout</a></li>
+                <?php }?>
+                <?php
+            }
+            ?>
 
-                                        <li><a href="blog.php">Blog</a></li>
+            <li><a href="alojamentos.php">Alojamento</a></li>
 
-                                        <li><a href="packagesrestaurant.php">Restauração</a></li>
+            <li><a href="noticias.php">Notícias</a></li>
 
-
-                                        <li>
-                                            <a href="#" class="dropdown-toggle">Descobrir</a>
-
-                                            <ul>
-                                                <li><a href="about.php">Sobre S. Pedro</a></li>
-                                                <li><a href="testimonials.php">Avaliações</a></li>
-                                                <li><a href="terms.php">Termos</a></li>
-                                                <li><a href="pontosdeinteresse.php">Pontos de Interesse</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="contact.php" class="active">Contatos</a></li>
-                                    </ul>
-                                </nav>
+            <li><a href="restauracao.php">Restauração</a></li>
+            <!--  <li><a href="#" data-toggle="modal" data-target="#login">Login</a> </li>
+               <li><a href="#" data-toggle="modal" data-target="#login">Loginfff</a> </li>
+               -->
 
 
-                                <?php
-                            }
 
-                            ?>
+
+
+
+
+            <li>
+                <a href="#" class="dropdown-toggle">Descobrir</a>
+
+                <ul>
+                    <li><a href="sobre.php">Sobre S. Pedro</a></li>
+                    <li><a href="criticasefeedbacks.php">Avaliações</a></li>
+                    <li><a href="termos.php">Termos</a></li>
+
+                </ul>
+            </li>
+            <li><a href="contactos.php" class="active">Contactos</a></li>
+        </ul>
+    </nav>
+
+
+    <?php
+}
+
+?>
 
                             <?php
 
@@ -950,7 +1123,7 @@ function topLen(){
 
                                             <ul>
                                                 <li><a href="sobre.php">Sobre S. Pedro</a></li>
-                                                <li><a href="testimonials.php">Avaliações</a></li>
+                                                <li><a href="criticasefeedbacks.php">Avaliações</a></li>
                                                 <li><a href="termos.php">Termos</a></li>
 
                                             </ul>
@@ -1446,43 +1619,71 @@ function topLen(){
                             }
                             ?>
 
-                            <?php
+<?php
 
-                            function Menupackrest()
-                            {
-                                ?>
-                                <!-- Menu -->
-                                <nav id="menu">
-                                    <h2>Menu</h2>
-                                    <ul>
-                                        <li><a href="index.php">Home</a></li>
+function Menupackrest()
+{
+    ?>
 
-                                        <li><a href="packages.php">Alojamento</a></li>
+    <!-- Menu -->
+    <nav id="menu">
+        <?php
+        include_once("config.inc.php");
+        $con = mysqli_connect("localhost", "root", "", "pap2021saopedro");
+        $con->set_charset("utf-8");
+        session_start();
+        ?>
+        <h2>Menu</h2>
+        <ul>
+            <li><a href="index.php" >Home</a></li>
+            <?php
+            if(!isset($_SESSION['id'])){
+                ?>
+                <li><a href="login.php">Login</a></li>
+                <?php
+            }else{
+                ?>
+                <?php if(isset($_SESSION['id'])){ ?>
+                    <li><a href="logout.php">logout</a></li>
+                <?php }?>
+                <?php
+            }
+            ?>
 
-                                        <li><a href="blog.php">Blog</a></li>
+            <li><a href="alojamentos.php">Alojamento</a></li>
 
-                                        <li><a href="packagesrestaurant.php" class="active">Restauração</a></li>
-                                        <li><a href="packagesrestaurant_reserva.php" class="active">Reserva</a></li>
+            <li><a href="noticias.php">Notícias</a></li>
 
-                                        <li>
-                                            <a href="#" class="dropdown-toggle">Descobrir</a>
-
-                                            <ul>
-                                                <li><a href="about.php">Sobre S. Pedro</a></li>
-                                                <li><a href="testimonials.php">Avaliações</a></li>
-                                                <li><a href="terms.php">Termos</a></li>
-                                                <li><a href="pontosdeinteresse.php">Pontos de Interesse</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="contact.php">Contatos</a></li>
-                                    </ul>
-                                </nav>
+            <li><a href="restauracao.php" class="active">Restauração</a></li>
+            <!--  <li><a href="#" data-toggle="modal" data-target="#login">Login</a> </li>
+               <li><a href="#" data-toggle="modal" data-target="#login">Loginfff</a> </li>
+               -->
 
 
-                                <?php
-                            }
 
-                            ?>
+
+
+
+
+            <li>
+                <a href="#" class="dropdown-toggle">Descobrir</a>
+
+                <ul>
+                    <li><a href="sobre.php">Sobre S. Pedro</a></li>
+                    <li><a href="criticasefeedbacks.php">Avaliações</a></li>
+                    <li><a href="termos.php">Termos</a></li>
+
+                </ul>
+            </li>
+            <li><a href="contactos.php">Contactos</a></li>
+        </ul>
+    </nav>
+
+
+    <?php
+}
+
+?>
 
 
 
@@ -1576,75 +1777,93 @@ function topLen(){
                             <?php
                             }
                             ?>
-                            <?php
+<?php
 
-                            function Menupack()
-                            {
-                                ?>
-                                <!-- Menu -->
-                                <nav id="menu">
-                                    <h2>Menu</h2>
-                                    <ul>
-                                        <li><a href="index.php">Home</a></li>
+function Menupack()
+{
+    ?>
 
-                                        <li><a href="packages.php" class="active">Alojamento</a></li>
+    <!-- Menu -->
+    <nav id="menu">
+        <?php
+        include_once("config.inc.php");
+        $con = mysqli_connect("localhost", "root", "", "pap2021saopedro");
+        $con->set_charset("utf-8");
+        session_start();
+        ?>
+        <h2>Menu</h2>
+        <ul>
+            <li><a href="index.php" >Home</a></li>
+            <?php
+            if(!isset($_SESSION['id'])){
+                ?>
+                <li><a href="login.php">Login</a></li>
+                <?php
+            }else{
+                ?>
+                <?php if(isset($_SESSION['id'])){ ?>
+                    <li><a href="logout.php">logout</a></li>
+                <?php }?>
+                <?php
+            }
+            ?>
 
-                                        <?php
-                                        include_once("config.inc.php");
-                                        $con = mysqli_connect("localhost", "root", "", "pap2021saopedro");
-                                        $con->set_charset("utf-8");
-                                        session_start();
-                                        ?>
+            <li><a href="alojamentos.php" class="active">Alojamento</a></li>
+            <?php
+            include_once("config.inc.php");
+            $con = mysqli_connect("localhost", "root", "", "pap2021saopedro");
+            $con->set_charset("utf-8");
+            session_start();
+            ?>
 
-                                            <?php
-                                            if(!isset($_SESSION['id'])){
-                                                ?>
-                                                <?php
-                                            }else{
-                                                ?>
-                                                <?php if(isset($_SESSION['id'])){ ?>
-                                                    <li><a href="reservalocal.php">Reserva</a></li>
-                                                <?php }?>
-                                                <?php
-                                            }
-                                            ?>
+            <?php
+            if(!isset($_SESSION['id'])){
+                ?>
+                <?php
+            }else{
+                ?>
+                <?php if(isset($_SESSION['id'])){ ?>
+                    <li><a href="reservalocal.php">Reserva</a></li>
+                <?php }?>
+                <?php
+            }
+            ?>
 
+            <li><a href="noticias.php">Notícias</a></li>
 
-
-
-
-
-
-
-
-
-
-
-                                        <li><a href="blog.php">Blog</a></li>
-
-                                        <li><a href="packagesrestaurant.php">Restauração</a></li>
-
-                                        <li>
-                                            <a href="#" class="dropdown-toggle">Descobrir</a>
-
-                                            <ul>
-                                                <li><a href="about.php">Sobre S. Pedro</a></li>
-                                                <li><a href="testimonials.php">Avaliações</a></li>
-                                                <li><a href="terms.php">Termos</a></li>
-                                                <li><a href="pontosdeinteresse.php">Pontos de Interesse</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="HTMLoriginal/contact.html">Contatos</a></li>
-                                    </ul>
-                                </nav>
+            <li><a href="restauracao.php">Restauração</a></li>
+            <!--  <li><a href="#" data-toggle="modal" data-target="#login">Login</a> </li>
+               <li><a href="#" data-toggle="modal" data-target="#login">Loginfff</a> </li>
+               -->
 
 
-                                <?php
-                            }
 
-                            ?>
 
-                            <?php
+
+
+
+            <li>
+                <a href="#" class="dropdown-toggle">Descobrir</a>
+
+                <ul>
+                    <li><a href="sobre.php">Sobre S. Pedro</a></li>
+                    <li><a href="criticasefeedbacks.php">Avaliações</a></li>
+                    <li><a href="termos.php">Termos</a></li>
+
+                </ul>
+            </li>
+            <li><a href="contactos.php">Contactos</a></li>
+        </ul>
+    </nav>
+
+
+    <?php
+}
+
+?>
+
+
+<?php
 
                             function footerpack(){
                             ?>
@@ -1746,44 +1965,74 @@ function topLen(){
                             <?php
                             }
                             ?>
-                            <?php
+<?php
 
-                            function Menupackd()
-                            {
-                                ?>
-                                <!-- Menu -->
-                                <nav id="menu">
-                                    <h2>Menu</h2>
-                                    <ul>
-                                        <li><a href="index.php">Home</a></li>
+function Menupackd()
+{
+    ?>
 
-                                        <li><a href="packages.php">Alojamento</a></li>
-                                        <li><a href="alojamento_reserva.php" class="active">Reserva</a></li>
-                                        <li><a href="blog.php">Blog</a></li>
+    <!-- Menu -->
+    <nav id="menu">
+        <?php
+        include_once("config.inc.php");
+        $con = mysqli_connect("localhost", "root", "", "pap2021saopedro");
+        $con->set_charset("utf-8");
+        session_start();
+        ?>
+        <h2>Menu</h2>
+        <ul>
+            <li><a href="index.php" >Home</a></li>
+            <?php
+            if(!isset($_SESSION['id'])){
+                ?>
+                <li><a href="login.php">Login</a></li>
+                <?php
+            }else{
+                ?>
+                <?php if(isset($_SESSION['id'])){ ?>
+                    <li><a href="logout.php">logout</a></li>
+                <?php }?>
+                <?php
+            }
+            ?>
 
-                                        <li><a href="packagesrestaurant.php">Restauração</a></li>
+            <li><a href="alojamentos.php" class="active">Alojamento</a></li>
 
-                                        <li>
-                                            <a href="#" class="dropdown-toggle">Descobrir</a>
+            <li><a href="noticias.php">Notícias</a></li>
 
-                                            <ul>
-                                                <li><a href="about.php">Sobre S. Pedro</a></li>
-                                                <li><a href="testimonials.php" class="active">Avaliações</a></li>
-                                                <li><a href="terms.php">Termos</a></li>
-                                                <li><a href="pontosdeinteresse.php">Pontos de Interesse</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="contact.php">Contatos</a></li>
-                                    </ul>
-                                </nav>
+            <li><a href="restauracao.php">Restauração</a></li>
+            <!--  <li><a href="#" data-toggle="modal" data-target="#login">Login</a> </li>
+               <li><a href="#" data-toggle="modal" data-target="#login">Loginfff</a> </li>
+               -->
 
 
-                                <?php
-                            }
 
-                            ?>
 
-                            <?php
+
+
+
+            <li>
+                <a href="#" class="dropdown-toggle">Descobrir</a>
+
+                <ul>
+                    <li><a href="sobre.php">Sobre S. Pedro</a></li>
+                    <li><a href="criticasefeedbacks.php">Avaliações</a></li>
+                    <li><a href="termos.php">Termos</a></li>
+
+                </ul>
+            </li>
+            <li><a href="contactos.php">Contactos</a></li>
+        </ul>
+    </nav>
+
+
+    <?php
+}
+
+?>
+
+
+<?php
 
                             function footerpackd(){
                             ?>

@@ -1,12 +1,32 @@
 <?php
-include_once("includes/functionCategorias.php");
+include_once("includes/functionNoticias.php");
 include_once("includes/functionMenuGeral.php");
-topCategorias();
-top();
+
+topPrec();
+
 ?>
 
+    <div id="main">
+        <div class="inner">
+            <h1>Página Preços - Administração</h1>
 
-    <?php
+
+
+
+
+
+
+
+            <br>
+
+
+
+        </div>
+
+    </div>
+
+
+<?php
     $con=mysqli_connect("localhost","root","","pap2021saopedro");
     $sql="select * from precos";
     $result=mysqli_query($con,$sql);
@@ -109,8 +129,8 @@ top();
                 </div>
                 <div class="modal-footer">
                     <?php
-                    echo "<button type='button' class='btn btn-secondary' data-dismiss='modal'>Close</button>";
-                    echo" <button type=\"Submit\" class='btn btn-primary'>Save changes</button> ";
+                    echo "<button type='button' class='btn btn-secondary' data-dismiss='modal'>Fechar</button>";
+                    echo" <button type=\"Submit\" class='btn btn-primary'>Salvar</button> ";
                     ?>
 
                 </div>

@@ -1,6 +1,6 @@
 <?php
-include_once("includes/functionNoticias.php");
-top();
+include_once("includes/functionMenuGeral.php");
+topsp();
 ?>
 
 

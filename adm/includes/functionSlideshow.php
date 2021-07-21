@@ -39,13 +39,19 @@ function top(){
         <h2>Menu</h2>
 
         <ul>
-            <li><a href="../lista/listaCategorias.php" >Categorias</a></li>
+
             <li>
-                <a href="#" class="dropdown-toggle">Estabelecimentos</a>
+                <a href="#" class="dropdown-toggle">Administração</a>
 
                 <ul>
-                    <li><a href="../lista/listaestabelecimentos.php" >Estabelecimentos</a></li>
-                    <li><a href="../lista/listaslideshow.php" class="active">SlideShow</a></li>
+                    <li><a href="../adm/listaCategorias.php" >Categorias</a></li>
+                    <li><a href="../adm/listaEstabelecimentos.php" >Estabelecimentos</a></li>
+                    <li><a href="../adm/listaslideshow.php?inicio=true" class="active">SlideShow</a></li>
+                    <li><a href="../adm/listanoticias.php">Notícias</a></li>
+                    <li><a href="../adm/listaPrecos.php">Preços</a></li>
+                    <li><a href="../adm/listaQuartos.php">Quartos</a></li>
+                    <li><a href="../adm/listaQuartosTipos.php">Tipos de Quarto</a></li>
+                    <li><a href="../adm/termopagina.php">Termos</a></li>
                 </ul>
             </li>
         </ul>
@@ -300,8 +306,8 @@ function top(){
                     <div class="modal-footer">
 
                         <?php
-                        echo "<button type='button' class='btn btn-secondary' data-dismiss='modal'>Close</button>";
-                        echo" <button type=\"Submit\" class='btn btn-primary'>Save changes</button> ";
+                        echo "<button type='button' class='btn btn-secondary' data-dismiss='modal'>Fechar</button>";
+                        echo" <button type=\"Submit\" class='btn btn-primary'>Salvar</button> ";
                         ?>
 
                     </div>

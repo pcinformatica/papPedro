@@ -133,8 +133,8 @@ top();
                 </div>
                 <div class="modal-footer">
                     <?php
-                    echo "<button type='button' class='btn btn-secondary' data-dismiss='modal'>Close</button>";
-                    echo" <button type=\"Submit\" class='btn btn-primary'>Save changes</button> ";
+                    echo "<button type='button' class='btn btn-secondary' data-dismiss='modal'>Fechar</button>";
+                    echo" <button type=\"Submit\" class='btn btn-primary'>Salvar</button> ";
                     ?>
 
                 </div>

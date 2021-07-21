@@ -92,13 +92,13 @@ function topback(){
 									<span class="image">
 										<img src="../images/1e.jpg" alt="" />
 									</span>
-                        <a href="index.php">
+                        <a href="listanoticias.php">
 
 
 
                             <p>
                                 <small>
-                            <h2>administração (Em desenvolvimento) </h2>
+                            <h2>administração Notícias </h2>
                                 </small>
                             </p>
                         </a>
@@ -125,11 +125,11 @@ function topback(){
 									<span class="image">
 										<img src="../images/1f.jpg" alt="" />
 									</span>
-                        <a href="">
+                        <a href="listaPrecos.php">
 
                             <p>
                                 <small>
-                            <h2>administração BLOG</h2>
+                            <h2>administração Preços</h2>
                                 </small>
                             </p>
                         </a>
@@ -140,11 +140,27 @@ function topback(){
 									<span class="image">
 										<img src="../images/2h.jpg" alt="" />
 									</span>
-                        <a href="listacultural.php">
+                        <a href="listaQuartos.php">
 
                             <p>
                                 <small>
-                            <h2>administração cultural</h2>
+                            <h2>administração Quartos</h2>
+                            </small>
+                            </p>
+                        </a>
+                    </article>
+
+
+
+                    <article class="style6">
+									<span class="image">
+										<img src="../images/2h.jpg" alt="" />
+									</span>
+                        <a href="listaQuartosTipos.php">
+
+                            <p>
+                                <small>
+                            <h2>administração Tipos de Quarto</h2>
                             </small>
                             </p>
                         </a>
@@ -154,9 +170,19 @@ function topback(){
 
 
 
+                    <article class="style6">
+									<span class="image">
+										<img src="../images/2h.jpg" alt="" />
+									</span>
+                        <a href="termospagina.php">
 
-
-
+                            <p>
+                                <small>
+                            <h2>administração Termos</h2>
+                            </small>
+                            </p>
+                        </a>
+                    </article>
 
 
 
