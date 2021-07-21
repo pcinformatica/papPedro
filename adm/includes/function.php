@@ -174,7 +174,7 @@ function topback(){
 									<span class="image">
 										<img src="../images/lendas.jpg" alt="" />
 									</span>
-                        <a href="termospagina.php">
+                        <a href="termopagina.php">
 
                             <p>
                                 <small>

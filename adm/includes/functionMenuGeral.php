@@ -439,8 +439,8 @@ function topCategorias(){
                                             <li><a href="../adm/listanoticias.php" >Notícias</a></li>
                                             <li><a href="../adm/listaPrecos.php" >Preços</a></li>
                                             <li><a href="../adm/listaQuartos.php" >Quartos</a></li>
-                                            <li><a href="../adm/listaQuartosTipos.php" class="active">Tipos de Quarto</a></li>
-                                            <li><a href="../adm/termopagina.php">Termos</a></li>
+                                            <li><a href="../adm/listaQuartosTipos.php" >Tipos de Quarto</a></li>
+                                            <li><a href="../adm/termopagina.php" class="active">Termos</a></li>
                                         </ul>
                                     </li>
                                 </ul>

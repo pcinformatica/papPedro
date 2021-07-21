@@ -15,7 +15,7 @@ Menublog();
             <h1>Notícias</h1>
 
             <div class="image main">
-                <img src="images/banner-image-6-1920x500.jpg" class="img-fluid" alt=""/>
+                <img src="images/noticiatitulo.jpg" class="img-fluid" alt=""/>
             </div>
 
             <div class="container-fluid">
