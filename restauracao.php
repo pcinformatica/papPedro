@@ -10,7 +10,7 @@ Menupackrest();
         <h1>Restauração</h1>
 
         <div class="image main">
-            <img src="images/rest1a.jpg" class="img-fluid" alt=""/>
+            <img src="images/all-bg1.jpg" class="img-fluid" alt=""/>
         </div>
 
         <?php
