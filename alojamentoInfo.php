@@ -194,7 +194,7 @@ Menupackd();
 
     <!-- Start Map section -->
     <section id="mu-map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3067.340411692422!2d-9.027388888116578!3d39.75446477913937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd22057614184209%3A0x28b689c316955980!2sAv.%20das%20Piscinas%2026%2C%202430-492%20M.nha%20Grande!5e0!3m2!1spt-BR!2spt!4v1605265482844!5m2!1spt-BR!2spt"
+        <iframe src="<?php echo  $dadosEstabelecimentos['estabelecimentoGoogle'] ?>"""
                 width="400" height="300" frameborder="0" style="border:0;" allowfullscreen=""
                 aria-hidden="false" tabindex="0"></iframe>
     </section>

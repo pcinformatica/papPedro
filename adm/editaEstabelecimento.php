@@ -32,9 +32,11 @@ $dadosEstabelecimentos=mysqli_fetch_array($resultEstabelecimentos);
             <input type="text"  class="col-2 col-form-label  " name="estabelecimentoTelefone"   value="<?php echo $dadosEstabelecimentos["estabelecimentoTelefone"]?>">
 
 
-            <label style="color:black; font-size: 15px" class="badge badge-white">Email do Estabelecimento:: </label>
+            <label style="color:black; font-size: 15px" class="badge badge-white"> &nbspEmail do Estabelecimento:  </label>
             <input type="text"  class="col-2 col-form-label  " name="estabelecimentoEmail"   value="<?php echo $dadosEstabelecimentos["estabelecimentoEmail"]?>">
 
+            <label style="color:black; font-size: 15px" class="badge badge-white">&nbsp&nbsp&nbspMapa  do Estabelecimento: </label>
+            <input type="text"  class="col-2 col-form-label  " name="estabelecimentoMapa"   value="<?php echo $dadosEstabelecimentos["estabelecimentoGoogle"]?>">
 
             <div class="form-group row">
                 <!--
