@@ -85,7 +85,7 @@ top();
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Nova Categoria</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Nova Notícia</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -138,49 +138,6 @@ top();
             </div>
         </div>
     </div>
-    <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel2" aria-hidden="true">
-        <?php
-        $id=intval($_GET['id']);
-        $con=mysqli_connect("localhost","root","","pap2021saopedro");
-        $sql="select * from categorias where categoriaId=".$id;
-        $result=mysqli_query($con,$sql);
-        $dados=mysqli_fetch_array($result);
-
-        ?>
-
-
-
-
-
-
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Edita Categoria</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <form action="confirmaEditaEstabelecimento.php" method="post" enctype="multipart/form-data">
-
-                        <input type="hidden" name="id" value="<?php echo $id?>">
-
-                        <label>Nome:</label>
-                        <input type="text" name="nomeCategoria" value="<?php echo $dados['categoriaNome']?>">
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <?php
-                    echo "<button type='button' class='btn btn-secondary' data-dismiss='modal'>Close</button>";
-                    echo" <button type=\"submit\" class='btn btn-primary'>Save changes</button> ";
-                    ?>
-
-                </div>
-            </div>
-        </div>
-    </div>
-
 
 
 
