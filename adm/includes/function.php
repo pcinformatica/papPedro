@@ -138,7 +138,7 @@ function topback(){
 
                     <article class="style6">
 									<span class="image">
-										<img src="../images/2h.jpg" alt="" />
+										<img src="../images/3b.jpg" alt="" />
 									</span>
                         <a href="listaQuartos.php">
 
@@ -172,7 +172,7 @@ function topback(){
 
                     <article class="style6">
 									<span class="image">
-										<img src="../images/2h.jpg" alt="" />
+										<img src="../images/lendas.jpg" alt="" />
 									</span>
                         <a href="termospagina.php">
 

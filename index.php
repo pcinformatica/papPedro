@@ -208,7 +208,7 @@ Menuind();
 
         <br>
 
-        <h2 class="h2">Blog</h2>
+        <h2 class="h2">Notícias</h2>
 
         <div class="col-9">
             <div class="row">
@@ -216,7 +216,7 @@ Menuind();
                 <?php
                 $con = mysqli_connect("localhost", "root", "", "pap2021saopedro");
                 $sql = "SELECT * from noticias limit 3";
-
+                $con->set_charset("utf-8");
                 $resultado = mysqli_query($con, $sql);
 
 
@@ -228,7 +228,7 @@ Menuind();
 
 
 
-                    <article class="">
+                    <article class=""  >
                                                             <span class="image">
                                                                 <img style="width: 420px" src="<?php echo $dados ['noticiaURL'] ?>" alt=""/>
                                                             </span>

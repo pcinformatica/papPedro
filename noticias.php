@@ -57,7 +57,7 @@ Menublog();
 
                     <div class="col-3">
                         <div class="form-group">
-                            <h4>Blog Search</h4>
+                            <h4>Pesquisa</h4>
                         </div>
 
 
@@ -72,7 +72,7 @@ Menublog();
                             <div class="input-group">
                                 <form action="noticias.php?search=$_POST['search']">
                                     <div class="input-group">
-                                        <input type="text" class="form-control" placeholder="Search"
+                                        <input type="text" class="form-control" placeholder="Pesquisar"
                                                aria-label="Search" aria-describedby="basic-addon2" id="search" name="search" value="">
 
 
