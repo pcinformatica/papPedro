@@ -6,7 +6,7 @@ topTermo();
 ?>
     <div id="main">
         <div class="inner">
-            <h1>Página dos Termos(Página) - Administração</h1>
+            <h1>Página dos Termos - Administração</h1>
 
 
 
@@ -47,7 +47,7 @@ $con->set_charset("utf-8");
             <th scope="col"></th>
             <th scope="col">ID</th>
             <th scope="col">Nome do titulo</th>
-            <th scope="col">Imagem</th>
+            <th scope="col">Informacao</th>
 
 
 
@@ -62,17 +62,18 @@ $con->set_charset("utf-8");
         //dados na base de dados
         $con=mysqli_connect("localhost","root","","pap2021saopedro");
         $con->set_charset("utf-8");
-        $sql="select * from pagtermos";
+        $sql="select * from termos inner join pagtermos ";
         $result=mysqli_query($con,$sql);
 
         while ($dados=mysqli_fetch_array($result)) {
 
             echo "<tr>";
             echo " <td></td>";
-            echo "<td>".$dados['pagtermoId']."</td>";
+            echo "<td>".$dados['termoId']."</td>";
+            echo "<td>".$dados['termoTitulo']."</td>";
             echo "<td>".$dados['pagtermoTitulo']."</td>";?>
-            <td>       <img width="400" id="output_image" src="../<?php echo $dados['pagtermoURL']?>"><br></td>";
-       <?php
+
+            <?php
 
 
 
@@ -82,8 +83,8 @@ $con->set_charset("utf-8");
             echo "<td class= 'actions' >";
 
 
-            echo  " <a class='btn btn-success btn-xs justify-content-md-end'href=\"../adm/listatermos.php?id=".$dados["pagtermoId"]."\"><i class='fa  fa-eye'></i>Termos</a>";
-            echo  " <a class='btn btn-warning btn-xs  justify-content-md-end'href=\"../adm/editapagTermo.php?id=".$dados["pagtermoId"]."\"><i class='fa fa-pencil'></i>Editar</a>";
+            echo  " <a class='btn btn-success btn-xs justify-content-md-end'href=\"../adm/termopagina.php?id=".$dados["termoId"]."\"><i class='fa  fa-eye'></i>Termos(página)</a>";
+            echo  " <a class='btn btn-warning btn-xs  justify-content-md-end'href=\"../adm/editaTermo.php?id=".$dados["termoId"]."\"><i class='fa fa-pencil'></i>Editar</a>";
 
             echo  "  <a class='btn btn-danger btn-xs'  onclick=\"confirmaElimina(".$dados['pagtermoId'].");\"><i class='fa fa-trash'></i>Excluir</a>";
             echo "   </td>";
@@ -95,7 +96,7 @@ $con->set_charset("utf-8");
     <script>
         function confirmaElimina(id) {
             if(confirm('Confirma que deseja eliminar o registo?'))
-                window.location="../adm/eliminaTermoPag.php?id=" + id;
+                window.location="../adm/eliminaTermo.php?id=" + id;
         }
 
     </script>
@@ -103,24 +104,40 @@ $con->set_charset("utf-8");
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Nova  página</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Novo Termo</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
                     <?php
-                    echo "<form action=\"confirmaNovoTermoPag.php\" method=\"post\" enctype='multipart/form-data'>";
+                    echo "<form action=\"confirmaNovoTermo.php\" method=\"post\" enctype='multipart/form-data'>";
 
 
 
                     echo" <label>Nome do Título: </label>";
-                    echo"  <input type=\"text\" name=\"nomeCategoria1\"><br>";
+                    echo"  <input type=\"text\" name=\"nomeCategoria5\"><br>";
 
 
 
                     ?>
+                    <select name="Termopag">
+                        <option value="-1">Escolha a pagTermo...</option>
+                        <?php
+                        $sql="SELECT *
+        from  pagtermos order by pagtermoTitulo";
+                        $result=mysqli_query($con,$sql);
+                        while ($dados=mysqli_fetch_array($result)){
+                            ?>
+                            <option value="<?php echo $dados['pagtermoId']?>"><?php echo $dados['pagtermoTitulo']?></option>
 
+
+                            <?php
+                        }
+
+
+                        ?>
+                    </select>
 
                 </div>
                 <div class="modal-footer">
@@ -134,5 +151,7 @@ $con->set_charset("utf-8");
             </div>
         </div>
     </div>
+
+
 <?php
 footer();?>

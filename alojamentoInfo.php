@@ -22,7 +22,7 @@ Menupackd();
             $resultEstabelecimentos = mysqli_query($con, $sql);
             $dadosEstabelecimentos = mysqli_fetch_array($resultEstabelecimentos);
             ?>
-            <h1> <?php echo $dadosEstabelecimentos["estabelecimentoNome"] ?> <span class="pull-right">€1094 - €1500</span></h1>
+            <h1> <?php echo $dadosEstabelecimentos["estabelecimentoNome"] ?> <span class="pull-right">Venha Descobrir!</span></h1>
 
             <div class="container-fluid">
                 <div class="row">
